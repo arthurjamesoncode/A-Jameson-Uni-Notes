@@ -169,11 +169,11 @@ $$
 $$
 The principle value is denoted by $\text{Arg}\;z$ and must be in the range $[0,2\pi)$ or $(-\pi, \pi]$.
 
->Computers (and sometumes humans) often find it easier to use the range $(-\pi,\pi]$ but both are perfectly valid.
+>Computers (and sometimes humans) often find it easier to use the range $(-\pi,\pi]$ but both are perfectly valid.
 
 We can calculate $\text{Arg}(a+ib)$ by using a special function $atan2(b, a)$. This function is essentially $\arctan(\frac ba)$, except that it gives back a value in the range $(-\pi, \pi]$ ($\arctan$ only gives values in the range $(-\frac\pi2, \frac\pi2)$) and takes into account the quadrant of the grid the point $(a, b)$ lies in.
 
-So $atan2(1, 1) = \frac\pi4$, and $atan(1, -1)=\frac{3\pi}4$ while $\arctan(\frac{1}{-1})=-\frac\pi4$.
+So $atan2(1, 1) = \frac\pi4$, and $atan2(1, -1)=\frac{3\pi}4$ while $\arctan(\frac{1}{-1})=-\frac\pi4$.
 ## Trigonometric Form and The Euler Form
 For $z=a+ib$ with $|z|=r$ and $\arg z=\theta$, the **Euler form** of $z$ is 
 $$z=r\cdot e^{i\theta}$$
@@ -353,16 +353,16 @@ Observe
 $$
 \begin{split}
 v
-& = r^{\frac1k}\cdot e^{i\frac{\theta+2n\pi}{k}} \\
-& = r^{\frac1k}\cdot e^{i(\frac{\theta}k+\frac{2(k+n-k)\pi}{k})} \\
-& = r^{\frac1k}\cdot e^{i(\frac{\theta+2k+2n\pi-2k\pi}{k})} \\
-& = r^{\frac1k}\cdot e^{i(\frac{\theta+2(k+n)\pi}{k}-\frac{2k\pi}k)} \\
-& = r^{\frac1k}\cdot e^{i(\frac{\theta+2(k+n)\pi}{k}-2\pi)}
+& = r^{\frac1k}\cdot e^{i\frac{\theta+2m\pi}{k}} \\
+& = r^{\frac1k}\cdot e^{i(\frac{\theta}k+\frac{2(k+m-k)\pi}{k})} \\
+& = r^{\frac1k}\cdot e^{i(\frac{\theta+2k+2m\pi-2k\pi}{k})} \\
+& = r^{\frac1k}\cdot e^{i(\frac{\theta+2(k+m)\pi}{k}-\frac{2k\pi}k)} \\
+& = r^{\frac1k}\cdot e^{i(\frac{\theta+2(k+m)\pi}{k}-2\pi)}
 \end{split}
 $$
 We can see from this that $\forall m\in\mathbb N$, 
 $$
-\frac{\theta+2n\pi}{k}=\frac{\theta+2(k+n)\pi}{k}-2\pi
+\frac{\theta+2m\pi}{k}=\frac{\theta+2(k+m)\pi}{k}-2\pi
 $$
 which shows us that the angle for $m=n$ is exactly $2\pi$ less than the angle for as $m=n+k$. 
 
@@ -378,6 +378,8 @@ v_m = e^{\frac{2\pi m}{k}}
 $$
 
 These roots represent the solutions to $x^k-1=0$, and are called the **primitive roots of unity**.
+
+Geometrically, these roots represent $m$ points on the unit circle with even angles (each gap is $\frac{2\pi}k$) between them. 
 
 Primitive roots of unity underpin the [Fourier Transform](https://en.wikipedia.org/wiki/Fourier_transform) which is widely used in signal processing and other electronics applications.
 
