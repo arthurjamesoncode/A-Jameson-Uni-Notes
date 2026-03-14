@@ -7,7 +7,7 @@ You can see that this function, instead of being represented as a (curved) line,
 
 Just like with **single-variable** functions $f(x)$, some choice of input will maximise the value of our **multivariable** function. The only difference is that now, we must consider two variables.
 
-When we had just 1 variable, the idea of **critical points** were supported by consider the gradients of lines tangent to the curve at a given point. This analogy does not work now that we have more than 1 variable.
+When we had just 1 variable, the idea of **critical points** were supported by consider the gradients of lines tangent to the curve at a given point. This analogy does not work now that we have more than 1 variable. We now must consider the **direction** that our function changes in.
 
 So how do we find **critical points** for **multivariable** functions? 
 
@@ -16,7 +16,7 @@ The answer is by using **partial derivatives**.
 A partial derivative is a derivative of a multivariable function, in which you treat all variables except one as a constant.
 
 So for a function $f(x, y)$ the $x$ partial derivative is given by $$
-f'_x(x,y)=\frac{df}{dx}=\lim_{h\to0}\frac{f(x+h, y) - f(x, y)}{h}
+f'_x(x,y)=\frac{\partial f}{\partial x}=\lim_{h\to0}\frac{f(x+h, y) - f(x, y)}{h}
 $$but we can just use our standard rules for computing derivatives.
 
 Essentially, we ignore how the change in the other variables affects the change in our function and only focus on how one specific variable affects the change. The choice of variable is denoted by the subscript (in this case $x$) in the $f'_x(x,y)$.

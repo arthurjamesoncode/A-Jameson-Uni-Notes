@@ -17,12 +17,14 @@ In quadratic functions you can see both **maximum** points and **minimum** point
 ![[maximum.png]]
 ![[minimum.png]]
 
-In **cubic** functions you can see **inflection points**, where the curve flattens out before continuing in the same direction:
+In **cubic** functions you can also see **inflection points**, where the curve flattens out before continuing in the same direction:
 ![[inflection.png]]
 
 More complicated functions can have multiple **local** maxima and minima as well:
 ![[local_criticals.png]]
 We say a maximum is **local** if it's the peak of a curve, but there exists values of $x$ for which $f(x)$ is greater than at this point. Local minimums are the same but reversed.
+
+>Technically, when you find a point where $f'(x)=0$, you can only be sure that it is a **local** maximum or minimum. You have to find all of the points where $f'(x)=0$ to deduce which are local/total minimums or maximums.
 
 Although some functions have no critical points at all
 ![[no_criticals.png]]
@@ -58,9 +60,9 @@ f'(x) = \frac{dx}{dy}
 $$Similarly we can denote the second derivative of $f(x)$ like this$$
 f''(x)=\frac{d^2y}{dx^2}
 $$
-You can continue this notation to higher degrees so $$
+You can continue this notation to higher degrees. So $$
 \frac{d^ky}{dx^k}
-$$represents the $k$th derivative.
+$$represents the $k^{th}$ derivative.
 
 The second derivative represents **the rate at which the rate of change is changing**. 
 

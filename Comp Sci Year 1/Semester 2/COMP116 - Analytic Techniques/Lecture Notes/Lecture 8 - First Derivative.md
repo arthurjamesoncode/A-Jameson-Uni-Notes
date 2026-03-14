@@ -28,7 +28,7 @@ You can see a graphical representation of this below:
 ![[more_line_approximations.png]]
 >Note we haven't been given an $f(x)$ for this problem so you can ignore the $y$-axis of these graphs. This is just a visual aid.
 
-In each of these approximations, the **gradient** of the each line is an approximation of the **trajectory** of the arrow. If we kept adding lines to infinity (to create a perfect curve) and knew the gradient of each infinite line, we would know the exact trajectory of the arrow at each infinite point between $x=0$ and $x=400$.
+In each of these approximations, the **gradient** of each line is an approximation of the **trajectory** of the arrow. If we kept adding lines to infinity (to create a perfect curve) and knew the gradient of each infinite line, we would know the exact trajectory of the arrow at each infinite point between $x=0$ and $x=400$.
 
 When the arrow is horizontal it is at it's maximum point. This would be when there is a line with a gradient of 0.
 
@@ -45,7 +45,7 @@ So how can we get the gradient of the line which touches this point on the curve
 The way to do this is to calculate $$
 \frac{f(x+h)-f(x)}{x+h-x}=\frac{f(x+h)-f(x)}{h}
 $$for arbitrarily small values of $h$ which approach 0. The way we write "as $h$ gets arbitrarily small" is by writing:$$
-\frac{f(x+h)-f(x)}{h}
+\lim_{h\to0}\frac{f(x+h)-f(x)}{h}
 $$We can then use this gradient function to figure out at for which value of $x$ the gradient is 0.
 ## The First Derivative
 The function which gives us the gradient of the line tangent to a curve given by $f(x)$ is called the **first derivative** of $f(x)$, which is denoted by $f'(x)$.
@@ -97,43 +97,51 @@ $$
 ### The Sum Rule
 The sum rule states that if $f(x)$ is the sum of two functions then $f'(x)$ is the sum of their derivatives.
 
-So formally:$$
+So formally:
+$$
 f(x)=g(x)+h(x)\implies f'(x)=g'(x)+h'(x)
 $$
 ### The Product Rule
 The product rule is more complicated than the sum rule. It states that if $f(x)$ is the product of two functions then $f'(x)$ is the sum of each function multiplied by the derivative of the other function.
 
-So formally:$$
+So formally:
+$$
 f(x)=g(x)\cdot h(x) \implies f'(x) = g'(x)\cdot h(x) + g(x)\cdot h'(x)
 $$
 ### The Quotient Rule
-The quotient rule is slightly more complicated than the product rule. It states that if $f(x)$ is the result of dividing 1 function by another function then $f'(x)$ is the difference of the derivative of the numerator multiplied by the denominator and the derivative of the denominator multiplied by the numerator, all divided by the product of the denominator with itself.
+The quotient rule is slightly more complicated than the product rule. It states that if $f(x)$ is the result of dividing one function by another function then $f'(x)$ is the difference of the derivative of the numerator multiplied by the denominator and the derivative of the denominator multiplied by the numerator, all divided by the product of the denominator with itself.
 
-So formally:$$
+So formally:
+$$
 f(x)=\frac{g(x)}{h(x)} \implies 
 f'(x) = \frac{g'(x)\cdot h(x) - g(x)\cdot h'(x)}{h(x)\cdot h(x)}
 $$
 ### The Chain/Composition Rule
 The chain rule (or composition rule) states that if $f(x)$ is the composition of 2 functions that $f'(x)$ is the the derivative of the outer function composed with the inner function, multiplied by the derivative of the outer function.
 
-So formally:$$
+So formally:
+$$
 f(x)=g(h(x))\implies f'(x)=g'(h(x))\cdot h'(x)
 $$
 ### The Power Rule
 The power rule states that if $f(x)$ is of the form $x^t$ where $t\in\mathbb R$ then $f'(x)$ is the product of $t$ and $x^{t-1}$.
 
-So formally:$$
+So formally:
+$$
 f(x)=x^t\implies f'(x)=tx^{t-1}
 $$
 ### Logarithm Rule
 The logarithm rule states that if $f(x)$ is of the form $\log_n x$ then $f'(x)$ is the reciprocal of the product of $\ln(n)$ and $x$. 
 
-So formally:$$
+So formally:
+$$
 f(x)=\log_n (x) \implies f'(x) = \frac{1}{\ln(n) \cdot x}
 $$
 The above is the general form for differentiating $\log_n(x)$, however often you will see functions of the form $\log(x)$ with no base. In calculus, when working with logs, it is standard to assume that $\log(x)=\ln(x)$. 
 
->In case you don't know $\ln (x)$ is the same as $\log_e(x)$ where $e$ is Euler's number. You can read more about $e$ [here](https://en.wikipedia.org/wiki/E_(mathematical_constant). I recommend also reading up on [logarithms](https://en.wikipedia.org/wiki/Logarithm), in particular the lists of logarithmic identities.
+>In case you don't know, $\ln (x)$ is the same as $\log_e(x)$ where $e$ is Euler's number. You can read more about $e$ [here](https://en.wikipedia.org/wiki/E_(mathematical_constant). 
+>
+>I recommend also reading up on [logarithms](https://en.wikipedia.org/wiki/Logarithm), in particular the lists of logarithmic identities, the main ones (like $\log_n(ab)=\log_n(a)+\log_n(b)$) don't take very long to memorise and are pretty useful.
 
 You may see a version of the rule above stated as 
 $$
@@ -144,7 +152,7 @@ $$
 f(x)=\ln(x)\implies f'(x)=\frac1x
 $$
 
-I personally don't like overloading $\log(x)$ like this, as $\log(x)$ with no base can actually mean $log_{10}(x)$, $log_2(x)$ or $\ln(x)$ depending on context leaving room for confusion, but you do need to be aware of the way this is used.
+I personally don't like overloading $\log(x)$ like this, as $\log(x)$ with no base can actually mean $\log_{10}(x)$, $\log_2(x)$ or $\ln(x)$ depending on context which leaves room for confusion. You do need to be aware that this is the way it is used though.
 ### The Exponential Rule
 The exponential rule states that if $f(x)$ is of the form $n^x$ then $f'(x)$ is the product of $\ln(n)$ and $n^x$.
 
@@ -161,18 +169,21 @@ $$
 ### The Trigonometric Rules
 The trigonometric rules state that if $f(x)$ is of the form $\sin(x)$ then $f'(x)$ is $\cos(x)$. They also state that if $f(x)$ is $\cos(x)$ then $f'(x)$ is $-\sin (x)$.
 
-So formally:$$
+So formally:
+$$
 \begin{split}
 & f(x) = \sin(x)\implies f'(x)=\cos(x) \\
 & f(x) = \cos(x)\implies f'(x)=-\sin(x)
 \end{split}
 $$
+
 If you remember that $$
 \tan(x) = \frac{\sin(x)}{\cos(x)}
 $$You can use a combination of these rules and the quotient rule to find the derivative of $\tan (x)$.
 ## Examples of Finding Derivatives Using Standard Rules
 ### Example 1
-Consider the function given by $$
+Consider the function given by 
+$$
 f(x)=x^2+2x+5
 $$
 We know, because of the sum rule, that we can find $f'(x)$ by finding the derivative of each individual term and summing them.
@@ -181,12 +192,14 @@ So by the power and constant rules we know that $$
 f'(x)=2x + 2
 $$
 ### Example 2
-Consider the function given by $$
+Consider the function given by 
+$$
 f(x)=\tan(x)=\frac{\sin(x)}{\cos(x)}
 $$
 As stated above, we can use the trigonometric rules and the quotient rule in tandem to find this derivative.
 
-So we know that $$
+So we know that 
+$$
 \begin{split}
 f(x)
 & = \frac{(\cos(x)^2)+ (\sin(x))^2}{(\cos (x))^2} \\
@@ -194,12 +207,15 @@ f(x)
 \end{split}
 $$
 ### Example 3
-Consider the function given by$$
+Consider the function given by
+$$
 f(x)=(1+5x^2)^3
 $$
-If we define $$
+If we define 
+$$
 g(x)=x^3,\; h(x)=1+5x^2
-$$we can understand $f(x)$ as $$
+$$we can understand $f(x)$ as 
+$$
 f(x) = g(h(x))
 $$letting us use the chain rule (composition rule).
 
@@ -207,7 +223,8 @@ We know by the sum and product rules that
 $$
 g'(x)=3x^2,\;h'(x)=10x
 $$
-and so by the chain rule we know that $$
+and so by the chain rule we know that 
+$$
 \begin{split}
 f'(x)
 & = 3(1+5x^2)^2(10x) \\

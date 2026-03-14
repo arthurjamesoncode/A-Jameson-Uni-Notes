@@ -26,9 +26,9 @@ $$is not.
 ## Functions
 A function is a relationship between 2 sets $f: A\to B$, such that **each element** of $A$ maps to **exactly one** element of $B$.
 
-We can write a function $f: A\to B$ as $f(x)$ where $x\in A$ and $f(x)\in C$.
+We can write a function $f: A\to B$ as $f(x)$ where $x\in A$, $f(x)\in B$
 
-We call the set $A$ the domain of $f$ and we call set $B$ the codomain of $f$.
+We call the set $A$ the domain of $f$, we call set $B$ the codomain of $f$.
 
 There is also a subset of $B$, made up of all the possible outputs of $f(x)$ called the range, which is denoted by $f(A)$.
 
@@ -40,7 +40,7 @@ Lets look at some example formulas and see if they are functions or not:
 - $f:\mathbb R \to\mathbb R$ given by $f(x)=x$ is a function as every element of $\mathbb R$ maps to exactly 1 element of $\mathbb R$ using the formula.
 - $f:\mathbb R \to \mathbb R$ given by $f(x)=x^2$ is a function as every element of $\mathbb R$ maps to exactly 1 element of $\mathbb R$ using the formula. It is worth noting that in this case multiple different elements can map to the same output, and not all elements of $\mathbb R$ can be mapped to. This makes the function, **non-injective** and **non-surjective** but does not stop it from being a function.
 - $f:\mathbb R \to \mathbb Z$ given by $f(x)=x$ is not a function as some elements of $\mathbb R$ can not map to any elements of $\mathbb Z$ using this formula.
-- $f$ given by $f(x)=\frac 1x$ is not a function as $\frac 10$ is not defined. If we restrict this function by giving it the domain and co domain of $\mathbb R\setminus \{0\}\to\mathbb Z$. 
+- $f$ given by $f(x)=\frac 1x$ is not a function as $\frac 10$ is not defined. We can call it a function if we restrict it by giving it the domain and co domain of $\mathbb R\setminus \{0\}\to\mathbb R$. 
 ### Important Functions
 In this course we will consider a number of functions which have the domain $\mathbb R$, (called functions on $\mathbb R$).
 
@@ -91,13 +91,13 @@ $\exp x$ can produce any value in the range $(0,\infty)$, and can take any $x\in
 **Rational** functions, are defined as the division of 2 functions $$h(x)=\frac{f(x)}{g(x)}$$and are restricted by the values of $x$ when $g(x)=0$.
 
 So the domain of the rational function $h(x)$ is $$\mathbb R \setminus \{x, \text{ where } g(x) = 0\}$$and the range of $h(x)$ is $$\mathbb R \setminus\{asymptotes\}$$
-An asymptote is a line which the function approaches, but cannot reach. For example $\frac 1x$ has an asymptote at $x=0$ as we cannot divide by 0.
+An asymptote is a line which the function approaches, but cannot reach. For example $\frac 1x$ has a vertical asymptote at $x=0$ as we cannot divide by 0.
 
 **Radical** functions are any functions including a root and are a bit too varied to say the domain and codomain for all of them. So instead we'll focus on the functions described by 
 $$
 f(x) = \sqrt[^k]{x} = x^{\frac1k}
 $$
-where $k\in\mathbb Z$.
+where $k\in\mathbb Z,\; k > 1$.
 
 For odd $k$ these functions can produce results for all $f(x)\in \mathbb R$ and take all $x\in\mathbb R$, for even $k$ these functions can only produce results for all $f(x)\in[0,+\infty)$, and can only take $x\in[0,+\infty)$.
 ## Linear Functions in Calculus
