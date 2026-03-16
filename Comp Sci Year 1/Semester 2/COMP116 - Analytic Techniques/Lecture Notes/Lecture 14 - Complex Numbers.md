@@ -6,9 +6,13 @@ The claim was made that "All polynomials of degree $k$ have $k$ roots".
 This claim had a few problems. One was polynomials of the form $p(x)^n$. 
 
 We know that any polynomial $p(x)$ of degree $k$ with $k$ roots can be written as 
-$$p(x)=\prod_{i=1}^k(x-r_i)$$
+$$
+p(x)=\prod_{i=1}^k(x-r_i)
+$$
 where $r_i$ is the $i$th root of $p(x)$, raising $p(x)$ to the power of $n$ means that
-$$p(x)^n=\prod_{i=1}^k(x-r_i)^n$$
+$$
+p(x)^n=\prod_{i=1}^k(x-r_i)^n
+$$
 and therefore $p(x)^n$ does not have any more distinct roots than $p(x)$ despite having a degree of $nk$ instead of $k$.
 
 The way around this claim is **multiplicity**, which was discussed as a sidenote in [[Lecture 3 - Polynomials]] when talking about roots of polynomials. What multiplicity means is that if $r$ is a root of $p(x)$ then $r$ is also $n$ **coinciding roots** of $p(x)^n$.
@@ -53,7 +57,8 @@ x
 & = \frac{-4\pm2i}{2} \\
 & = -2\pm i
 \end{split}
-$$and so $x^2+4x+5$ has 2 roots $-2+i$ and $-2-i$. 
+$$
+and so $x^2+4x+5$ has 2 roots $-2+i$ and $-2-i$. 
 
 Both of these are still just 1 number which is the sum of a **real number** (2) and an imaginary number ($\pm i$). We call numbers of this form **complex numbers**.
 

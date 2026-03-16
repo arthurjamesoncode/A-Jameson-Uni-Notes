@@ -45,9 +45,9 @@ Irrational numbers are subset of $\mathbb{R}$ but don't fit into the subset chai
 @
 This diagram treats natural numbers as not including 0 and introduces a new concept "Whole Numbers" which is what we call natural numbers on this module. Whole numbers could also just mean integers, so what they mean exactly depends on context, and who is saying it.
 
-**UPDATED** - So now, we know that the definition of **whole numbers** does matter for tests but only if the question makes it clear that it uses the concept. This is, frankly, stupid and unnecessarily confusing and feels like Olga wants to use $\mathbb N=\{0,1,2,...\}$ but also wants to reuse material from the old lecturer who used $\mathbb N=\{1,2,...\}$ and $\mathbb W = \{0,1,2,...\}$.
+**UPDATED** - So now, we know that the definition of **whole numbers** does matter for tests but only if the question makes it clear that it uses the concept. This is, frankly, unnecessarily confusing and feels like Olga wants to use $\mathbb N=\{0,1,2,...\}$ but also wants to reuse material from the old lecturer who used $\mathbb N=\{1,2,...\}$ and $\mathbb W = \{0,1,2,...\}$.
 
-**UPDATED AGAIN** - She labelled natural numbers as the "Non-negative integer numbers" during the test, so I think we're good to assume that they do include 0, and she understood that she was being too confusing.
+**UPDATED AGAIN** - She labelled natural numbers as the "Non-negative integer numbers" during the test, so I think we're good to assume that they do include 0, and she understood that they way this was communicated was too confusing.
 ## Why Can't We Divide by 0?
 In our definition for **rational numbers** we specified that $q\neq 0$, why did we do this?
 

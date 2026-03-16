@@ -199,3 +199,5 @@ There are a few important properties of **cross products**:
 - It is **anti-commutative**, meaning that the order of operations does matter. $\vec u \times \vec v\neq\vec v \times \vec u$. In fact $\vec u \times \vec v = -\vec v \times \vec u$. This will be shown below.
 
 The proof for **cross product** being anti-commutative is very similar to the proof that **dot product** is commutative. For that reason I will not show the whole thing, as the only real thing of interest is that $$\sin (\alpha) = -\sin(2\pi - \alpha)$$I am sure you can piece together how $\vec u \times \vec v = -\vec v \times \vec u$ follows from this.
+
+>You do not need to be able to compute the cross product of two 3D vectors for this module. You simply should be aware of it's properties and why we use it.
