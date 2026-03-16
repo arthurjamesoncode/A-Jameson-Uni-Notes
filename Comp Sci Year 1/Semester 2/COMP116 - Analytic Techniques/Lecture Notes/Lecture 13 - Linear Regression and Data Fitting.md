@@ -22,7 +22,7 @@ Now consider the image below, which is the same graph but with the line $y=2x+1$
 
 Observe that this line hits all of these points from our data perfectly! This means that the line $y=2x+1$ is a **perfect fit** for our data. What this means is that the function $f(x)=2x+1$ is a much more clear and concise way for us to represent our data. We can even use this function to predict what we might observe for values of $X$ not in our data.
 
-In reality lines being perfect fits for data is very unlikely, but many lines can get either very close or close enough that they can be a useful approximating. **Linear regression**, which we will cover today, is the process of finding the best fitting line given a set of data points.
+In reality lines being perfect fits for data is very unlikely, but many lines can get either very close or close enough that they can be a useful approximatiom. **Linear regression**, which we will cover today, is the process of finding the best fitting line given a set of data points.
 
 For some data, attempting to fit it to a linear function is misguided, and some method other than **linear regression** is required to find a well fitting function.
 
@@ -185,7 +185,7 @@ R^2
 $$
 You can see graphical representations of $SS_{res}$ and $SS_{tot}$ below
 ![[r-squared_graph.png]]
-### Bigger is not Always Better (as I keep telling my girlfriend)
+### Bigger is not Always Better
 A better $R^2$ score does not mean a better set of predictions. $R^2$ always increases or stays the same as more variables are added, this is called [kitchen sink regression](https://en.wikipedia.org/wiki/Kitchen_sink_regression) which you don't need to know but can read about.
 
 But even within two dimensions sometimes $R^2$ can mislead us.

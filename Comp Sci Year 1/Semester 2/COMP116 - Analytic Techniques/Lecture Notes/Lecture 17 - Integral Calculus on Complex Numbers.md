@@ -181,14 +181,168 @@ This could represent any number of things, for example:
 
 Being able to accurately estimate quantities like this is often crucial when it comes to determining how an algorithm behaves **on average**.
 ### Generating Functions
-To estimate these values we can use a **generating function**.
+To estimate these values accurately we can use a **generating function**.
 
 Take the function $G$ given by
 $$
 G(z)=\sum^{\infty}_{n=0}a_nz^n
 $$
-This is a generating function, which uses the given sequence to create some value.
+This is a generating function, which generates a **polynomial** which has coefficients of $z^n$ that match the given sequence. 
+
+Importantly $z^n$ is not a value, but instead a placeholder which represents the **object of size $n$** with which we are concerned. The coefficient $a_n$ represents the number of objects of size $n$ which exist.
+
+Another way to understand this, is that $G(z)$ represents the **sum** of all of the given objects of all possible sizes.
 
 While this might not immediately seem useful, we can (depending on the objects in the sequence) manipulate the sum to find a simpler **closed form**.
 
-Consider the sequence given by "The number of binary trees with $n$ leaves". We can define a function 
+Consider the sequence given by "The number of binary trees with $n$ leaves". We can define a **recursive** function which gives us the number of binary trees with $n$ leaves.
+
+First, lets quickly define what a binary tree is, and what a leaf is. A **binary tree** is a tree in which each node can only have up to two children. These children represent a **left subtree** and a **right subtree**. A **leaf** is any node with a tree that has **no children**.
+
+We will also add 1 more restriction on top of this. We are counting the number of **full binary trees**, also called **proper binary trees**. In a full binary tree each node always has **exactly** zero or two children. This is an important distinction to make as otherwise there are an infinite amount of binary trees with only a single leaf.
+
+Note that, when we say a tree is **unique** we are only considering the structure of the tree for this, not the data it holds.
+
+So now we have a recursive definition for our **full binary tree**, it either
+- Is a single node with no children (base case)
+- Is a root node with a left and a right subtree (recursive rule)
+
+First we need the base case, a tree with a single root node and no children. There is only one of these and it has 1 leaf and so $t_1=1$.
+
+Now lets consider $t_2$, this is the number of of binary trees with only 2 leaves. We know that there is only 1 of these as well, a single node with 2 children.
+
+Lets consider $t_3$, we have:
+- A root node with two children where the left child also has 2 children
+- A root node with two children where the right child also has 2 children
+
+And finally if we consider $t_4$ we have:
+- A root node with two children, where both children have 2 children
+- A root node with two children, where the left child has two children, and the left child's left child has two children
+- A root node with two children, where the left child has two children, and the left child's right child has two children
+- A root node with two children, where the right child has two children, and the right child's left child has two children
+- A root node with two children, where the right child has two children, and the right child's right child has two children
+
+We can see that keeping track like this can get unruly very quickly, which is why we want to find some kind of generalised function.
+
+If $w(t)$ is the function for the number of leaves of a tree then
+$$
+w(t) = w(t_l) + w(t_r)
+$$
+where $t_l$ represents the left subtree and $t_r$ represents the right subtree.
+
+Understanding it like this, we can find the number of trees with $n$ leaves as the number of **choices of unique subtrees** we can combine. 
+
+If you recall the [[Lecture 28 - Combinatorics#The Product Rule|product rule]] from combinatorics, we know that if $t_k$ and $t_{n-k}$ represent the number of unique subtrees with $k$ and $n-k$ leaves respectively, then just by joining these subtrees we can create $t_k \cdot t_{n-k}$ unique subtrees.
+
+This is true for all values of $1 \leq k < n$. This lets us use the [[Lecture 28 - Combinatorics#Sum Rule|sum rule]] from combinatorics to find $t_n$ like so
+$$
+t_n = \sum_{k=1}^{n-1}t_k\cdot t_{n-k}
+$$
+
+Now that we have a way to get $t_n$ we can create a **generating function** like so
+$$
+B(z)=\sum_{n=0}^{\infty}t_nz^n
+$$
+where $t_n$ is the number of full binary trees with $n$ leaves. Remember that $z^n$ isn't an actual value, but is a placeholder to represent the idea of a tree of size $n$.
+
+If we understand $B(z)$ as the **sum** of all **full binary trees**, we can break this down into our base case and our recursive rule. We know that there is a **single** binary tree with only 1 leaf, which in $B(z)$ is represented by $x$. 
+
+We also know that there are **infinite** binary trees which are the **combination** of two binary trees. We can represent all of these as $B(z)\cdot B(z)=B(z)^2$.
+
+This means we can re-write our generating function **in terms of these recursive rules** to get
+$$
+B(z) = z + B(z)^2
+$$
+Now that we have this **recursive definition** of our generating function we can rearrange it to get
+$$
+B(z)^2-B(z)+z = 0
+$$
+And we can now use the **quadratic formula** to find a solution for this in terms of $z$
+$$
+\begin{split}
+B(z) 
+& = \frac{-(-1)\pm\sqrt{(-1)^2-4(1)(z)}}{2(1)} \\
+& = \frac{1\pm\sqrt{1-4z}}{2} \\
+\end{split}
+$$
+There is still one question about this solution, **which sign do we choose**?
+
+When we have a generating function of the form 
+$$
+G(x) = a_0x^0+a_1x^1+a_2x^2+\cdots
+$$
+notice that if we set $x=0$, all that remains is the coefficient of the $x^0$ term, or the number of objects of size 0.
+
+We know that no binary trees exist which have no leaves, and we laid out possible trees for up to $t_4$. This means that 
+$$
+B(z) = 0z^0 + 1z^1 + 1z^2 + 2z^3 + 5z^4 + \cdots
+$$
+
+This means that $B(0)$ **must be** 0.
+
+So if we look back at our solution
+$$
+\begin{split}
+B(0) 
+& = \frac{1 + \sqrt{1-4(0)}}{2} \\
+& = \frac22 \\
+& = 1 \\
+\\
+B(0)
+& = \frac{1 - \sqrt{1-4(0)}}{2} \\
+& = \frac02 \\
+& = 0
+\end{split}
+$$
+
+We can see that the **plus** sign leads to an invalid answer meaning that
+$$
+B(z) = \frac{1 - \sqrt{1-4z}}{2}
+$$
+
+Since this is a finite expression, and $B(z)$ is an infinite function we call this the **closed form** of $B(z)$. It is common to denote infinite functions with a capital letter and closed forms with a lower case letter.
+
+So
+$$
+\begin{split}
+B(z) & = \sum^{\infty}_{n=0}t_nz^n \\
+\\
+b(z) & = \frac{1 - \sqrt{1-4z}}{2}
+\end{split}
+$$
+### Finding the Coefficients/The Generalised Cauchy Integral Formula
+Now we have a **finite expression** $b(z)$ (closed form) for the **infinite function $B(z)$** defined in terms of $z$. So how does this help us when it comes to calculating the number of binary trees with $n$ leaves.
+
+To do this we need to find the coefficient of $z^n$ in $B(z)$. 
+
+We saw above how when we choose $z=0$ then $B(z)$ becomes the number of objects of size 0. 
+Since $B(z)$ is a polynomial, we can generalise this to 
+$$
+\frac{d^nB}{dz^n}(0) = n!\cdot a_n 
+$$
+
+This means that to find the coefficient of $z^n$ in $B(z)$ we can differentiate $B(z)$ $n$ times, pass in $z=0$ and then divide by $n!$.
+
+The problem with this is that differentiating $n$ times is not always trivial, especially in the case of **complex functions**.
+
+The way we get around this is to use the [Generalized Cauchy Integral Theorem](https://dspace.mit.edu/bitstream/handle/1721.1/49419/18-112Fall-2006/NR/rdonlyres/Mathematics/18-112Fall-2006/5F5BE6FC-6F17-4BE5-9C8E-C9325ACCAD58/0/lecture13.pdf) to calculate the $n^{th}$ derivative of a function.
+
+Let $G(z)$ be a generating function with a closed form of $g(z)$. We denote the $n^{th}$ derivative of $g(z)$ by $g^{(n)}(z)$.
+
+Now if we choose a closed contour $C$ then
+$$
+g^{(n)}(z) = \frac{n!}{2\pi i}\oint_C\frac{g(\beta)d\beta}{(\beta-z)^{(n+1)}}
+$$
+
+Since we are looking for a value of $a_0$, we can substitute in $z=0$ and see our formula for $a_n$.
+$$
+a_n = \frac{n!}{2\pi i}\oint_C\frac{g(\beta)d\beta}{\beta^{(n+1)}}
+$$
+And so we can finally find use this to estimate the **binary trees with $n$ leaves**, or other objects of size $n$.
+### Summary
+Both **generating functions** and **Cauchy's Integral Formula** would require a whole modules worth of teaching to cover in detail, and as such we have only touched the surface of them.
+
+This whole section is not something you will be tested on during this module. Instead, it is simply to give you an idea of why these ideas which we are being taught are actually useful.
+
+
+

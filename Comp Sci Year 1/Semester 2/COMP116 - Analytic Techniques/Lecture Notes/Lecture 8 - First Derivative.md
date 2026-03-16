@@ -197,11 +197,16 @@ $$
 f(x)=\tan(x)=\frac{\sin(x)}{\cos(x)}
 $$
 As stated above, we can use the trigonometric rules and the quotient rule in tandem to find this derivative.
+$$
+f(x)=\frac{g(x)}{h(x)}
+$$
+Where $g(x)=\sin (x)$, $h(x)=\cos (x)$ and therefore $g'(x)=\cos(x)$, $h'(x)=-\sin (x)$.
 
 So we know that 
 $$
 \begin{split}
-f(x)
+f'(x)
+& = \frac{(\cos(x)\cdot \cos(x))-(-\sin(x)\cdot \sin(x))}{\cos(x)\cdot\cos(x)} \\
 & = \frac{(\cos(x)^2)+ (\sin(x))^2}{(\cos (x))^2} \\
 & = \frac{1}{(\cos(x))^2}
 \end{split}

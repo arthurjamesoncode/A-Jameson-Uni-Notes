@@ -7,7 +7,7 @@ You can see that this function, instead of being represented as a (curved) line,
 
 Just like with **single-variable** functions $f(x)$, some choice of input will maximise the value of our **multivariable** function. The only difference is that now, we must consider two variables.
 
-When we had just 1 variable, the idea of **critical points** were supported by consider the gradients of lines tangent to the curve at a given point. This analogy does not work now that we have more than 1 variable. We now must consider the **direction** that our function changes in.
+When we had just 1 variable, the idea of **critical points** were supported by consider the gradients of lines tangent to the curve at a given point. This analogy does not work now that we have more than 1 variable. We now must consider which **direction** in the $xy$ plane our function changes in.
 
 So how do we find **critical points** for **multivariable** functions? 
 
@@ -19,7 +19,9 @@ So for a function $f(x, y)$ the $x$ partial derivative is given by $$
 f'_x(x,y)=\frac{\partial f}{\partial x}=\lim_{h\to0}\frac{f(x+h, y) - f(x, y)}{h}
 $$but we can just use our standard rules for computing derivatives.
 
-Essentially, we ignore how the change in the other variables affects the change in our function and only focus on how one specific variable affects the change. The choice of variable is denoted by the subscript (in this case $x$) in the $f'_x(x,y)$.
+Essentially, we ignore how the change in the other variables affects the change in our function and only focus on how one specific variable affects the change. 
+
+The choice of variable is denoted by the subscript (in this case $x$) in the $f'_x(x,y)$. 
 
 For example consider the function $$
 z=f(x, y) = -(3x^2+2y^2+xy)
@@ -42,7 +44,7 @@ f'_y(x,y)
 & = -(4y + x)
 \end{split}
 $$
->Note that I use $f'_x(x,y)$ to represent the partial derivative of $f(x)$ with respect to $x$, but there is another common notation that is used being $\frac{\partial f}{\partial x}$. 
+>Note that I use $f'_x(x,y)$ to represent the partial derivative of $f(x)$ with respect to $x$, but there is another common notation that is used, being $\frac{\partial f}{\partial x}$.
 >
 >The $\partial$ symbol is similar to $d$ but specifically represents that a derivative is a **partial** derivative and not a **whole** derivative.
 
@@ -78,7 +80,7 @@ y & = -6(0) \\
 y & = 0
 \end{split}
 $$
-And so the we know there is a critical point for this function when $x=0$ and $y=0$.
+And so we know there is a critical point for this function when $x=0$ and $y=0$.
 ## The Gradient (Nabla)
 The gradient function for a multivariable function is a vector that packages the partial derivatives together. We call this function the "nabla" and denote it by $\nabla f$.
 
@@ -115,15 +117,11 @@ There is some new notation here so:
 
 [Clairaut's Theorem](https://en.wikipedia.org/wiki/Symmetry_of_second_derivatives) states that as long as a function and it's derivatives are "well behaved", that the order of differentiation does not matter. Practically, for this module, this means that you can treat $f_{xy}$ and $f_{yx}$ as virtually identical.
 
-An easy way to remember the layout is:
-- The left column corresponds to $\nabla f'_x(x,y)$
-- The right column corresponds to $\nabla f'_y(x,y)$
-
-When a function has 2 variables the **Hessian** is given by a $2\times 2$ matrix. Similarly if we have $n$ variables then the **Hessian** is given by $n\times n$ variables.
+When a function has 2 variables the **Hessian** is given by a $2\times 2$ matrix. Similarly if we have $n$ variables then the **Hessian** is given by an $n\times n$ matrix.
 
 When we were working with **univariate** functions, we looked at whether the value of $f''(x)$ was negative, positive or zero.
 
-Now that we are working with **multivariate** functions, we instead use the **determinate** of $\mathbf{H}$ for our comparison.
+Now that we are working with **multivariate** functions, we instead use the **determinant** of $\mathbf{H}$ for our comparison.
 
 The **determinant** of a matrix is a single scalar value that can be computed by the matrix. The exact properties of and reason for the determinant of a matrix are not needed for the time being, but you will need to know how to compute it given a $2\times 2$ matrix for the calculus problems in this module.
 

@@ -38,7 +38,7 @@ So far we've looked at a number of different types of critical points, and we've
 We often want to determine:
 - How many critical points a function has;
 - Where these critical points are;
-- Are these points **maxima** or **minima**,.
+- Are these points **maxima** or **minima**.
 
 So how do we do this for a given function $f(x)$
 
@@ -49,7 +49,7 @@ The number of solutions also tells us the number of critical points. If no solut
 
 So how do we go about determining whether these are **minimum, maximum, or inflection** points?
 
-We'll to do that we need to determine the **second derivative**.
+Well to do that we need to determine the **second derivative**.
 ### Second Derivative
 The second derivative of a function $f(x)$ is the derivative of $f'(x)$ denoted by $f''(x)$.
 
