@@ -294,7 +294,7 @@ When we have a generating function of the form
 $$
 G(x) = a_0x^0+a_1x^1+a_2x^2+\cdots
 $$
-notice that if we set $x=0$, all that remains is the coefficient of the $x^0$ term, or the number of objects of size 0.
+notice that if we set $x=0$, all that remains is the coefficient of the $x^0$ term (since $0^0=1$), which is the number of objects of size 0.
 
 We know that no binary trees exist which have no leaves, and we laid out possible trees for up to $t_4$. This means that 
 $$
