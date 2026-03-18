@@ -1,4 +1,4 @@
-Quaternions are an extension of the idea of the **complex plane** to a 3D space. Considering how complex numbers themselves are an extension of the **real numbers** (a 1D space) and are made of $1+1=2$ disparate parts, it makes sense that for quaternions we use $3+1=4$ disparate parts.
+Quaternions are an extension of the idea of the **complex plane** to a 3D space. Considering how complex numbers themselves are an extension of the **real numbers** (a 1D space) and are made of $1+1=2$ disparate parts, it makes sense that for quaternions (and extension of 3D space) we use $3+1=4$ disparate parts.
 
 Since quaternions are pretty much just a representation of a 4D space, visualising what they actually are is very difficult (or more accurately impossible). In the lecture we were shown [this video](https://www.3blue1brown.com/?v=quaternions) by 3Blue1Brown which explains what they are and helps us understand them in terms of a projection of this 4D space onto 3D space. I recommend watching the full video.
 
@@ -6,7 +6,7 @@ Since quaternions are pretty much just a representation of a 4D space, visualisi
 >
 >At minimum, she concretely said that we won't be tested on **quaternion multiplication** since the convenient form of it requires the cross product of two 3D vectors, which we have not been shown how to compute. 
 >
->She didn't say as much for the other operations on quaternions, but they are all relatively simple extensions of what we have done so far. In fact, there is a question about **unit-quaternions** in the mock test, but this is just a Euclidean norm question pretty much.
+>She didn't say as much for the other operations on quaternions, but they are all relatively simple extensions of what we have done so far. In fact, there is a question about **unit-quaternions** in the mock test, but this is just a Euclidean norm question.
 >
 >I would recommend familiarising yourself with the basic operations and Hamilton rules, but not worrying too much about whether you fully understand this for the test.
 ## Quaternion Structure & Convention
@@ -52,7 +52,7 @@ q = [w, \underline{v}]
 $$
 where $\underline v$ is a the vector $\langle x,y,z \rangle\in\mathbb R^3$.
 
-Before we say the notation $\vec v$ to indicate that $v$ is a vector. We can still use this notation, but are using the notation $\underline v$ to help draw a distinction between other vectors and quaternions.
+Before we used the notation $\vec v$ to indicate that $v$ is a vector. We can still use this notation, but are using the notation $\underline v$ to help draw a distinction between other vectors and quaternions.
 
 The notation $\mathbb H$ is in honour of [William Hamilton](https://en.wikipedia.org/wiki/William_Rowan_Hamilton) who is credited with founding Quaternion Algebra. He is also the namesake of the Hamilton rules.
 ## Quaternion Operations
@@ -148,7 +148,7 @@ $$
 ## Applications in 3D graphics
 We have seen, earlier in this module, the ways in which we can use matrix vector products for transformations.
 
-This works fairly well in 2 dimensions but in 3 dimensions rotational effects become very awkward and computationally costly if we still use matrix vector products directly.
+This works fairly well in 2 dimensions but in 3 dimensions rotational effects become very awkward and costly if we still use matrix vector products directly.
 
 One of the reasons for this is **Gimbal Lock** (pictured below). This is a phenomenon where some directions of movement are lost when the axes of two "gimbals" become parallel.
 ![[Gimbal_Lock_Plane.gif]]
@@ -165,7 +165,7 @@ We can choose a quaternion
 $$
 q_{\theta}=\Bigl[\cos(\frac\theta2), \sin(\frac\theta2)\underline v\Bigr]
 $$
-choosing $\underline v$ such that it has the same direction as our **axis of rotation** and makes $q$ **unit-quaternion**.
+choosing $\underline v$ such that it has the same direction as our **axis of rotation** and makes $q_{\theta}$ a **unit-quaternion**.
 
 We can then represent the computation "Rotate $\underline w=\langle x,y,z \rangle$ by $\theta$ about $\underline v$" as
 $$

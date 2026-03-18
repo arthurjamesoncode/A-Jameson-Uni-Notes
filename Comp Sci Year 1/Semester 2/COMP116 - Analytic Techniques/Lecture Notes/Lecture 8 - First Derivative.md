@@ -117,7 +117,7 @@ f(x)=\frac{g(x)}{h(x)} \implies
 f'(x) = \frac{g'(x)\cdot h(x) - g(x)\cdot h'(x)}{h(x)\cdot h(x)}
 $$
 ### The Chain/Composition Rule
-The chain rule (or composition rule) states that if $f(x)$ is the composition of 2 functions that $f'(x)$ is the the derivative of the outer function composed with the inner function, multiplied by the derivative of the outer function.
+The chain rule (or composition rule) states that if $f(x)$ is the composition of 2 functions that $f'(x)$ is the the derivative of the outer function composed with the inner function, multiplied by the derivative of the inner function.
 
 So formally:
 $$

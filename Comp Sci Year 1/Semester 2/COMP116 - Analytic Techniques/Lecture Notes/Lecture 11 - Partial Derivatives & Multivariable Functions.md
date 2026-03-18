@@ -136,12 +136,20 @@ D= ad - bc
 $$
 In the case of the **Hessian** since each component is a function $f(x,y)$, the determinant is also a function, $D(x,y)$. This function, will return a single, scalar value and this value is what we use to determine the type of the critical points of $f(x,y)$, along with the value of $f_{xx}$.
 
+You can also compute the value of the determinant at a particular point $(x, y)$ by substituting into each of the four functions and using the results to calculate the determinant.
+
+So you might also see
+$$
+D = f_{xx}(x,y) \cdot f_{yy}(x,y) - f_{xy}(x, y)^2
+$$
+
+
 So we can determine the type of critical point like so:
 - $D(x,y) < 0$ means that the point is a **saddle point** (explained below);
 - $D(x, y) > 0$ and $f_{xx}(x,y) > 0$ means that the point is a (local) **minimum**;
 - $D(x, y) > 0$ and $f_{xx}(x,y) < 0$ means that the point is a (local) **maximum** 
 - $D(x, y) > 0$ and $f_{xx}(x,y) = 0$ is **not possible**. 
-- $D(x, y) = 0$ is **inconclusive**, and we will need to computer higher order derivatives. You can understand this with the same intuition expressed in [[Lecture 9 - Critical Points & Second Derivative#Determining Critical Points|last lecture]].
+- $D(x, y) = 0$ is **inconclusive**, and we will need to compute higher order derivatives. You can understand this with the same intuition expressed in [[Lecture 9 - Critical Points & Second Derivative#Determining Critical Points|last lecture]].
 
 In 3D space:
 - A **saddle point** means that the surface curves upwards in one direction and downward in another. It is named this because it looks similar to a saddle.

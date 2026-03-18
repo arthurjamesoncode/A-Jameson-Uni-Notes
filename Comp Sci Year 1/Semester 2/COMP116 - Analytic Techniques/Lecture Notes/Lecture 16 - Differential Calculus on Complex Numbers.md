@@ -79,7 +79,7 @@ We can also see what this means geometrically.
 
 Consider a function $f$ (which maps a vector to another vector), a vector $X$, and a complex number $z$.
 
-If the result of multiplying $X$ by $z$ and then applying $f$ is the same as the result of applying $f$ to $z$ and then multiplying by $X$ then $f$ satisfies the Cauchy-Riemann conditions. Essentially it must be the case that $df(zX)=zdf(X)$ for $f$ to satisfy the Cauchy-Riemann conditions.
+If the result of multiplying $X$ by $z$ and then applying $f$ is the same as the result of applying $f$ to $z$ and then multiplying by $X$ then $f$ satisfies the Cauchy-Riemann conditions. Essentially, it must be the case that $df(zX)=zdf(X)$ for $f$ to satisfy the Cauchy-Riemann conditions.
 
 You can see this pictured below
 ![[Cauchy-Riemann.svg.png]]
@@ -143,11 +143,11 @@ f'(z) = 2z = 2a + 2ib
 $$
 which is the same as
 $$
-f'(z) = \frac{\partial u}{\partial a} + i\frac{\partial v}{\partial b}
+f'(z) = \frac{\partial u}{\partial a} + i\frac{\partial v}{\partial a}
 $$
 which again is the same as
 $$
-f'(z) = \frac{\partial v}{\partial a} + i\cdot (-\frac{\partial u}{\partial b})
+f'(z) = \frac{\partial v}{\partial b} + i\cdot (-\frac{\partial u}{\partial b})
 $$
 ### Example 2
 Consider the function $f:\mathbb C \to\mathbb C$ given by $f(z)=\bar z$. How could we differentiate this function? Well first we need to check if this satisfies the Cauchy-Riemann conditions. If it doesn't we **can't** differentiate it at all.

@@ -210,7 +210,7 @@ R^2_A & \approx 0.86 \\
 R^2_B & \approx 0.923
 \end{split}
 $$
-So going just off of $R^2$ scores alone, it seems that $B$ is a better set of predictions, which we can see to not be the case.
+So going just off of $R^2$ scores alone, it seems that $B$ is a better set of predictions, which we can see to not be the case. The outliers are punished too harshly.
 ## Limits and Opportunities of LSR
 Least-Squares Regression (LSR) does have some limitations:
 - **Extreme values** - Since we square error, a single extreme value can skew the line away from the majority of the data

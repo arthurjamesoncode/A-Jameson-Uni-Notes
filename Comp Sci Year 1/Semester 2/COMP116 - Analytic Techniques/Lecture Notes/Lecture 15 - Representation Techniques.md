@@ -171,9 +171,9 @@ The principle value is denoted by $\text{Arg}\;z$ and must be in the range $[0,2
 
 >Computers (and sometimes humans) often find it easier to use the range $(-\pi,\pi]$ but both are perfectly valid.
 
-We can calculate $\text{Arg}(a+ib)$ by using a special function $atan2(b, a)$. This function is essentially $\arctan(\frac ba)$, except that it gives back a value in the range $(-\pi, \pi]$ ($\arctan$ only gives values in the range $(-\frac\pi2, \frac\pi2)$) and takes into account the quadrant of the grid the point $(a, b)$ lies in.
+We can calculate $\text{Arg}(a+ib)$ by using a special function $atan2(b, a)$. This function is essentially $\arctan(\frac ba)$, except that it gives back a value in the range $(-\pi, \pi]$ ($\arctan$ only gives values in the range $(-\frac\pi2, \frac\pi2)$) by taking into account the quadrant of the grid the point $(a, b)$ lies in.
 
-So $atan2(1, 1) = \frac\pi4$, and $atan2(1, -1)=\frac{3\pi}4$ while $\arctan(\frac{1}{-1})=-\frac\pi4$.
+So $atan2(1, 1) = \frac\pi4$ and $\arctan(\frac11)=\frac\pi4$ but $atan2(1, -1)=\frac{3\pi}4$ while $\arctan(\frac{1}{-1})=-\frac\pi4$. Be aware that the order of the arguments of $atan2$ are reversed compared to how they usually appear as a point.
 ## Trigonometric Form and The Euler Form
 For $z=a+ib$ with $|z|=r$ and $\arg z=\theta$, the **Euler form** of $z$ is 
 $$z=r\cdot e^{i\theta}$$
@@ -244,7 +244,7 @@ z_1\cdot z_2=r_1r_2e^{i(\theta_1+\theta_2)}
 $$
 This also works in the trigonometric form, since Euler's form is just a simplification of that
 $$
-z_1+z_2=r_1r_2(\cos(\theta_1 + \theta_2)+i\sin(\theta_1 + \theta_2))
+z_1\cdot z_2=r_1r_2(\cos(\theta_1 + \theta_2)+i\sin(\theta_1 + \theta_2))
 $$
 
 Consider now the number $z^n$ where $z\in\mathbb C$, what does this look like for various $z$? 
@@ -272,7 +272,7 @@ Consider $e^{\frac\pi2\theta}$, which is just $i$. Lets table out the first 5 va
 | 4   | 1     |
 And view the graph below 
 ![[i_to_n.png]]
-We can see that this graph and tables shows $i^n$ is cyclic, and functions as a repeated rotation of $\frac\pi2$.
+We can see from this graph and the table that $i^n$ is cyclic, and functions as a repeated rotation of $\frac\pi2$.
 
 Now consider $e^{ik}$. What will we see if we look at this graph?
 ![[e_to_ik.png]]
@@ -364,11 +364,13 @@ We can see from this that $\forall m\in\mathbb N$,
 $$
 \frac{\theta+2m\pi}{k}=\frac{\theta+2(k+m)\pi}{k}-2\pi
 $$
-which shows us that the angle for $m=n$ is exactly $2\pi$ less than the angle for as $m=n+k$. 
+which shows us that the angle for $m=n$ is exactly $2\pi$ less than the angle for $m=n+k$. 
 
-Since $e^{i\theta}=e^{i(\theta+2\pi)}$ is shows that only the values from $m=0$ to $m=k-1$ offer unique roots.
+Since $e^{i\theta}=e^{i(\theta+2\pi)}$, this shows that only the values from $m=0$ to $m=k-1$ offer unique roots.
 
 And so we have proved that there are exactly $k$ unique **principle** values for the $k^{th}$ root of a complex number.
+
+Note that **principle** in the above statement means the principle value for each root (i.e. the value for the root with an argument in the range $[0,2\pi)$. The principle root of a number also means the first root obtained by travelling counter clockwise from the real axis. You can also understand this as the root with the smallest **non-zero** argument.
 ### Primitive Roots of Unity
 Lets consider the $k^{th}$ roots of $u=1=e^{0i}$.
 
@@ -380,6 +382,8 @@ $$
 These roots represent the solutions to $x^k-1=0$, and are called the **primitive roots of unity**.
 
 Geometrically, these roots represent $m$ points on the unit circle with even angles (each gap is $\frac{2\pi}k$) between them. 
+
+We call the 1st primitive root of unity $e^{i\frac{2\pi}k}$ the principle $k^{th}$ root of unity.
 
 Primitive roots of unity underpin the [Fourier Transform](https://en.wikipedia.org/wiki/Fourier_transform) which is widely used in signal processing and other electronics applications.
 

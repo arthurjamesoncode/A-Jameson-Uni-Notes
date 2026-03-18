@@ -1,7 +1,9 @@
 # UOL Computer Science Notes
 This repo is a place for me to store my notes for my studies at the University of Liverpool. I have made this into a public repo in order to make sharing my notes with other students as easy as possible.
 ## Usage
-Feel free to browse this GitHub page as you would a wiki, but you might come across parts that aren't formatted correctly. I recommend you clone the repo to your local machine. You can also set GitHub up so it notifies you of any new commits by using the "Watch" feature.
+Feel free to browse this GitHub page as you would a wiki, but you might come across parts that aren't formatted correctly. I recommend you clone the repo to your local machine, and you can find instructions on how to do that [here](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository). You do need to have git installed, which you can do [here](https://git-scm.com/install/).
+
+You can also set GitHub up so it notifies you of any new commits by using the "Watch" feature.
 
 I make these notes with Obsidian, and I recommend browsing them using Obsidian. This is just to guarantee that they are formatted the same way I see them, though I am sure other similar markdown note taking apps will also work. You can download Obsidian [here](https://obsidian.md/).
 

@@ -24,7 +24,7 @@ Instead, we must **move from $p$ to $q$ in the complex plane**. So what does thi
 ### Contour Integrals & Parameterising the Curve
 If we have two points, $p$ and $q$, in the complex plane, we can plot these points and draw any number of infinite curves connecting the two. Choosing a specific curve is the same as describing the way we move from $p$ to $q$.
 
-Choosing a specific path $\gamma$, allows us to compute the **contour integral of $f(z)$ along path $\gamma$** is given by
+Choosing a specific path $\gamma$, allows us to compute the **contour integral of $f(z)$ along path $\gamma$**. Which is denoted by
 $$
 \int_{\gamma}f(z)dz
 $$
@@ -39,7 +39,7 @@ We can then split $\phi$ into both its real and imaginary parts
 $$
 x(t) = Re(\phi(t)),\; y(t)=Im(\phi(t))
 $$
-giving use $\phi$ in terms of two $\mathbb R\to\mathbb R$ functions
+giving us $\phi$ in terms of two $\mathbb R\to\mathbb R$ functions
 $$
 \phi(t)=x(t)+i\cdot y(t)
 $$
@@ -47,9 +47,34 @@ for any $t$ such that $Re(p)\leq t \leq Re(q)$.
 
 Now we have an expression for our curve from $p$ to $q$ in terms of a single **real parameter**. Fittingly this process is called **parameterising the curve**.
 
->The function we choose for $\phi$ is now incredibly important to the process of finding an complex integral. How exactly to choose a good $\phi$ is difficult and you will not be asked to choose a good $\phi$ at any point in this module.
+For example, imagine we were using the points $p=2+4i$ and $q=6+12i$, we could choose a function $\phi(t)=t+2it$. If we substitute in $Re(p)$ and $Re(q)$ we can see that we get back $p$ and $q$ respectively
+$$
+\begin{split}
+\phi(2) 
+& = 2 + 2i(2) \\
+& = 2 + 4i \\
+\\
+\phi(6) 
+& = 6 + 2i(6) \\
+& = 6+ 12i
+\end{split}
+$$
+Since, $\phi(Re(p))=p$ and $\phi(Re(q))=q$ we can say that $\phi$ parameterises the line between $p$ and $q$.
+
+The function we choose for $\phi$ is now incredibly important to the process of finding an complex integral. Choosing a good $\phi$ can sometimes be difficult, but you will not be asked to choose a good $\phi$ at any point in this module.
+
+In general though, you can usually use a straight line for distinct points, which means your $\phi$ will look like
+$$
+\phi(t) = t + i \cdot (mt + c)
+$$
+and if you want to use a closed curve you can use a circle, which means your $\phi$ will look something like
+$$
+\phi(t)=re^{it}
+$$
+
+>You will only be tested on how to calculate integrals given $f(z),\;p,q\in\mathbb C$, and a specific $\phi(t)$ which **parameterises** the curve. You may also be tested on whether a certain parameterisation is valid or not.
 >
->You will only be tested on how to calculate integrals given $f(z),\;p,q\in\mathbb C$, and a specific **parameterisation**. Meaning you need to understand parameterisation, and learn the formula below.
+>This means you need to understand parameterisation, and learn the formula below, but don't actually need any more information (at least to pass this module).
 
 It can be shown that, when a function $\phi:\mathbb R\to\mathbb C$ parameterises the curve $\gamma$ which joins $p$ and $q$ then 
 $$
@@ -73,8 +98,6 @@ $$
 Consider the function $f:\mathbb C\to\mathbb C$ given by $f(a+ib)=a^2+ib^2$ and the points $p=0$ and $q=1+i$. How could we integrate $f$ between $p$ and $q$?
 
 Well first we need a **path** $\gamma$ from $p$ to $q$ parameterised by a function $\phi:\mathbb R\to\mathbb C$. In this case we can use a straight line from 0 to (1,1) given by $\phi(t)=t+it$. 
-
-In this module, you don't need to know **how** to choose a good $\phi$, you will be given one whenever you are asked to calculate a complex integral. At minimum, you will always be able to a straight line between the two points.
 
 Now we need to find our expression for 
 $$
@@ -163,7 +186,7 @@ $$
 ### Applications in CS - Counting Objects
 The techniques outlined in this note and its predecessors provide a basic introduction to complex analysis. One of the most powerful practical applications of these techniques lies in the study of **counting objects**.
 
-Imagine we wanted to determine exact or asymptotic estimates for the number of objects of a particular type having a given size. Two tools which are very useful for this are the notion of a Generating Function and a result called the (Generalised) Cauchy Integral Formula.
+Imagine we wanted to determine exact or asymptotic estimates for the number of objects of a particular type having a given size. To do this we can use a Generating Function and a result called the (Generalised) Cauchy Integral Formula.
 
 >This section is meant to give you an idea of how the things you are being taught are used. You won't be tested on your knowledge of this, and this is only a very brief overview.
 
@@ -195,7 +218,7 @@ Another way to understand this, is that $G(z)$ represents the **sum** of all of 
 
 While this might not immediately seem useful, we can (depending on the objects in the sequence) manipulate the sum to find a simpler **closed form**.
 
-Consider the sequence given by "The number of binary trees with $n$ leaves". We can define a **recursive** function which gives us the number of binary trees with $n$ leaves.
+Consider the sequence given by "The number of binary trees with $n$ leaves". We can define a **recursive** function which gives us this sequence.
 
 First, lets quickly define what a binary tree is, and what a leaf is. A **binary tree** is a tree in which each node can only have up to two children. These children represent a **left subtree** and a **right subtree**. A **leaf** is any node with a tree that has **no children**.
 
@@ -245,7 +268,7 @@ B(z)=\sum_{n=0}^{\infty}t_nz^n
 $$
 where $t_n$ is the number of full binary trees with $n$ leaves. Remember that $z^n$ isn't an actual value, but is a placeholder to represent the idea of a tree of size $n$.
 
-If we understand $B(z)$ as the **sum** of all **full binary trees**, we can break this down into our base case and our recursive rule. We know that there is a **single** binary tree with only 1 leaf, which in $B(z)$ is represented by $x$. 
+If we understand $B(z)$ as the **sum** of all **full binary trees**, we can break this down into our base case and our recursive rule. We know that there is a **single** binary tree with only 1 leaf, which in $B(z)$ is represented by $z$. 
 
 We also know that there are **infinite** binary trees which are the **combination** of two binary trees. We can represent all of these as $B(z)\cdot B(z)=B(z)^2$.
 
@@ -278,7 +301,7 @@ $$
 B(z) = 0z^0 + 1z^1 + 1z^2 + 2z^3 + 5z^4 + \cdots
 $$
 
-This means that $B(0)$ **must be** 0.
+This means that $B(0)$ **must be** 0, as the coefficient of $z^0$ is 0 and this is the only term which is not removed from the function.
 
 So if we look back at our solution
 $$
@@ -316,7 +339,7 @@ Now we have a **finite expression** $b(z)$ (closed form) for the **infinite func
 To do this we need to find the coefficient of $z^n$ in $B(z)$. 
 
 We saw above how when we choose $z=0$ then $B(z)$ becomes the number of objects of size 0. 
-Since $B(z)$ is a polynomial, we can generalise this to 
+Since $B(z)$ is a polynomial, we can use the power rule to generalise this to 
 $$
 \frac{d^nB}{dz^n}(0) = n!\cdot a_n 
 $$
