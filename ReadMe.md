@@ -13,7 +13,7 @@ I make these notes with Obsidian, and I recommend browsing them using Obsidian. 
 
 If you have Obsidian installed, you can clone this repo into an Obsidian vault and all notes will be instantly browsable within Obsidian.
 ## Status
-This is just a quick place to track where I currently am in my studies, and which modules have up to date notes. This is just each module with the most recent complete note written next to it.
+This is just a quick place to track where I currently am in my studies, and which modules have up to date notes. This is just each module with a link to the most recent complete note written next to it. These links work if you clone the repo to an Obsidian Vault, but will not work if you are reading this on GitHub itself, and may not work in other apps (I haven't tested it).
 
 It is Currently **Year 1 Semester 2**
 
