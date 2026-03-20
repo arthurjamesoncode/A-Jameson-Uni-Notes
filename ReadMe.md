@@ -12,6 +12,18 @@ I make these notes with Obsidian, and I recommend browsing them using Obsidian. 
 >If you don't want to install anything new, VS code seems to format them correctly.
 
 If you have Obsidian installed, you can clone this repo into an Obsidian vault and all notes will be instantly browsable within Obsidian.
+## Status
+This is just a quick place to track where I currently am in my studies, and which modules have up to date notes. This is just each module with the most recent complete note written next to it.
+
+It is Currently **Year 1 Semester 2**
+
+| Module  | Most Recent Complete Note                          |
+| ------- | -------------------------------------------------- |
+| COMP108 | [[Lecture 16 - Trees]]                             |
+| COMP116 | [[Lecture 18 - Quaternions]]                       |
+| COMP122 | [[Lecture 9 - Accessibility]]                      |
+| COMP124 | [[Lecture 10 - Priority Scheduling & Round Robin]] |
+
 ## Errors
 These are my personal notes, which I am making as I am studying these modules. Although I try to make them as accurate as possible, **there may be errors in these notes.** 
 

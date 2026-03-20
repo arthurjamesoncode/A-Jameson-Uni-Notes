@@ -61,7 +61,7 @@ $$
 $$
 Since, $\phi(Re(p))=p$ and $\phi(Re(q))=q$ we can say that $\phi$ parameterises the line between $p$ and $q$.
 
-The function we choose for $\phi$ is now incredibly important to the process of finding an complex integral. Choosing a good $\phi$ can sometimes be difficult, but you will not be asked to choose a good $\phi$ at any point in this module.
+The function we choose for $\phi$ is now incredibly important to the process of finding a complex integral. Choosing a good $\phi$ can sometimes be difficult, but you will not be asked to choose a good $\phi$ at any point in this module.
 
 In general though, you can usually use a straight line for distinct points, which means your $\phi$ will look like
 $$
@@ -203,6 +203,19 @@ This could represent any number of things, for example:
 - The sum of $\frac{1}{n^2}$.
 
 Being able to accurately estimate quantities like this is often crucial when it comes to determining how an algorithm behaves **on average**.
+
+We can use a **generating** function to get an **infinite** polynomial expression for this, which we can manipulate to a **closed** finite expression.
+
+We can then differentiate this **finite** expression $n$ times, and pass in 0 to get the number of objects of size $n-1$. Exactly why this works you can read about [[#Finding the Coefficients/The Generalised Cauchy Integral Formula|below]]. 
+
+Given a function $G(z)$, we can find the $n^{th}$ derivative of $G(z)$ (denoted by $g^{(n)}(z))$ using the formula below
+$$
+g^{(n)}(z) = \frac{n!}{2\pi i}\oint_C\frac{g(\beta)d\beta}{(\beta-z)^{(n+1)}}
+$$
+
+This is one of the **primary uses** of complex integration.
+
+You can have a look below for a more in depth exploration of the example of "The number of binary trees with $n$ leaves".
 ### Generating Functions
 To estimate these values accurately we can use a **generating function**.
 
@@ -276,6 +289,7 @@ This means we can re-write our generating function **in terms of these recursive
 $$
 B(z) = z + B(z)^2
 $$
+
 Now that we have this **recursive definition** of our generating function we can rearrange it to get
 $$
 B(z)^2-B(z)+z = 0

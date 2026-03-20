@@ -368,9 +368,11 @@ which shows us that the angle for $m=n$ is exactly $2\pi$ less than the angle fo
 
 Since $e^{i\theta}=e^{i(\theta+2\pi)}$, this shows that only the values from $m=0$ to $m=k-1$ offer unique roots.
 
-And so we have proved that there are exactly $k$ unique **principle** values for the $k^{th}$ root of a complex number.
+And so we have proved that there are exactly $k$ unique **principal** values for the $k^{th}$ root of a complex number.
 
-Note that **principle** in the above statement means the principle value for each root (i.e. the value for the root with an argument in the range $[0,2\pi)$. The principle root of a number also means the first root obtained by travelling counter clockwise from the real axis. You can also understand this as the root with the smallest **non-zero** argument.
+Note that **principal** in the above statement means the principal value for each root, i.e. the value for the root with an argument in the range $[0,2\pi)$. 
+
+The principle root of a number also means the first root obtained by travelling counter clockwise from the real axis. You can also understand this as the root with the smallest **non-zero** argument.
 ### Primitive Roots of Unity
 Lets consider the $k^{th}$ roots of $u=1=e^{0i}$.
 
@@ -379,11 +381,11 @@ $$
 v_m = e^{\frac{2\pi m}{k}}
 $$
 
-These roots represent the solutions to $x^k-1=0$, and are called the **primitive roots of unity**.
+These roots represent the solutions to $x^k=1$, and are called the **primitive roots of unity**.
 
 Geometrically, these roots represent $m$ points on the unit circle with even angles (each gap is $\frac{2\pi}k$) between them. 
 
-We call the 1st primitive root of unity $e^{i\frac{2\pi}k}$ the principle $k^{th}$ root of unity.
+We call the 1st primitive root of unity $e^{i\frac{2\pi}k}$ the principal $k^{th}$ root of unity.
 
 Primitive roots of unity underpin the [Fourier Transform](https://en.wikipedia.org/wiki/Fourier_transform) which is widely used in signal processing and other electronics applications.
 
