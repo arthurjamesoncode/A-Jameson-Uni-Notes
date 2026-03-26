@@ -34,8 +34,5 @@ I attempt to write these notes in such a way that they are understandable to any
 Equally, if you find that a certain part was particularly helpful or well explained, I would also like to hear about this.
 
 To be clear, I am obviously not under any obligation to act on your feedback. These are my notes after all.
-## Unfinished Notes
-As of right now there are a number of unfinished/empty notes for recent lectures. Please be aware of this.
 
-In future I will try to restrict updates to only contain fully completed notes, but this will require a bit of catch up first.
 
