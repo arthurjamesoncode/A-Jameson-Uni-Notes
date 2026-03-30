@@ -35,3 +35,93 @@ To show that a subclass **extends** (inherits from) a **superclass**, we use an 
 
 Below you can see an example UML diagram for a club system
 ![[full_club_uml.png]]
+
+We can see here that there are also **uses** arrows, indicated by the word **uses** and the solid colour tips. These arrows indicated that `Club` has attributes of type `ClubMember` and `CommitteeMember`, or lists/collections of that type.
+## Implementing the Club Example
+One could end up with the above UML diagram if they were working on the following brief:
+	"Design and implement a Java program that stores details about clubs and their members, e.g. their name and club ID number. 
+	Additionally, some of the club members are committee members. 
+	Committee members have all the attributes and behaviour of a club member, but additionally need their position on the committee (e.g. treasurer, chair, secretary, etc) to be stored."
+
+From this brief, we can try and pick out the **objects** that we want to represent. There are 3 of these:
+- Club
+- Club Member
+- Committee Member
+
+Then we should look at the relationships between these objects. We know that a committee member must also be a club member, but needs some extra information. This means that we can make `CommitteeMember` a **subclass** of `ClubMember`.
+
+We know that Clubs have members, and so we can make these members (including committee members), attributes of the club. 
+
+>The way this is done in the UML you are shown is to have `member1` be an attribute of type `ClubMember` and `member2` be an attribute of type `CommitteeMember` but this is a bad way of doing it.
+>
+>We don't know how many members we will have, and won't want to change the code if another member gets added. This means that the best way to do this would be to have a `members` attribute of type `ClubMember[]`.
+
+First lets draw up an implementation of `ClubMember`
+```java
+public class ClubMember {
+	private int idNum;
+	private String name;
+	
+	public ClubMember(int newId, String newName) {
+		idNum = newId;
+		name = newName;	
+	}
+	
+	public int getIdNum() {
+		return idNum;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	
+	public String toString() {
+		return "id: " + idNum + ", name: " + name;
+	}
+}
+```
+
+Now we can add an implementation for `CommitteeMember`, we're going to make this a subclass of `ClubMember`, which we can do by using the extends keyword. 
+
+We also need a **constructor** which takes the same arguments as `ClubMember` (the superclass), with an additional one. The attributes from `ClubMember` are private, and so we can't change them in our subclass. The way we get around this is by using the special keyword `super`.
+
+`super` refers to the superclass of the current class. You can use it to refer to overridden methods from the superclass or the superclass's constructors.
+
+`super(<args>)` represents the constructors of the superclass. When you call `super(<args>)` from a subclass, it checks the arguments you pass to it to see if the superclass has a constructor which matches the signature of the `super(<args>)` call. This check happens at compile time, and won't work if the superclass doesn't have a matching constructor.
+
+The `super(<args>)` call must happen on the first line of the constructor of the subclass. If `super(<args>)` isn't called explicitly by the programmer, java calls it anyway passing in the same arguments passed to the subclass's constructor.
+
+We can use this to pass the id and name of our committee member to the constructor of the `ClubMember`, setting these private attributes in a safe way.
+
+We can also use `super.toString()` inside our `toString` method to simplify our logic.
+
+```java
+public class CommitteeMember extends ClubMember {
+	private String role;
+	
+	public CommitteeMember(int newId, String newName, String newRole) {
+		super(newId, newName);
+		role = newRole;
+	}
+	
+	public String getRole() {
+		return role;
+	}
+	
+	public String toString() {
+		return super.toString() + ", role: " + role;
+	}
+}
+```
+
+And finally we can write our `Club` class
+```java
+public class Club {
+	private ClubMember[] members;
+	private CommitteeMember[] committee;
+} 
+```
+
+This isn't a very useful class at the moment but shows how we can use our other classes as types of attributes for our class.
+
+As an exercise, try to add a constructor method for this class, as well as a `toString` method, and methods to add and remove members or committee members.
