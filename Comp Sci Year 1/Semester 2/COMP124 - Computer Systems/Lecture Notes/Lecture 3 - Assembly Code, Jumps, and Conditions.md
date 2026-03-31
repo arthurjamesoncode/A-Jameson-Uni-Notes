@@ -135,7 +135,7 @@ mov eax, 120 ; places our dividend into the accumulator
 div ebx      ; divides our dividend by our divisor
 ```
 
-Division in assembly is integer division, meaning that the result will be an integer and there may be a remainder. The result of a division is stored in the accumulator, while the result is stored in the data register.
+Division in assembly is integer division, meaning that the result will be an integer and there may be a remainder. The result of a division is stored in the accumulator, while the remainder is stored in the data register.
 
 This operation will set some status flags if the result is too big or if you try to divide by zero.
 ## Status Flags Register

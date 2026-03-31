@@ -89,7 +89,7 @@ We also need a **constructor** which takes the same arguments as `ClubMember` (t
 
 `super(<args>)` represents the constructors of the superclass. When you call `super(<args>)` from a subclass, it checks the arguments you pass to it to see if the superclass has a constructor which matches the signature of the `super(<args>)` call. This check happens at compile time, and won't work if the superclass doesn't have a matching constructor.
 
-The `super(<args>)` call must happen on the first line of the constructor of the subclass. If `super(<args>)` isn't called explicitly by the programmer, java calls it anyway passing in the same arguments passed to the subclass's constructor.
+The `super(<args>)` call must happen on the first line of the constructor of the subclass. If `super(<args>)` isn't called explicitly by the programmer, java calls `super()` (the superclass's default constructor). If the superclass doesn't have a default constructor (like in this example), it will cause an error at compile time.
 
 We can use this to pass the id and name of our committee member to the constructor of the `ClubMember`, setting these private attributes in a safe way.
 
@@ -121,6 +121,8 @@ public class Club {
 	private CommitteeMember[] committee;
 } 
 ```
+
+Note that we can store objects of type `CommitteeMember` in the `members` attribute since any `CommitteeMember` is also a `ClubMember`
 
 This isn't a very useful class at the moment but shows how we can use our other classes as types of attributes for our class.
 
