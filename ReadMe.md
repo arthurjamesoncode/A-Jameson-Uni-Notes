@@ -21,7 +21,7 @@ It is Currently **Year 1 Semester 2**
 | ------- | -------------------------------------------------- |
 | COMP108 | [[Lecture 16 - Trees]]                             |
 | COMP116 | [[Lecture 18 - Quaternions]]                       |
-| COMP122 | [[Lecture 11 - Overriding]]                        |
+| COMP122 | [[Lecture 13 - Interfaces]]                        |
 | COMP124 | [[Lecture 12 - Linux Processes, Pipes, & Sockets]] |
 
 ## Errors
