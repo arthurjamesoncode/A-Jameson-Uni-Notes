@@ -11,10 +11,9 @@ An example of a theorem, which remained a conjecture for a long time before some
 
 This was conjectured in 1637 by Pierre de Fermat, and proved in 1995 by Andrew Wiles.
 
-The proof is here [[http://www.scienzamedia.uniroma2.it/~eal/Wiles-Fermat.pdf]], and is 109 pages long. It is far too complicated for someone just taking COMP109 to understand, but goes to show that relatively simple statements can have proofs that take centuries to actually find.
+The proof is [here](http://www.scienzamedia.uniroma2.it/~eal/Wiles-Fermat.pdf), and is 109 pages long. It is far too complicated for someone just taking COMP109 to understand, but goes to show that relatively simple statements can have proofs that take centuries to actually find.
 
 >What I find personally interesting about this proof is that the theorem itself is not used ever. It's basically useless, but the techniques developed (partially) to prove it have been incredibly useful and opened up whole new mathematical fields.
-
 ## More Examples of Direct Proof
 
 **Every integer is rational:**

@@ -20,7 +20,7 @@ $$
 We see that if we add these matrices we get
 $$
 \begin{split}
-\mathbf{M}_u
+\mathbf{M}_{u+v}
 & =
 \pmatrix{a & -b \\ b & a}
 +

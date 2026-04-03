@@ -20,7 +20,7 @@ It is Currently **Year 1 Semester 2**
 | Module  | Most Recent Complete Note                          |
 | ------- | -------------------------------------------------- |
 | COMP108 | [[Lecture 16 - Trees]]                             |
-| COMP116 | [[Lecture 18 - Quaternions]]                       |
+| COMP116 | [[Lecture 21 - Quaternions]]                       |
 | COMP122 | [[Lecture 13 - Interfaces]]                        |
 | COMP124 | [[Lecture 12 - Linux Processes, Pipes, & Sockets]] |
 

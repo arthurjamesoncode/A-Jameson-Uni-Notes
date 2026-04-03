@@ -103,7 +103,7 @@ I am Bob and I am 21 years old
 ### Format Specifiers
 There are a lot of format specifiers and options, but the common ones (and the ones we'll use on this course) are:
 - `%d` - display as a decimal integer
-- `%d` - display as a string
+- `%s` - display as a string
 - `%c` - display as a single character
 - `%f` - display as a floating point number
 You can look to [here](cplusplus.com/reference/cstdio/printf/) for a complete list.

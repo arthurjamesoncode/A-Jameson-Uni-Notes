@@ -10,7 +10,7 @@ This is not a correct proof, for a universal statement as it proves nothing abou
 ### Using The Same Letter to Mean Two Different Things
 Consider the following “proof” fragment:  
 	Suppose m and n are any odd integers. Then by definition of odd,  
-	m = 2k + 1 and n = 2k + 1 for some integer k.
+	m = 2k + 1 and n = 2k + 1 for some integer k, therefore $m=n$.
 
 This statement says that m and n are equal. This is obviously not necessarily true.
 

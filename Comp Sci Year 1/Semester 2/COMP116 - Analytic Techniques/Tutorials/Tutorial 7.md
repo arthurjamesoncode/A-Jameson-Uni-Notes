@@ -1,1 +1,1 @@
-This tutorial is meant to be spent going over the mock test on canvas. As such I will not be including detailed notes for it.
+This tutorial is meant to be spent going over the mock test on canvas. I will not be including detailed notes for it.
