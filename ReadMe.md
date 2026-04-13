@@ -19,7 +19,7 @@ It is Currently **Year 1 Semester 2**
 
 | Module  | Most Recent Complete Note                                |
 | ------- | -------------------------------------------------------- |
-| COMP108 | [[Lecture 16 - Trees]]                                   |
+| COMP108 | [[Lecture 17 - Graphs Part 1]]                           |
 | COMP116 | [[Lecture 21 - Determinants & Intro to Spectral Theory]] |
 | COMP122 | [[Lecture 15 - Iterators]]                               |
 | COMP124 | [[Lecture 12 - Linux Processes, Pipes, & Sockets]]       |

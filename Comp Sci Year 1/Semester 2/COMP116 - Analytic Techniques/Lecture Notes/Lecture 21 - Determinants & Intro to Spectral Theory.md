@@ -138,7 +138,7 @@ D=ad-bc
 $$
 Which described in plain English is the difference of the product of the top-left diagonal and the product of the top-right diagonal.
 
-This gets a bit more complicated when we look to matrices with higher dimensions, but hold's with a similar logic.
+This gets a bit more complicated when we look to matrices with higher dimensions, but has a similar logic.
 
 >Using $a$, $b$, $c$, and $d$ to represent the elements of a matrix works well for $2\times 2$ matrices, where there aren't many elements to keep track of. 
 >
