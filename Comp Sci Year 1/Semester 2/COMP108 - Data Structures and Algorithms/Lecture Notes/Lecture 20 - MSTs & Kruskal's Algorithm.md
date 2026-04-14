@@ -113,7 +113,7 @@ Sort E' from smallest weight to largest weight
 CurrTrees = Empty Map
 
 while E' is not empty do
-	e = first item of E'
+	e = first/smallest item of E'
 	{a, b} = The endpoints of e 
 	//a and b are variables which would hold the unique label for the vertices
 	
@@ -159,3 +159,9 @@ while E' is not empty do
 	endif 
 endwhile
 ```
+## Time Complexity Analysis
+Imagine we start with a sorted list of edges.
+
+In this case, we can go through the edges linearly, meaning that in the worst case (when the greatest edge is part of the MST), that we complete $n$ operations. This gives the algorithm a time complexity of $O(n)$.
+
+If we start with an unsorted list of edges, obviously we need to first sort them. Since the best sorting algorithms take $O(n\log n)$ time to complete, and $n\log n$ dominates $n$, the time complexity in this case would be $O(n\log n)$.
