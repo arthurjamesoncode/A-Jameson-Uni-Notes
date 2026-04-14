@@ -80,7 +80,9 @@ If we travel to the node, this number decreases by 1 leaving us with $2k-1$ untr
 
 This means that we can go to and leave any non-starting node exactly $k$ times, and therefore cannot get stuck on it.
 
-In the case of the start node we can get stuck. Let $2k$ be the number of untravelled edges from the start node. When we leave it in the beginning we are left with $2k-1$ paths. This means that eventually the start node will be left with 1 untravelled edge while we are not on the node, and so when we eventually travel that edge back to the start we will be stuck.
+In the case of the start node we can get stuck. 
+
+Let $2k$ be the number of untravelled edges from the start node. When we leave it in the beginning we are left with $2k-1$ paths. This means that eventually the start node will be left with 1 untravelled edge while we are not on the node, and so when we eventually travel that edge back to the start we will be stuck.
 
 Now that we know where we can get, we can trace an arbitrary circuit around this graph. There are a 2 cases for this circuit:
 - It travels every edge (is already a Euler circuit)
@@ -102,7 +104,7 @@ Again there are two cases for this extended circuit:
 
 If it travels every edge then we have found a Euler circuit, but if it does not travel every edge we can simply repeat the process outlined here to extend the circuit until it does. 
 
-This proves that any connected undirected graph only containing even-degree vertices will contain a Euler circuit. 
+This proves that any connected undirected graph only containing even-degree vertices will contain a Euler circuit.
 
 >I haven't included any images in this proof, which I find necessary to keep it general, but I think some graphical explanation can help understand this. 
 >

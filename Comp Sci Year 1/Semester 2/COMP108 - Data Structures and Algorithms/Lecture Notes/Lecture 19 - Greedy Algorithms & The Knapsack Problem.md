@@ -144,9 +144,28 @@ Greedy algorithms won't help us much if we want to end up with an optimal soluti
 
 Imagine a our "Sort by Ratio" algorithm has just selected a subset of items and tries to select the next item but it is too large to fit into this subset. Before, we simply skipped it, but we have seen in our examples that this single item could be larger than our whole selected subset.
 
-What if we corrected for this by, instead of skipping, checking whether this one item has a larger value then our current total and, if so, taking the single item instead of the whole selected subset.
+What if we corrected for this by, after completing the algorithm, checking whether each unselected item has a larger value then our current total and, if so, taking the single item instead of the whole selected subset.
 
 This avoids some of the worst situations that can arise from using the "Sort by Ratio" algorithm, and actually means that the solution found by the algorithm will be **at least half** of the optimal solution.
 
+To understand why this is, imagine that we can pick items $i_1,i_2,...,i_{k-1}$ but we can't pick item $i_k$.
+
+Our greedy algorithm compares the value of $i_1,i_2,...,i_{k-1}$ and $i_k$, and chooses the max of these two. The maximum of two numbers will always be greater than or equal to half of the sum of the two numbers. So
+$$
+\max\{v_1+v_2+\cdots+v_{k-1}, v_k\} \geq \frac{v_1+v_2+\cdots+v_{k-1}+v_k}2
+$$
+
+At most, the optimal solution will be something less than the sum of all of these values, so
+$$
+OPT <  v_1+v_2+\cdots+v_{k-1}+v_k
+$$
+From this we can observe that 
+$$
+\max\{v_1+v_2+\cdots+v_{k-1}, v_k\} \geq \frac{OPT}2
+$$
+While half as good as optimal is not particularly great, that is only in the worst case. In practice this would make for a decent approximation. It definitely isn't too bad compared to the arbitrarily bad situations we looked at before, which are now impossible using this version of the algorithm.
+
 What this shows us is that we can often apply a greedy algorithm to find fast, easy solutions that may not be optimal, although we can use a little bit of clever trickery to make them decent approximations.
+
+
 
