@@ -246,6 +246,17 @@ which we can see matches the determinant we saw before.
 There are a number of useful properties to know when it comes to determinants. We will go over some of these now.
 
 I will be explaining these rules in plain English first, but I think the maths notation definitions are more succinct and less confusing.
+## The Determinant Transpose Rule
+The determinant transpose rule states that the determinant of a matrix is the same as the determinant of the transpose of the same matrix.
+
+The transpose operation was covered briefly during [[Lecture 15 - Representation Techniques#Conjugate|representation techniques of complex numbers]], but, in case you need a reminder, the transpose of a matrix is the same matrix reflected in the top-left diagonal.
+
+>We use $A^T$ to denote the transpose of $A$.
+
+So formally:
+$$
+\det (A^T) = \det A
+$$
 ### The Determinant Multiplication Rule
 The determinant multiplication rule states that if a matrix $A$ is multiplied by a matrix $B$ the determinant of $AB$ will be the product of $\det A$ and $\det B$.
 
@@ -255,9 +266,9 @@ $$
 $$
 A direct consequence of this is that
 $$
-\det A^T = (\det A)^T
+\det A^n = (\det A)^n
 $$
-for any square matrix $A$ with $T\in\mathbb N$
+for any square matrix $A$ with $n\in\mathbb N$
 ### Scalar Multiplication Rule
 The scalar multiplication rule states that if one row or column of $A$ is multiplied by a scalar $s$, then the value of $\det A$ is also multiplied by $s$. 
 
