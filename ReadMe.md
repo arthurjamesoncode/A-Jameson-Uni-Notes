@@ -17,12 +17,12 @@ This is just a quick place to track where I currently am in my studies, and whic
 
 It is Currently **Year 1 Semester 2**
 
-| Module  | Most Recent Complete Note                                      |
-| ------- | -------------------------------------------------------------- |
-| COMP108 | [[Lecture 21 - Single-Source Shortest Paths & Dijkstra's]]     |
-| COMP116 | [[Lecture 21 - Determinants & Intro to Spectral Theory]]       |
-| COMP122 | [[Lecture 15 - Iterators]]                                     |
-| COMP124 | [[Lecture 13 - File Manager, File Allocation, & Disk Formats]] |
+| Module  | Most Recent Complete Note                                |
+| ------- | -------------------------------------------------------- |
+| COMP108 | [[Lecture 22 - Divide and Conquer Algorithms]]           |
+| COMP116 | [[Lecture 21 - Determinants & Intro to Spectral Theory]] |
+| COMP122 | [[Lecture 15 - Iterators]]                               |
+| COMP124 | [[Lecture 14 - Linux File Systems, EXT4, IO Streams]]    |
 
 ## Errors
 These are my personal notes, which I am making as I am studying these modules. Although I try to make them as accurate as possible, **there may be errors in these notes.** 
