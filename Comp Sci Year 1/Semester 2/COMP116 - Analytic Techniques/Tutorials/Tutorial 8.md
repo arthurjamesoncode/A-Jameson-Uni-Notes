@@ -86,7 +86,7 @@ For any fixed value $1\leq j \leq 3$.
 
 We can choose any fixed row or column to get this determinant and the value will always be the same.
 
-Observe that the first row of $A$ is equal to the first column of $A^T$. Also observe that $A_{11}=A^T_{11}$, $A_{12}=A^T_{12}$, and $A_{13}=A^T_{13}$.
+Observe that the first row of $A$ is equal to the first column of $A^T$. Also observe that $A_{11}=A^T_{11}$, $A_{12}=A^T_{12}$, and $A_{13}=A^T_{13}$, when fixing the first row of $A$ and the first column of $A^T$.
 
 Therefore, by the expansion formula, if we fix the first row of $A$ and fix the first column of $A^T$, we are left with an identical calculation.
 
@@ -108,7 +108,7 @@ $$
 $$
 For any fixed value $1\leq j \leq 3$.
 
-Let $s\in\mathbb R$, and $A_s$ be the matrix obtained by multiplying an unspecified row or column. We can choose any row or column and we will get the same value, so lets choose the row/column multiplied by $s$.
+Let $s\in\mathbb R$, and $A_s$ be the matrix obtained by multiplying an unspecified row or column. We can choose any row or column to fix for the expansion formula and we will get the same value, so lets choose the row/column multiplied by $s$.
 
 In this case:
 $$
@@ -135,7 +135,7 @@ A_s = s\det A
 $$
 Therefore multiplying any single row by a scalar value also multiplies the determinant by that same value.
 
-**2.** Since multiplying a row by $s$ increases the determinant by a factor of $s$ multiplying all 3 rows by $s$ increases the determinant by a factor of $s^3$.
+**2.** Since multiplying a row by $s$ increases the determinant by a factor of $s$ multiplying all 3 rows by $s$ increases the determinant by a factor of $s$ three times, therefore increasing by a factor of $s^3$.
 
 Therefore 
 $$
@@ -192,15 +192,9 @@ B_b=
 a_{11} & a_{12} & a_{13} \\
 a_{31} & a_{32} & a_{33} \\
 a_{21} & a_{22} & a_{23} \\
-\end{pmatrix},\;
-B_c =
-\begin{pmatrix}
-a_{31} & a_{32} & a_{33} \\
-a_{21} & a_{22} & a_{23} \\
-a_{11} & a_{12} & a_{13} \\
-\end{pmatrix}\;
+\end{pmatrix}
 $$
-$B_a$ swaps the first and second rows, $B_b$ swaps the second and third rows and $B_c$ swaps the 1st and 3rd row (remove when finished).
+$B_a$ swaps the first and second rows and $B_b$ swaps the second and third.
 
 Observe that in either case, the submatrices obtained when removing either swapped row do not change when the rows are swapped. The submatrix obtained when removing the unchanged row does change however, to a vertical reflection of itself.
 
@@ -311,7 +305,7 @@ Oops I didn't read the whole question properly and wasted my time. $AB$ does not
 Consider the function $f: \mathbb{C} \to \mathbb{C}$ defined as $f(z) = 1 + z - z^{2}$. The function is to be integrated between the points $p = 0$ and $q = 1 + i$ in the Complex Plane.
 
 **Question:** Classify the following parameterizations, $t: \mathbb{R} \to \mathbb{C}$:
-1. $t(x) = x^{2} - i$
+1. $t(x) = x^{2} - ix$
 2. $t(x) = (2 - i) \cdot x$
 3. $t(x) = x + 1 - i \cdot x$
 4. $t(x) = \cos^{2}(\pi x) + \sin(\pi \cdot \frac{1}{2}) + i \sin(1.5\pi x)$
@@ -323,7 +317,7 @@ Consider the function $f: \mathbb{C} \to \mathbb{C}$ defined as $f(z) = 1 + z - 
 - (D) Maps NEITHER $Re(p)$ nor $Re(q)$ correctly
 
 **Answer:**
-1. (D)
+1. (C)
 2. (A)
 3. (A)
 4. (D)

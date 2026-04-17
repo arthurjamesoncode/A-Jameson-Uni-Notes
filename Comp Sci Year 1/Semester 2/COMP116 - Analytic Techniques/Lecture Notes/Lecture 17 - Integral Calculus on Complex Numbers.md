@@ -33,6 +33,8 @@ $$
 \oint_{\gamma}f(z)dz
 $$
 
+>Below, we mention a **real range** that we are interested in. This is a slight simplification, and but is useful as a first step to understanding. Look to the the [[Lecture 17 - Integral Calculus on Complex Numbers#Less Simple Parameterisations|next section]] to understand why.
+
 The (real) range that we are interested in is $[Re(p), Re(q)]$, if we define a function $\phi:\mathbb R\to\mathbb C$ such that 
 $$\phi(Re(p))=p,\; \phi(Re(q))=q$$
 We can then split $\phi$ into both its real and imaginary parts
@@ -71,6 +73,8 @@ and if you want to use a closed curve you can use a circle, which means your $\p
 $$
 \phi(t)=re^{it}
 $$
+
+It is possible to parameterise a curve without substituting back in 
 
 >You will only be tested on how to calculate integrals given $f(z),\;p,q\in\mathbb C$, and a specific $\phi(t)$ which **parameterises** the curve. You may also be tested on whether a certain parameterisation is valid or not.
 >
@@ -183,6 +187,93 @@ $$
 & = 2\pi i
 \end{split}
 $$
+### Less Simple Parameterisations
+Above we stated that "The (real) range that we are interested in is $[Re(p), Re(q)]$". This is actually not necessarily true.
+
+While usually possible to find a parameterisation $\phi$ which works because $\phi(Re(p))=p$ and $\phi(Re(q))=q$, this isn't a requirement. We simply need two values $i,j\in\mathbb R$ such that $\phi(i)=p$ and $\phi(j)=q$. 
+
+As a result the real range we are **actually** interested in is $[i, j]$.
+
+For example, consider a function $f:\mathbb C\to\mathbb C$ which we want to parameterise between the points $p=0$ and $q=1+i$.
+
+Consider the function 
+$$
+\phi(t)=t^2-it
+$$
+If we substitute in $Re(p)$ and $Re(q)$ we can see that
+$$
+\begin{split}
+\phi(0) 
+&= 0^2 - 0i \\
+&= 0 = p \\
+\\
+\phi(1)
+&= 1^2 - 1i \\
+&= 1 -i\neq q
+\end{split}
+$$
+Observe that this, while it does work for $p$, does not work for $q$. However, if instead we substitute in $-1$, we can see
+$$
+\begin{split}
+\phi(-1)
+&= (-1)^2-(-1)i \\
+&= 1 + i = q
+\end{split}
+$$
+which does correctly map to $q$.
+
+In this case the function $\phi(t)=t^2-it$ does parameterise the path from $p$ to $q$, it just needs inputs different from the real parts of $p$ and $q$.
+
+As a result, the range we are interested in when using this parameterisation is actually $[-1, 0]$.
+
+>**IMPORTANTLY:** We may not always want to use a **straight-line** function for our path between two distinct points. Sometimes want to find a contour integral using a $n$-degree polynomial function, trigonometric function, exponential function, etc.
+>
+>That is one huge benefit of these less simple parameterisations.
+### Example 3
+As said above, choosing a good path $\gamma$ is difficult, and dependant on the exact problem you are trying to solve. For this module however you don't need to.
+
+What you do need to do is determine whether a given parameterisation is valid.
+
+Let's use the same example from above. The function
+$$
+\phi(t)=t^2-it
+$$
+for the points $p=0$ and $q=1+i$.
+
+We have seen already that this is a valid, with $t=-1$ and $t=0$, but how to check whether this function is a valid parameterisation if we don't already know which values of $t$?
+
+Well to do that we determine if there are any values of $t$ which correctly map to $p$ and $q$.
+
+To do that we can break $\phi(t)$, $p$, and $q$ into their **real** and **imaginary** parts. Thus deriving systems of simultaneous equations in terms of $t$ alone.
+
+First, observe that
+$$
+Re(\phi(t)) = t^2,\; Im(\phi(t))=-t
+$$
+
+Breaking $p$ into it's parts we can derive
+$$
+\begin{split}
+t^2 = 0 \\
+AND\\
+-t = 0 \\
+\end{split}
+$$
+giving us a set of simultaneous equations which, when solved for $t$, provide us with a value of $t$ which will map to $p$ if such a value of $t$ exists at all.
+
+We know that $\sqrt0=0$ and $-0=0$ so, in this case, both of these equations share a solution of 0. This means that $t$ must be 0 and the parameterisation is valid for **at least $p$**.
+
+Now if we beak $q$ into it's parts we can derive
+$$
+\begin{split}
+t^2 = 1 \\
+AND\\
+-t = 1 \\
+\end{split}
+$$
+From the first of these equations, we can see that $t=1$ or $t=-1$. From the second of these equations, we can see that $t$ must be $-1$. Since both of these equations share one solution ($-1$), we know that the parameterisation is also valid for $q$.
+
+Since the parameterisation is valid for both $p$ and $q$ we know that it is valid, and uses the range $[-1,0]$ (our found values of $t$).
 ### Applications in CS - Counting Objects
 The techniques outlined in this note and its predecessors provide a basic introduction to complex analysis. One of the most powerful practical applications of these techniques lies in the study of **counting objects**.
 
