@@ -19,7 +19,7 @@ It is Currently **Year 1 Semester 2**
 
 | Module  | Most Recent Complete Note                                |
 | ------- | -------------------------------------------------------- |
-| COMP108 | [[Lecture 22 - Divide and Conquer Algorithms]]           |
+| COMP108 | [[Lecture 23 - Merge Sort]]                              |
 | COMP116 | [[Lecture 21 - Determinants & Intro to Spectral Theory]] |
 | COMP122 | [[Lecture 15 - Iterators]]                               |
 | COMP124 | [[Lecture 14 - Linux File Systems, EXT4, IO Streams]]    |

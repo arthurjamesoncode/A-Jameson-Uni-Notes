@@ -45,7 +45,9 @@ Each bus uses a different protocol and format for sending and receiving data, as
 Each **device bus** communicates with the CPU through the **system bus** and interrupts.
 ![[device_system_buses.png]]
 ## Device and Disk Scheduling
-The device manager schedules I/O activities in a way to maximise system performance. It wants to:
+The device manager schedules I/O activities in a way to maximise system performance. What we mean when talking about this is scheduling the amount of time each device, including disks, spends on each request/process.
+
+It wants to:
 - Minimise time wasted by moving the HDD read/write head
 - Prioritise I/O requests depending on process
 - Ensure each process has fair access to disks
@@ -56,8 +58,37 @@ Each disk has an I/O queue, and the scheduler can reorder these based on policy.
 - First Come First Served
 - Shortest Seek First
 - Elevator Algorithm
-- Completely Fair Scheduling
+- Completely Fair Queueing
 - Anticipatory Scheduling
 
-How first come first served works is in the name, so I will skip that one.
+How first come first served works is in the name, so I will skip that one but quickly go over all of the other options.
+### Shortest Seek First
+This is a scheduling policy that always schedules I/O so that the operation closest to the current position of the HDD read/write head is performed.
 
+This minimises the amount of time that the read/write head has to move but has no benefit on non-HDD devices.
+
+This policy can also cause problems since, if many operations are requested close to the current position of the read/write head, then an operation that was requested a while ago may stall or never execute.
+### Elevator Algorithm
+The elevator algorithm is a version of the "Shortest Seek First" policy which functions similar to the way an elevator in a building works.
+
+In this algorithm, the next operation which will be performed is chosen based on both the **distance** from the current position, as well as the current direction that the head is moving in. 
+
+So if the head is moving to the other side of the disk to perform, and an I/O operation is requested that is closer, but still in the same direction, it will stop on the way. If an operation was requested which is closer than the current requested operation, but in the other direction, then it will continue to the further one first before changing direction.
+
+This algorithm stops the read/write head "wiggling" inside, and ensures that every operation will be seen too without losing many of the benefits of the "shortest seek first" policy.
+### Completely Fair Queueing
+Completely fair Queueing works similarly to the [[Lecture 10 - Priority Scheduling & Round Robin|round robin]] method of process scheduling.
+
+Each process places it's IO requests into a queue. Every process has it's own unique queue.
+
+The system them services each queue for a specific time-slice, before cycling to a queue for a different process. Processes may have different **priorities** which will be taken into account.
+
+In HDD drives, this can cause a lot of extra movement of the read/write head since it will jump between the different physical locations that different processes want to perform their I/O. For SSDs this is not an issue.
+
+This policy ensures that every process gets equal access to each device, and ensures that no process gets completely blocked/stuck for long.
+### Anticipatory Scheduling
+A single process usually deals with locations on disk which are close to each other. 
+
+Processes often want to deal with data (perform some calculations etc.) read from the disk before issuing another request. If, while they are dealing with this data, a different process requests some I/O at a point far away from the head's current position, the read write head will be moved away before having to return to perform the follow up request.
+
+This leads to moving the read/write head more than necessary. Anticipatory scheduling freezes for a short time (milliseconds) after completing a request. This can decrease the amount of movement required for the read/write head.
