@@ -22,7 +22,7 @@ It is Currently **Year 1 Semester 2**
 | COMP108 | [[Lecture 23 - Merge Sort]]                              |
 | COMP116 | [[Lecture 21 - Determinants & Intro to Spectral Theory]] |
 | COMP122 | [[Lecture 15 - Iterators]]                               |
-| COMP124 | [[Lecture 14 - Linux File Systems, EXT4, IO Streams]]    |
+| COMP124 | [[Lecture 15 - Device Manager & Direct Memory Access]]   |
 
 ## Errors
 These are my personal notes, which I am making as I am studying these modules. Although I try to make them as accurate as possible, **there may be errors in these notes.** 
