@@ -56,7 +56,7 @@ The second derivative of a function $f(x)$ is the derivative of $f'(x)$ denoted 
 The second derivative is another function of $x$, same as $f(x)$ and $f'(x)$. You can continue to find the derivative of these functions to find the third derivative $f'''(x)$ and so one.
 
 We saw notation for the derivative of $f(x)$ that looked like this$$
-f'(x) = \frac{dx}{dy}
+f'(x) = \frac{dy}{dx}
 $$Similarly we can denote the second derivative of $f(x)$ like this$$
 f''(x)=\frac{d^2y}{dx^2}
 $$

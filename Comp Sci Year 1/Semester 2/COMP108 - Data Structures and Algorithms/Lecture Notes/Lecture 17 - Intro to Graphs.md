@@ -180,6 +180,8 @@ In an undirected graph, if vertex $i$ and vertex $j$ are adjacent then the $M(i,
 
 In a directed graph, $M(i, j)$ being 1 indicates that the vertex $i$ is connected to (points to) the vertex $j$.
 
+>You may see numbers other than 1 in adjacency matrices, in this case you can consider the number the **weight** of the edge. This will usually be the *cost* to travel that edge.
+
 Note that if a graph is undirected then the adjacency matrix will always be symmetrical along the top-left diagonal.
 
 Below you can see an example **undirected graph** 

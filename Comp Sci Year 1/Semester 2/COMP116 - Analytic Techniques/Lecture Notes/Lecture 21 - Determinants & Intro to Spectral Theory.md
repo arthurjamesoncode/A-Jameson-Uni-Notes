@@ -68,7 +68,7 @@ $$
 AB & =
 \pmatrix{a & b \\ c & d}\cdot\pmatrix{w & x \\ y & z} \\
 & =
-\pmatrix{aw + by & ax + bz \\ ax + bz & cx + dz} 
+\pmatrix{aw + by & ax + bz \\ cw + dy & cx + dz} 
 \end{split}
 $$
 ### Matrix Inverse

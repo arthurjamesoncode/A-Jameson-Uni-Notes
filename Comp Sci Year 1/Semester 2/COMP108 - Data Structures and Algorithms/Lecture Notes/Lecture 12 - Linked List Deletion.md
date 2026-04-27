@@ -14,7 +14,7 @@ We can see the full pseudocode of this algorithm below:
 List-Delete-Head(L)
 begin
 	node = head
-	if node /= NIL then // list is empty
+	if node == NIL then // list is empty
 		STOP and return NIL
 	endif
 	
