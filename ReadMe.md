@@ -17,12 +17,12 @@ This is just a quick place to track where I currently am in my studies, and whic
 
 It is Currently **Year 1 Semester 2**
 
-| Module  | Most Recent Complete Note                                |
-| ------- | -------------------------------------------------------- |
-| COMP108 | [[Lecture 26 - Dynamic Programming 2]]                   |
-| COMP116 | [[Lecture 21 - Determinants & Intro to Spectral Theory]] |
-| COMP122 | [[Lecture 15 - Iterators]]                               |
-| COMP124 | [[Lecture 15 - Device Manager & Direct Memory Access]]   |
+| Module  | Most Recent Complete Note                              |
+| ------- | ------------------------------------------------------ |
+| COMP108 | [[Lecture 26 - Dynamic Programming 2]]                 |
+| COMP116 | [[Lecture 22 - Eigenstuff]]                            |
+| COMP122 | [[Lecture 15 - Iterators]]                             |
+| COMP124 | [[Lecture 15 - Device Manager & Direct Memory Access]] |
 
 ## Errors
 These are my personal notes, which I am making as I am studying these modules. Although I try to make them as accurate as possible, **there may be errors in these notes.** 

@@ -7,7 +7,8 @@ The **basis** is formed by the words in a **corpus**, which means a dataset of w
 
 We then represent each document as a vector, where non-zero terms represent that a term appears in the document. Often values are chosen by the **TF-idf** value of a term.
 
-**TF-idf** is determined by the following formula $$
+**TF-idf** is determined by the following formula 
+$$
 \text {TF-idf}=\frac{\text{No. of times term t appears in document d}}{\text {No. of terms in document d}}\times \frac{\text{No. of documents N}}{\text{No. of documents containing term t}}
 $$
 You can then us this vector to determine how similar various documents are by using the angle between these vectors, which you can calculate using the dot product.
