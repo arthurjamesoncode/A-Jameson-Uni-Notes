@@ -1,7 +1,7 @@
 ## Insertion of a Node to the Front of a List
 When we use a linked list, how can we insert a node to the front of the list.
 
-Our answer here differs a little depending on if it's a **singly** or **doubly** linked list. First, lets consider a **singly** list list.
+Our answer here differs a little depending on if it's a **singly** or **doubly** linked list. First, lets consider a **singly** linked list.
 
 Since we are adding this to the head of the list, we mainly need the `head` of the list and our `node` to add, but we do still need the tail.
 
@@ -24,7 +24,7 @@ begin
 end
 ```
 
-If, instead, we we're dealing with a **doubly** linked list we do more or less the same thing. We just need to also set `head.prev` to our new node, and set `node.prev` to `NIL`
+If, instead, we're dealing with a **doubly** linked list we do more or less the same thing. We just need to also set `head.prev` to our new node, and set `node.prev` to `NIL`
 
 ```
 List-Insert-Head(L, node)
