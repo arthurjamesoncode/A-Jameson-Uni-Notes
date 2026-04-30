@@ -10,9 +10,12 @@ The cartesian product forms the basis of the **cartesian coordinate system**.
 
 For all points $A,B\in \mathbb{R}^2$ the fixed vector ${\overrightarrow{AB}}$ is defined as the line that starts at $(x_a, y_a)$ and ends at $(x_b, y_b)$. This can be generalised for $A,B\in \mathbb{R}^n$ as the the line that starts at $(a_1,\cdot\cdot\cdot,a_n)$ and ends at $(b_1,\cdot\cdot\cdot,b_n)$.
 
-We say that 2 fixed vectors $\overrightarrow{AB},\overrightarrow{CD}$ where $A,B,C,D\in\mathbb{R}^2$ are equivalent if and only if$$
+We say that 2 fixed vectors $\overrightarrow{AB},\overrightarrow{CD}$ where $A,B,C,D\in\mathbb{R}^2$ are equivalent if and only if
+$$
 x_b - x_a = x_d - x_c\text{ and } y_b - y_a = y_d - y_c 
-$$Again this can be generalised for $A,B,C,D\in\mathbb{R}^n$ as $$
+$$
+Again this can be generalised for $A,B,C,D\in\mathbb{R}^n$ as 
+$$
 \overrightarrow{AB}=\overrightarrow{CD}\iff b_i - a_i = d_i - c_i\; \forall i\in\mathbb{N},\; i\leq n
 $$
 ## Free Vectors
@@ -20,7 +23,8 @@ Since equality for **fixed** vectors is defined as above, this leaves us conside
 
 We call these classes **free vectors**. These are likely the kind of vectors that you are familiar with from school physics, and can be implemented as tuples in programming languages.
 
-So if we have a **fixed vector** $\overrightarrow{AB}$ where $A,B\in \mathbb{R}^n$ the corresponding **free vector** $\vec v$ is defined as $$
+So if we have a **fixed vector** $\overrightarrow{AB}$ where $A,B\in \mathbb{R}^n$ the corresponding **free vector** $\vec v$ is defined as 
+$$
 \begin{split}
 \vec v & = (b_1 - a_1,\cdot\cdot\cdot,b_n-a_n) \\
 & = (v_1,...,v_n)
@@ -36,7 +40,8 @@ We can actually go further and represent any number of big data representations 
 
 We can start from any set of numbers $\mathbb{H}$, and an $n$-vector has $n$ components. This is the same as the definition given above.
 
-It is worth noting there are various different notations for vectors. There is tuple notation, which is shown above. As well as square bracket column notation $$
+It is worth noting there are various different notations for vectors. There is tuple notation, which is shown above. As well as square bracket column notation 
+$$
 \vec v = 
 \begin{bmatrix}
 v_1 \\
@@ -44,21 +49,40 @@ v_2 \\
 ... \\
 v_n
 \end{bmatrix}
-$$parentheses column notation  $$\vec v = 
+$$
+parentheses column notation  
+$$\vec v = 
 \begin{pmatrix}
 v_1 \\
 v_2 \\
 ... \\
 v_n
-\end{pmatrix}$$and angle bracket notation $$
+\end{pmatrix}
+$$
+and angle bracket notation 
+$$
 \vec v = \langle v_1,v_2,...,v_n\rangle
 $$
 There are some other ones, but these are the ones you are most likely to encounter.
 ## Vector Attributes
 ### Length
-The length (or magnitude) of a vector $\vec v=(v_1,...,v_n)$ is denoted by $|\vec v|$ and is given by $$
-|\vec v| = \sqrt{v_1^2 + \cdot\cdot\cdot + v_n^2}
-$$This formula is derived by the Pythagorean theorem. 
+The length (or magnitude) of a vector $\vec v=(v_1,...,v_n)$ is denoted by $|\vec v|$ and is given by 
+$$
+||\vec v|| = |\vec v| = \sqrt{v_1^2 + \cdot\cdot\cdot + v_n^2}
+$$
+This formula is derived by the Pythagorean theorem. 
+
+The above is technically the **Euclidean ($L_2$) norm** for the length of a vector. Other norms exist including:
+- $L_1$ The Manhattan distance (the sum of the components)
+- $L_3$ The Cubic Norm (calculated like the Euclidean norm but replace the squares with cubes)
+- $L_\infty$ The max norm (the maximum component)
+
+To make which norm we use clear we may add a subscript so $||v||_2$ denotes the Euclidean norm of this vector.
+
+There are infinite norms for a vector. In general the $L_p$ norm of an $n$-vector is given by
+$$
+||v||_p=(\sum^n_{i=1}|v_i|^p)^{\frac1p}
+$$
 ### Angle
 The angle between vectors $\vec u$ and $\vec v$, denoted by $\angle(\vec u,\vec v)$, is the fraction of the **anti-clockwise** turn from $\vec u$ to $\vec v$, where the angle of a full turn is $2\pi$ radians or $360\degree$. 
 

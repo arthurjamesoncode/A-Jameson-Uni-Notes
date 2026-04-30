@@ -20,7 +20,7 @@ It is Currently **Year 1 Semester 2**
 | Module  | Most Recent Complete Note                              |
 | ------- | ------------------------------------------------------ |
 | COMP108 | [[Lecture 26 - Dynamic Programming 2]]                 |
-| COMP116 | [[Lecture 22 - Eigenstuff]]                            |
+| COMP116 | [[Lecture 23 - Applications of Eigenstuff]]            |
 | COMP122 | [[Lecture 15 - Iterators]]                             |
 | COMP124 | [[Lecture 15 - Device Manager & Direct Memory Access]] |
 

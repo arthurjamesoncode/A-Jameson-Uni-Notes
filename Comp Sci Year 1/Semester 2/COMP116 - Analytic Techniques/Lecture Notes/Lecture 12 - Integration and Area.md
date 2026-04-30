@@ -233,9 +233,9 @@ The exponential rule is the inverse of  the exponential rule for differentiation
 
 So formally:
 $$
-f(x)=n^x\implies \int f(x)dx=\frac{n^x}{\ln(x)}
+f(x)=n^x\implies \int f(x)dx=\frac{n^x}{\ln(n)}
 $$
-Again this is most common when $n=e$ and therefore $\ln(x)=1$. Because of this, you may see this rule expressed as
+Again this is most common when $n=e$ and therefore $\ln(n)=1$. Because of this, you may see this rule expressed as
 $$
 f(x)=\exp(x)\implies \int f(x)dx=\exp(x)
 $$
