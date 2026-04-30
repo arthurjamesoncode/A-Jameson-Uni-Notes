@@ -287,3 +287,5 @@ This is because $W$ is a **column stochastic** matrix, meaning all of the column
 It can be shown that column stochastic matrices always have a **spectral radius** of 1, meaning that their largest eigenvalue is 1, but this may not be unique. You can see some proofs of this [here](https://math.stackexchange.com/questions/40320/proof-that-the-largest-eigenvalue-of-a-stochastic-matrix-is-1).
 
 In the PageRank algorithm, these matrices are forced to have a unique, dominant eigenvalue of 1, by transforming it into the **Google Matrix**. You can read about this [here](https://en.wikipedia.org/wiki/Google_matrix), but it's not really needed for this course. 
+
+You do need to understand that this method of finding $\vec r$ only works if $W$ has a **unique dominant eigenvalue** of 1, and that this condition is "forced" by the transformation into the google matrix. 

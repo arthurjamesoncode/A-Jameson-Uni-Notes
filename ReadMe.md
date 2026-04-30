@@ -3,7 +3,7 @@ This repo is a place for me to store my notes for my studies at the University o
 ## Usage
 Feel free to browse this GitHub page as you would a wiki, but you will come across parts that aren't formatted correctly. Especially any equations since these use LaTeX. 
 
-I recommend you clone the repo to your local machine, and you can find instructions on how to do that [here](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository). You do need to have git installed, which you can do [here](https://git-scm.com/install/).
+I recommend you clone the repo to your local machine, and you can find instructions on how to do that [here](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository). You do need to have git installed, which you can install [here](https://git-scm.com/install/).
 
 You can also set GitHub up so it notifies you of any new commits by using the "Watch" feature.
 
