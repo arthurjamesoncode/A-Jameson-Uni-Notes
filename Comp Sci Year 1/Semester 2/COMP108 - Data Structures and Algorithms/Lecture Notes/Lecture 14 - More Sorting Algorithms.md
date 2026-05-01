@@ -5,7 +5,7 @@ Firstly, we would need pointers to keep track of a few things. We're going to wa
 
 How we swap when we find 2 nodes that are out of order is also a bit different, but mostly the same.
 
-We don't actually need to change the order of our nodes, we just need to change the order of the **data** that our nodes hold. This lets us us a very similar approach to the one we used before, just this time we access the `data` property of our nodes.
+We don't actually need to change the order of our nodes, we just need to change the order of the **data** that our nodes hold. This lets us use a very similar approach to the one we used before, just this time we access the `data` property of our nodes.
 
 ```
 Swap-Node(a, b)
@@ -124,4 +124,4 @@ This algorithm works by assuming that everything to the left of `i` is already s
 
 To find the time complexity of this algorithm we need to count the number of comparisons. Since this is essentially bubble sort in reverse the process is the same. In fact, it has the exact same time complexity for both sort and swap operations as bubble sort.
 
-This means that this algorithm is big-O of $O(n)$.
+This means that this algorithm is big-O of $O(n^2)$.

@@ -14,7 +14,7 @@ All of the principle components are eigenvectors of the **covariance-matrix** of
 
 >A covariance matrix is a representation of data that shows how different variables change together.
 
-If one component has a significantly smaller eigenvalue associated with it, then the other component, then we can consider the component with the smaller eigenvalue **noise**, and the component with the larger eigenvalue the **signal** of the data.
+If one component has a significantly smaller eigenvalue associated with it than the other component, then we can consider the component with the smaller eigenvalue **noise**, and the component with the larger eigenvalue the **signal** of the data.
 
 Since we are working in 2-dimensional space, and therefore only have 2 principle components, I will now be referring to PC1 as the **signal** and PC2 as **noise** for simplicity.
 

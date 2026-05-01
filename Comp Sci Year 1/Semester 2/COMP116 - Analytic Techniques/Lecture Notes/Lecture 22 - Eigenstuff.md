@@ -50,7 +50,7 @@ For **complex values** if $\lambda$ is an eigenvalue $\bar\lambda$ is also an ei
 ## Example
 Consider the matrix $A$ given by 
 $$
-A=\pmatrix{3 & 1\\0 & 2}
+ A=\pmatrix{3 & 1\\0 & 2}
 $$
 From this we can derive the characteristic polynomial $\chi(A)$
 $$
