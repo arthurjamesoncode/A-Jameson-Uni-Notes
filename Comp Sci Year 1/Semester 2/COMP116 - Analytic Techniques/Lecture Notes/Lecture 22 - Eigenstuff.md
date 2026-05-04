@@ -44,9 +44,9 @@ $\lambda_1$ is called the **dominant eigenvalue** of $A$. If $\lambda_1$ appears
 
 The maximum of the absolute values of all eigenvalues is called the spectral radius and is denoted with $\rho(A)$.  
 
-For **complex values** if $\lambda$ is an eigenvalue $\bar\lambda$ is also an eigenvalue. You can understand this is you recall that all eigenvalues of $A$ are roots of $n$ degree polynomial.
+For **complex values** if $\lambda$ is an eigenvalue $\bar\lambda$ is also an eigenvalue. You can understand this is you recall that all eigenvalues of $A$ are roots of an $n$ degree polynomial.
 
-**Importantly:** If $A$ is symmetric, then all eigenvalues $\lambda_k$ of $A$ are real.
+**Importantly:** If $A$ is symmetric, then all eigenvalues $\lambda_k$ of $A$ are real. Symmetric matrices are not the only matrices which have exclusively real eigenvalues, but they are guaranteed to have them.
 ## Example
 Consider the matrix $A$ given by 
 $$

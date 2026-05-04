@@ -216,9 +216,3 @@ And so 3 bits are required to represent both $C$ and $D$.
 We cannot use a codeword with the prefix 1, or 01 meaning that $Code(C),Code(D)\in\{000,001\}$. There are two symbols and 2 possible codewords, therefore we can assign one codeword to each and we have found the Huffman coding for this alphabet.
 
 The specifics of how this algorithm work are more complicated, but this run through should at least give you an idea of **why** we can use these **variable length codewords**.
-
-
-
-
-
-
