@@ -152,7 +152,8 @@ for any diagonalisable matrix $A$.
 
 Exactly why this is, is difficult to explain and unnecessary for this module. What is easier to explain is why this is useful.
 
-Consider a diagonal $n\times n$ matrix. We multiply an matrices by summing the product of corresponding elements from the rows of the first matrix and the columns of the second matrix.
+Consider a diagonal $n\times n$ matrix. We multiply 
+matrices by summing the product of corresponding elements from the rows of the first matrix and the columns of the second matrix.
 
 If the only non-zero elements of a matrix lie on it's diagonal, then the matrix raised to the power of $n$ is the same as the matrix obtained by raising each diagonal element to the power of $n$.
 
@@ -178,6 +179,6 @@ We know the polynomial $\lambda^2+1$ has no real roots, and therefore $i$ has no
 
 No real eigenvalues means no *"real"* scaling. These linear maps do still scale the vectors they are applied to, but their scaling is **complex**.
 
-**Complex scaling** representations rotations as well as scaling.
+**Complex scaling** representats rotations as well as scaling.
 ## Note on Practice Questions
 Olga included some practice questions on the final two slides. I think these are worth going over, but I am not going to do so in these notes.

@@ -6,7 +6,7 @@ Let $A$ be a matrix such that $A\in\mathbb R^{n\times n}$. The growth rate of ra
 There is a good amount of value in being able to be sure that there is a **unique, real, positive eigenvalue**. The **Perron-Frobenius Theorem** gives us conditions sufficient for this to be true.
 
 The Perron Frobenius Theorem states that, if $A\in\mathbb R^{n\times n}$ and $A_{i,j}>0$ for all $1\leq i,j\leq n$, then:
-- There is a unique, real, positive eigenvalue $\lambda_{pf}$ associated with it.
+- There is a unique, dominant, real, positive eigenvalue $\lambda_{pf}$ associated with it.
 - This eigenvalue has an eigenvector (called the **Perron vector**) $\vec v_{pf}$ which contains only real positive components.
 - For any initial positive $\vec v_0\neq \vec 0$, the sequence of normalised iterations converges to the perron vector.
 
@@ -19,7 +19,7 @@ There is a generalisation of this theorem to some **non-negative** matrices as w
 
 >Understanding the proof of this theorem is not necessary. You also do not need to understand which **non-negative** matrices it can be generalised to. But you can read about this [here](https://en.wikipedia.org/wiki/Perron%E2%80%93Frobenius_theorem). 
 >
->The gist (from what I read) is that a weaker similar theorem exists for all non-negative matrices, but for a special type of matrix called an *irreducible* matrix, there is a non-trivial generalisation of this theorem.
+>The gist (from what I read) is that a weaker similar theorem exists for all non-negative matrices, but, for a special type of matrix called an *irreducible* matrix, there is a non-trivial generalisation of this theorem.
 >
 >Importantly, when asked to use the power method (see below) do not worry if given a non-negative matrix instead of a positive one. It should be a matrix for which this method still works.
 ### The Power Method
@@ -56,6 +56,8 @@ Since $\vec v$ is the dominant eigenvector of $A$, $\lambda$ must be the dominan
 If $A$ has an inverse (is non-singular) then we can also find the smallest eigenvalue of $A^{-1}$, this will be $\frac1\lambda$.
 
 If we were to find the dominant eigenvalue of $A^{-1}$ using this method (we'll label it $\lambda_{-1}$), we can find the smallest eigenvalue of $A$, by doing $\frac1{\lambda_{-1}}$.
+
+This is because the eigenvalues of $A$ and the eigenvalues of $A^{-1}$ are reciprocals of each other. If A has an eigenvalues of 3 then $A^{-1}$ has an eigenvalue of $\frac13$
 
 >There is a ton of content in this lecture so I am not going to typeset examples of using the power method. You should go over some on paper to make sure you understand this.
 ## Spectral Graph Theory
@@ -121,7 +123,7 @@ The slides give an example question on chromatic numbers: "The matrix of an undi
 
 This question is poorly worded, and I think Paul E. Dunne might have meant for this to have a different answer to what Olga has put.
 
-I think the question was intended to just ask for the bounds of the chromatic number but the, but the question actually asks two things:
+I think the question was intended to just ask for the bounds of the chromatic number but the question actually asks two things:
 1. What is the maximum number of colours you could use to colour a graph so that every linked node is of a different colour?
 2. What is the minimum number of colours you could use to colour a graph so that every linked node is of a different colour?
 
@@ -148,6 +150,8 @@ $$
 \end{split}
 $$
 Since we know that this must be an integer between 2.25 and 3.5, we know that the chromatic number of this graph must be 3.
+
+If the bounds included 2 or more integers we would have no way to answer this.
 ## PageRank Algorithm
 There are a lot of search engines with which we can browse the web. The most popular search engine by far is Google. So why does Google dominate so much?
 
@@ -189,7 +193,7 @@ To fix this, we need to evenly distribute the rank of $p_i$ to all the pages $p_
 
 So now we have this
 $$
-r_k=\sum_{p_i\in P_{i\to k}}\frac{r_i}{|P_{k\leftarrow i}|}
+r_k=\sum_{p_i\in P_{i\to k}}\frac{r_i}{|P_{j\leftarrow i}|}
 $$
 ### Modelling with Matrices
 We've seen how we can model a directed graph using matrices. Let's try and model the graph of selected pages using matrices.

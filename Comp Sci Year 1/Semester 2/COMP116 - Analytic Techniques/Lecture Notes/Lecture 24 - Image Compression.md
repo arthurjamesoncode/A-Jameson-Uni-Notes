@@ -49,13 +49,15 @@ To look at **how** we do this we first need to understand **what** a digital ima
 
 A digital image is essentially a table of integers, where each integer represents the colour of the corresponding pixel.
 
-Any table can be represented by a matrix, meaning that we can understand images and **matrices of integers**.
+Any table can be represented by a matrix, meaning that we can understand images as **matrices of integers**.
 
 We want a way to **decrease the size** of this matrix, but without losing information. The way we can do this is by **singular value decomposition**.
 ### Singular Value Decomposition (SVD)
 Given an $n\times k$ image $P$, let $W$ be the corresponding matrix.
 
-The SVD of any $n\times k$ matrix $W$ is $U\Sigma V^T$, where $U$ and $V$ are rotation matrices and $\Sigma$ is a diagonal (or scaling) matrix with ordered values $(\sigma_1,..,\sigma_k)$ along the diagonal. $U$ is an $n\times n$ matrix, $V$ is a $k\times k$ matrix, and $\Sigma$ is an $n\times k$ matrix.
+The SVD of any $n\times k$ matrix $W$ is $U\Sigma V^T$, where $U$ and $V$ are rotation matrices and $\Sigma$ is a diagonal (or scaling) matrix with ordered values $(\sigma_1,..,\sigma_k)$ along the diagonal. 
+
+$U$ is an $n\times n$ matrix, $V$ is a $k\times k$ matrix, and $\Sigma$ is an $n\times k$ matrix.
 
 ![[svd_figure.png]]
 
@@ -66,10 +68,10 @@ Geometrically, this means that any matrix can be decomposed into a **rotation** 
 At first, this actually uses more space since we have to store:
 - $U$ which is a $n\times n$ matrix using $n^2$ space
 - $V^T$ which is a $k\times k$ matrix using $k^2$ space
-- The diagonal values of $\Sigma$, which uses $\min(n, k)$ space. We can discard the other values since we know that are all 0. 
+- The diagonal values of $\Sigma$, which uses $\min(n, k)$ space. We can discard the other values since we know they are all 0. 
 So the total space is $n^2 +k^2 + \min(n, k)$ which is greater than the previously needed $nk$ space, so we need some kind of trick to decrease the space.
 
-The trick we use is to take the **Truncated SVD** of the image instead. This means that we keep only the top $p$ singular values, or the top $p$ diagonal values of $\Sigma$.
+The trick we use is to take the **Truncated SVD** of the image instead. This means that we keep only the top $p$ singular values, or the top $p$ diagonal values of $\Sigma$. You can see why this works [[Lecture 24 - Image Compression#What Can We Throw Away?|below]]
 
 This means that we can represent $W$ as the product of:
 - $U_p$ an $n\times p$ matrix requiring $np$ space
@@ -87,7 +89,8 @@ We talked a lot about using these different types of matrices, but how do we act
 
 Well first given $W$ we need to find the matrices $W\cdot W^T$ and $W^T\cdot W$.
 
-Any matrix multiplied by it's transpose are **symmetric**, **square**, **positive semi-definite** matrices. 
+Any matrix multiplied by it's transpose are **symmetric**, **square**, **positive semi-definite** matrices.
+
 You don't need to know what [positive semi-definite](https://en.wikipedia.org/wiki/Definite_matrix) means, but this has an important property that we can use: Their eigenvalues are exclusively **real** and **non-negative**.
 
 This means that $W\cdot W^T$ and $W^T\cdot W$, both have exclusively **real**, **non-negative** eigenvalues. The spectra are also identical to each other, meaning that every non-zero element is the same.
@@ -142,7 +145,7 @@ The slides include an example exam question which goes as follows:
 
 "A square image consists of 1000 rows and 1000 columns, occupying $1000 ⋅ 1000 ≈ 1Mb$ space. Its owner wishes to forward the image in an encoding as 3 matrices which will use a total space of ≤ $0.75Mb$. What size of the $S$ matrix (the diagonal matrix formed from eigenvalues in an SVD encoding) both achieves this aim and maximizes the quality of the compressed encoding?"
 
-To solve this is to essentially find a value minimum value of $p$ which we could choose to end up with 3 matrices with less than $1000\cdot 1000 \cdot 0.75= 750,000$ elements.
+To solve this is to essentially find a minimum value of $p$ which we could choose to end up with 3 matrices with less than $1000\cdot 1000 \cdot 0.75= 750,000$ elements.
 
 The total size to store the 3 matrices we will use in terms of $p$ is:
 - $U:1000\times p=1000p$

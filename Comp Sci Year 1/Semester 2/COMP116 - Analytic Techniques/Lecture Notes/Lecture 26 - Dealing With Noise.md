@@ -125,7 +125,7 @@ Essentially the most frequent word occurs 5 times as often as the $5^{th}$ most 
 
 This means that a select few words do a lot of heavy lifting for the language, such as "the", "a", "and", etc. This creates the high redundancy base which makes language predictable.
 ## Predicting Language with N-Grams
-To analyse usage frequency of words, we need some kind of **text-corpus**. This would usually be collections some actual written text, like books, posts, poems, etc.
+To analyse usage frequency of words, we need some kind of **text-corpus**. This would usually be collections of some actual written text, like books, posts, poems, etc.
 
 Once we have this, we can use **relative frequencies** of sequences of words as a way to predict or otherwise analyse the text.
 
