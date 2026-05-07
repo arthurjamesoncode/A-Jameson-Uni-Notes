@@ -49,7 +49,7 @@ where $\lambda$ is the associated eigenvalue for $\vec v$.
 
 >Note that $\vec v^T$ is the **transpose** of $\vec v$. This just means that instead of a **column** vector, it is a **row** vector. It is necessary to use the transpose because of the rules of **matrix multiplication**, and specifically the order in which we can multiply matrices.
 >
->If $v$ is a $n$ component **row vector** and $A$ is an $n\times n$ matrix, we can only compute $Av$. If we transpose $v$ to get $v^T$ we can now compute $v^TA$.
+>If $v$ is a $n$ component **column vector** and $A$ is an $n\times n$ matrix, we can only compute $Av$. If we transpose $v$ to get $v^T$ we can now compute $v^TA$.
 
 Since $\vec v$ is the dominant eigenvector of $A$, $\lambda$ must be the dominant eigenvalue of $A$.
 
@@ -131,7 +131,7 @@ I think the question was intended to just ask for the bounds of the chromatic nu
 
 The answer to the first question is trivial. It is simply the same number of nodes as the graph. In this case 10.
 
-The answer to the second question is (a little) difficult to derive. We can only find the bounds for the chromatic number from the information given. However, since a chromatic number must be an integer, if the lower bounds ceiling is the same as the upper bounds floor then we know the chromatic number.
+The answer to the second question is (a little) more difficult to derive. We can only find the bounds for the chromatic number from the information given. However, since a chromatic number must be an integer, if the lower bounds ceiling is the same as the upper bounds floor then we know the chromatic number.
 
 Let's find the bounds of this number. It must be at least
 $$

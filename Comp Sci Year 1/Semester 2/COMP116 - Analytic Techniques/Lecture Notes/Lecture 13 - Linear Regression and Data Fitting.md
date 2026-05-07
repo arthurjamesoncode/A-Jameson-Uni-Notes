@@ -69,7 +69,7 @@ This is given by
 $$
 \begin{split}
 a 
-& = \frac{\sum_{k=1}^n(x_i-\bar x)(y_i-\bar y)}{\sum_{k=1}^n(x_i-\bar x)^2} \\
+& = \frac{\sum_{i=1}^n(x_i-\bar x)(y_i-\bar y)}{\sum_{i=1}^n(x_i-\bar x)^2} \\
 \\
 b & = \bar y -a\bar x
 \end{split}
