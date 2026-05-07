@@ -20,8 +20,8 @@ It is Currently **Year 1 Semester 2**
 | Module  | Most Recent Complete Note                              |
 | ------- | ------------------------------------------------------ |
 | COMP108 | [[Lecture 26 - Dynamic Programming 2]]                 |
-| COMP116 | [[Lecture 25 - Information Theory Intro]]              |
-| COMP122 | [[Lecture 15 - Iterators]]                             |
+| COMP116 | [[Lecture 26 - Dealing With Noise]]                    |
+| COMP122 | [[Lecture 16 - Exception Handling]]                    |
 | COMP124 | [[Lecture 15 - Device Manager & Direct Memory Access]] |
 
 ## Errors
