@@ -185,7 +185,7 @@ public class ReadLong {
 			long l = scan.nextLong();
 			System.out.println(l);
 		} catch (InputMismatchException e) {
-			System.out.prinln("Give me an invalid input again, and I will personally ensure we come for you first when AI takes over.)
+			System.out.prinln("Give me an invalid input again, and I will personally ensure we come for you first when AI takes over.")
 		}
 	}
 }
