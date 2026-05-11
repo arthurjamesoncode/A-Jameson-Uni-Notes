@@ -21,7 +21,7 @@ It is Currently **Year 1 Semester 2**
 | ------- | ------------------------------------------------------ |
 | COMP108 | [[Lecture 26 - Dynamic Programming 2]]                 |
 | COMP116 | [[Lecture 26 - Dealing With Noise]]                    |
-| COMP122 | [[Lecture 17 - Custom Exceptions]]                     |
+| COMP122 | [[Lecture 18 - IO & Streams]]                          |
 | COMP124 | [[Lecture 15 - Device Manager & Direct Memory Access]] |
 
 ## Errors
