@@ -60,7 +60,7 @@ x
 $$
 and so $x^2+4x+5$ has 2 roots $-2+i$ and $-2-i$. 
 
-Both of these are still just 1 number which is the sum of a **real number** (2) and an imaginary number ($\pm i$). We call numbers of this form **complex numbers**.
+Both of these are still just 1 number which is the sum of a **real number** ($-2$) and an imaginary number ($\pm i$). We call numbers of this form **complex numbers**.
 
 >Small sidenote: $xi$ and $ix$ are obviously equivalent, but generally you will see people write $ix$, as placing the $i$ first makes it more clear that the number is imaginary. 
 >

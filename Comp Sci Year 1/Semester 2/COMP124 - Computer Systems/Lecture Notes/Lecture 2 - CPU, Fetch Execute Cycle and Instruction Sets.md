@@ -40,7 +40,7 @@ The maximum unsigned integer also relates to the max random access memory size, 
 - A 32-Bit system can only address $2^{32}$ bytes or 4 gigabytes
 - A 64-Bit system can only address $2^{64}$ bytes or 16 exabytes (This is likely more RAM than anyone will ever need. I believe the most RAM any single machine has has so far is 160TB, which is about 1 billion times less than 16 exabytes)
 
-Within a single "word" bits are 0 indexed from right to left. We call bit zero (the rightmost bit) the lest significant bit, and we call the left-most bit (31 in a 32-bit system etc.) the most significant bit. 
+Within a single "word" bits are 0 indexed from right to left. We call bit 0 (the rightmost bit) the least significant bit, and we call the left-most bit (31 in a 32-bit system etc.) the most significant bit. 
 
 In the same manner we can also have the least and most significant byte. In a 32-Bit system, the least significant byte would contain bits 0-7 and the most significant byte would contain bits 23-31.
 ## CPU Structure

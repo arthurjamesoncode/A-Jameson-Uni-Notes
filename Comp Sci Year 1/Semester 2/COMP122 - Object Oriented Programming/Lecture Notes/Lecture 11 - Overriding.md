@@ -1,7 +1,7 @@
 ## Overriding a Superclass Method
 When we create a subclass `B` of a class `A`, `B` inherits all public or protected attributes and methods of `A` without needing explicit definitions in the body of `B`.
 
-However if there is a method definition in `B` which has the exact same signature as a method in `A` the method will work as defined in `B` not in `A`. When this happens we say that the method in `A` **overrides** the method in `B`.
+However if there is a method definition in `B` which has the exact same signature as a method in `A` the method will work as defined in `B` not in `A`. When this happens we say that the method in `B` **overrides** the method in `A`.
 
 >Note that the subclass method must have either the same accessibility or a stronger (more private) accessibility than the superclass method. If not the case, the compiler will complain.
 
