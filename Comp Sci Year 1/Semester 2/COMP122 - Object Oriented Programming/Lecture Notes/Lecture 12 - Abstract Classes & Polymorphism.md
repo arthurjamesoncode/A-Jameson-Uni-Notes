@@ -8,7 +8,7 @@ We indicate a class as abstract when we define it by using the abstract keyword 
 <modifiers> abstract class ClassName { ... }
 ```
 
-Abstract classes can include **abstract methods**. These are methods which are defined using the abstract keyword and don't include a method body. The lack of a method body means that the there are no square brackets, instead the line just ends with a semi-colon like so.
+Abstract classes can include **abstract methods**. These are methods which are defined using the abstract keyword and don't include a method body. The lack of a method body means that the there are no curly brackets, instead the line just ends with a semi-colon like so.
 ```java
 <modifiers> abstract <type> methodName (<args>); 
 ```
