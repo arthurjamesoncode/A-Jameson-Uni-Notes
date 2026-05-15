@@ -17,14 +17,12 @@ This is just a quick place to track where I currently am in my studies, and whic
 
 It is Currently **Year 1 Semester 2**
 
-| Module  | Most Recent Complete Note                                |
-| ------- | -------------------------------------------------------- |
-| COMP108 | [[Lecture 26 - Dynamic Programming 2]]                   |
-| COMP116 | [[Lecture 26 - Dealing With Noise]]                      |
-| COMP122 | [[Lecture 21 - Final Exam Info]]                         |
-| COMP124 | [[Lecture 18 - Threads, Concurrency, & Race Conditions]] |
-
-
+| Module  | Most Recent Complete Note                               |
+| ------- | ------------------------------------------------------- |
+| COMP108 | [[Lecture 26 - Dynamic Programming 2]]                  |
+| COMP116 | [[Lecture 26 - Dealing With Noise]]                     |
+| COMP122 | [[Lecture 21 - Final Exam Info]]                        |
+| COMP124 | [[Lecture 19 - Producer-Consumer Problem & Semaphores]] |
 
 ## Errors
 These are my personal notes, which I am making as I am studying these modules. Although I try to make them as accurate as possible, **there may be errors in these notes.** 
