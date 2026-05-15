@@ -17,12 +17,12 @@ This is just a quick place to track where I currently am in my studies, and whic
 
 It is Currently **Year 1 Semester 2**
 
-| Module  | Most Recent Complete Note                                  |
-| ------- | ---------------------------------------------------------- |
-| COMP108 | [[Lecture 26 - Dynamic Programming 2]]                     |
-| COMP116 | [[Lecture 26 - Dealing With Noise]]                        |
-| COMP122 | [[Lecture 21 - Final Exam Info]]                           |
-| COMP124 | [[Lecture 16 - Memory Manager, Addresses, & Segmentation]] |
+| Module  | Most Recent Complete Note                       |
+| ------- | ----------------------------------------------- |
+| COMP108 | [[Lecture 26 - Dynamic Programming 2]]          |
+| COMP116 | [[Lecture 26 - Dealing With Noise]]             |
+| COMP122 | [[Lecture 21 - Final Exam Info]]                |
+| COMP124 | [[Lecture 17 - Paging, Working Sets, & Caches]] |
 
 
 ## Errors
