@@ -22,7 +22,7 @@ It is Currently **Year 1 Semester 2**
 | COMP108 | [[Lecture 26 - Dynamic Programming 2]]                  |
 | COMP116 | [[Lecture 26 - Dealing With Noise]]                     |
 | COMP122 | [[Lecture 21 - Final Exam Info]]                        |
-| COMP124 | [[Lecture 19 - Producer-Consumer Problem & Semaphores]] |
+| COMP124 | [[Lecture 20 - Dining Philosopher's Problem, Deadlock]] |
 
 ## Errors
 These are my personal notes, which I am making as I am studying these modules. Although I try to make them as accurate as possible, **there may be errors in these notes.** 
