@@ -11,7 +11,7 @@ We know many different types of numbers such as:
 - $\mathbb{Q}=$ The set of all **rational numbers**
 - $\mathbb{R}=$ The set of all **real numbers**
 
-The **natural numbers** are loosely defined as the numbers we use to count, that is $$**\mathbb{N}=\{0,1,2,3,...\}$$0 may or may not be included, but for the purposes of this module, it is included.
+The **natural numbers** are loosely defined as the numbers we use to count, that is $$\mathbb{N}=\{0,1,2,3,...\}$$0 may or may not be included, but for the purposes of this module, it is included.
 
 If you want a proper definition you need to look to [Peano Axioms](https://en.wikipedia.org/wiki/Peano_axioms). However [Godel's incompleteness theorems](https://en.wikipedia.org/wiki/G%C3%B6del%27s_incompleteness_theorems) state that:
 - No consistent system of axioms, whose theorems can be proven by an algorithm, is capable to prove all truths about the arithmetic of natural numbers: there will be statements that are true (or false), but that are unprovable within the system.
@@ -21,11 +21,11 @@ Essentially, defining this stuff at the most basic level is extremely difficult,
   
 The **integers** is defined as the set of natural numbers (including 0) and their negations. So$$
 \mathbb{Z}=\{\cdot\cdot\cdot,-2,-1,0,1,2,\cdot\cdot\cdot\}$$
-The **rational numbers** is defined as the set of all numbers $x$ which can be represented as $$x=\frac{p}{q}$$where $p,q\in\mathbb{Z}$ and $q\neq0$.
+The **rational numbers** $\mathbb Q$ is defined as the set of all numbers $x$ which can be represented as $$x=\frac{p}{q}$$where $p,q\in\mathbb{Z}$ and $q\neq0$.
 
 >$\in$ means "in" or "is a member of". So $p,q\in\mathbb{Z}$ means that $p$ and $q$ are integers. Notation will not be explained after this. You should be familiar with it from COMP109.
 
-The **real numbers** are any numbers which are used to measure some kind of 1 dimensional quantity.
+The **real numbers** $\mathbb R$ are any numbers which are used to measure some kind of 1 dimensional quantity.
 
 All of these numbers can be represented by a number line. This is because $\mathbb{R}$ can be represented as an infinite number line, and all the other sets are a subset of $\mathbb{R}$. In fact, each set in this list is a subset of the set following it. Or formally:$$\mathbb{N\subseteq Z^+\subseteq Z \subseteq Q \subseteq R}$$
 Lastly we have **irrational numbers** these are all the real numbers which are not rational. Irrational numbers don't have their own symbol and are represented by $\mathbb{R\setminus Q}$.
@@ -42,7 +42,6 @@ You can see a proof that $\sqrt{2}$ is irrational in [[Lecture 7 - Two Classic R
 
 Irrational numbers are subset of $\mathbb{R}$ but don't fit into the subset chain shown above. If we represent all numbers as a Venn diagram we can show all numbers like so:
 ![[all_number_venn.png]]
-@
 This diagram treats natural numbers as not including 0 and introduces a new concept "Whole Numbers" which is what we call natural numbers on this module. Whole numbers could also just mean integers, so what they mean exactly depends on context, and who is saying it.
 
 **UPDATED** - So now, we know that the definition of **whole numbers** does matter for tests but only if the question makes it clear that it uses the concept. This is, frankly, unnecessarily confusing and feels like Olga wants to use $\mathbb N=\{0,1,2,...\}$ but also wants to reuse material from the old lecturer who used $\mathbb N=\{1,2,...\}$ and $\mathbb W = \{0,1,2,...\}$.
