@@ -132,7 +132,7 @@ Alternatively you can use `java.io.Scanner` to collect input using the methods:
 These methods **do not** throw **checked exceptions**, but they may throw subclasses of `RuntimeException` (unchecked exceptions) if they are trying to pass the "wrong kind" of input.
 
 Take the program below
-```
+```java
 import java.util.Scanner;
 
 public class ReadLong {
@@ -172,7 +172,7 @@ $
 
 In order to stop this so that our program works we need to check for this `InputMismatchException` using a try-catch block.
 
-```
+```java
 import java.util.Scanner;
 
 public class ReadLong {
@@ -185,7 +185,7 @@ public class ReadLong {
 			long l = scan.nextLong();
 			System.out.println(l);
 		} catch (InputMismatchException e) {
-			System.out.prinln("Give me an invalid input again, and I will personally ensure we come for you first when AI takes over.")
+			System.out.println("Give me an invalid input again, and I will personally ensure we come for you first when AI takes over.")
 		}
 	}
 }
