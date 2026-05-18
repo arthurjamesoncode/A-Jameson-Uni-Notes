@@ -234,7 +234,7 @@ The values of **ESP** and **EBP** change as the calls happen:
 - **ESP** always points to the top of the stack
 - **EBP** changes with each subroutine call
 
-When subroutines are called the stack shrinks, as the stack frames are cleaned off of it.
+When subroutines are returned the stack shrinks, as the stack frames are cleaned off of it.
 
 You can see a model of how the stack frames are built below.
 ![[nested_stack_frames.png]]

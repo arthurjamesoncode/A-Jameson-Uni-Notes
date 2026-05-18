@@ -139,16 +139,16 @@ Division in assembly is integer division, meaning that the result will be an int
 
 This operation will set some status flags if the result is too big or if you try to divide by zero.
 ## Status Flags Register
-The Intel x86 CPU has a special register where each bit represents a true/false status. There are many flags that we will not use, but there are a few which are of interest to us.
+The Intel x86 CPU has a special register where each bit represents a true/false status. There are many flags that we will not use, but there are a few which are of interest to us. 
 
 These are:
 - **CF** - carry flag - previous operation had a carry from the most significant bit
 - **ZF** - zero flag - previous operation had a zero result
-- **SF** - sign flag - previous operation was positive (0) or negative
+- **SF** - sign flag - previous operation had a negative result
 - **OF** - overflow flag - previous operation was too big to fit in memory
+If the conditions above aren't satisfied all of these flags are 0, otherwise they are 1.
 
 We can use jump instructions to check flags and take appropriate action.
-
 ## Jumps
 An unconditional jump uses the mnemonic `jmp` and will move the instruction pointer to the given address label.
 

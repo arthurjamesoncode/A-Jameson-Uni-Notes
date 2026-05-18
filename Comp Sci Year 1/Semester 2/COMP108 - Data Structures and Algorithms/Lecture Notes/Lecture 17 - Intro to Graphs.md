@@ -68,7 +68,7 @@ Other subjects also use graphs to model various things:
 Undirected graphs are graphs in which there in which the set of edges is defined as a set of **unordered pairs**.
 
 There are 2 kinds of undirected graph:
-- A simple graph - There is at most 1 edge between vertices, and vertices can be connected to themselves.
+- A simple graph - There is at most 1 edge between vertices, and vertices cannot be connected to themselves.
 - A multigraph - There can be more than one edge between two vertices and vertices can be connected to themselves.
 
 We say that vertices which are connected to each other are **adjacent** and are **neighbours** of each other.
