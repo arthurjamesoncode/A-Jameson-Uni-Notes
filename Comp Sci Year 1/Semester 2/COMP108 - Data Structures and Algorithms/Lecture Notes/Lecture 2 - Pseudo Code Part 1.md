@@ -89,7 +89,7 @@ endif
 For loops execute some code for every item in some set. This can be every item in a list, or every value in a certain range. You can see examples of this below.
 
 ```
-for <variable> ← <value1> to <value2> do
+for <variable> = <value1> to <value2> do
 	<statement>
 endfor
 ```

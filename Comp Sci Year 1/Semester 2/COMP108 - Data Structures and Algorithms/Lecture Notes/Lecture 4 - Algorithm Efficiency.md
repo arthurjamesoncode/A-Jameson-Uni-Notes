@@ -125,9 +125,11 @@ Big-O notation is our main way of comparing the efficiency of various algorithms
 
 The formal definition of Big-O notation is this $$
 f(n) = O(g(n))
-$$where $$
+$$when $$
 \exists c\exists n_0 \text{ such that } \forall n\geq n_0 \text { we have } f(n) \leq cg(n)
 $$
+In plain English, this says "There a constants $c$ and $n_0$ such that for all $n$ greater than $n_0$ the value of $f(n)$ is greater than the value of $c\cdot g(n)$"
+
 We can use this to prove that certain functions have certain big O notations.
 
 Take the function $$

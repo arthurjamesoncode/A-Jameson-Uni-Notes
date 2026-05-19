@@ -24,8 +24,8 @@ How about if we wanted to create an custom exception called `NegativeNumberExcep
 - etc.
 
 We could do so like this
-```
-/** An exception for complaining abut negative integers */
+```java
+/** An exception for complaining about negative integers */
 public class NegativeNumberException extends Exception {
 
 	public NegativeNumberException () {}

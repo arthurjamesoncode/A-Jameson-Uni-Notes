@@ -52,7 +52,7 @@ Let's look at how we could program a factorial subroutine in assembly code.
 ; SUB factorial
 factorial:
 	cmp eax, 1
-	jl termcase
+	jle termcase
 	push eax
 	dec eax
 	call factorial
