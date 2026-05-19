@@ -42,6 +42,12 @@ This definition can be used to prove that a given algorithm is of order $O(g(n))
 In practice, we can find the big-O of a algorithm by simply **discarding any constants** and **discarding all but the dominant term(s)**.
 
 The **dominant term** of a function is the term which places highest in the hierarchy defined below.
+
+If a function has two distinct terms of the same degree, for example
+$$
+f(n) = n^2 + m
+$$
+then you cannot eliminate either term unless you know for certain that one always dominates the other. For example if $m$ is always less than $n$.
 ### Hierarchy of Functions
 We can define the hierarchy of functions as follows, lowest **order of growth** to highest:
 - **Constant** - 1
