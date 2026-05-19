@@ -49,7 +49,6 @@ node = tail
 while node /= NIL do
 	output node.data
 	node = node.prev
-endwhileprev
 endwhile
 ```
 ## Searching Through a Linked List
