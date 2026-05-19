@@ -277,3 +277,6 @@ begin
 	List-Insert-Curr(L, curr, node)
 end
 ```
+### Note on Linked List Questions
+Prudence likes to ask questions about the order of operations when inserting or deleting a node. I find that in an exam the best strategy for this is to just draw physical lines representing the pointers and go through the operations in the orders given to see if any match.
+

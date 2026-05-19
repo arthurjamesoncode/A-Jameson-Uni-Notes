@@ -14,7 +14,6 @@ Today we will be running through the simplest (and worst) of these algorithms **
 ## Bubble Sort
 If you recall [[Lecture 6 - Finding Min & Max of Arrays|lecture 6]], we created an algorithm which finds the maximum value of an array. Bubble sort is essentially if you applied that algorithm to find the maximum value, then applied it again to find the second max, and so on until you have a sorted array. 
 
-
 The way it works is simple:
 - Start from the first element in the array
 - Traverse the array and swap elements which are not in ascending order
