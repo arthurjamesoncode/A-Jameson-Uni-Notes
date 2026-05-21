@@ -128,6 +128,6 @@ You can also understand this as finding the minimum of each machine given the pr
 
 Note that if, instead of having a fixed number of assembly lines, we had $m$ assembly lines. Now we have $m\times n$ machines in total. So to find the time complexity of this algorithm we need to look at how long it takes to find the minimum of the $j^{th}$ machine in a given assembly line given the previous layer.
 
-Before it took constant time to find the minimum of a given machine since we had a **fixed** number of lines. Now we don't we have $m$ lines, and therefore must find the minimum of $m$ values for every machine. The time complexity of finding the minimum of $m$ values is $O(m)$.
+Before it took constant time to find the minimum of a given machine since we had a **fixed** number of lines. Now we don't, we have $m$ lines, and therefore must find the minimum of $m$ values for every machine. The time complexity of finding the minimum of $m$ values is $O(m)$.
 
 This means that in total we need to find perform an $O(m)$ operation $mn$ times, meaning that the big-O for this algorithm is $O(m^2n)$.
