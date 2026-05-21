@@ -3,7 +3,7 @@ This note is a bit weird compared to the other ones. It's not going to cover any
 
 The exam is a 2hr programming exam that will take place on the 20th of May.
 
-It will take place on university computers, and you can use any IDE on these computers. They are guaranteed to have both notepad++ and vscode. You cannot use any generative AI tools.
+It will take place on university computers, and you can use any IDE on these computers. They are guaranteed to have both notepad++ and likely to have vscode. You cannot use any generative AI tools.
 
 You need to bring:
 - A pen/pencil to sign/fill in some forms

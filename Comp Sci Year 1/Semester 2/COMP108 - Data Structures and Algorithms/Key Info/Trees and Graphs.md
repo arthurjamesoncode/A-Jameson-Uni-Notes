@@ -98,7 +98,7 @@ Adjacency matrices can be represented by a 2D array.
 Adjacency matrices have fast lookup times compared to adjacency lists, but always store $n^2$ entries for $n$ nodes in the graph. In a sparse graph adjacency matrices store much more than an adjacency list of the same graph.
 
 If we represent a graph as an **adjacency list**, we store a list of adjacent vertices next to each vertex.
-## Incidence
+### Incidence
 If a graph has $m$ edges and $n$ nodes then it's **incidence matrix** will be an $m\times n$ matrix.
 
 $M(i,j)$ being 1 indicates that edge $i$ is incident with node $j$.
@@ -170,4 +170,4 @@ endwhile
 ```
 If DFS is asked to output a path, the path it outputs may not be optimal. As implemented it is complete.
 
->If you want more in-depth properties and visualisations of these algorithms look to [[Lecture 5 & Lecture 6 - BFS and DFS]] from the COMP111 module.
+>If you want more in-depth properties and visualisations of these algorithms look to [[Lecture 5 & Lecture 6 - BFS and DFS]] from the COMP111 module. 

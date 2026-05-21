@@ -1,5 +1,5 @@
 ## Minimum Spanning Tree (MST)
-Given an undirected connected graph $G$, a **spanning tree** of $G$ is a tree which contains all the vertices in $G$.
+Given an undirected connected graph $G$, a **spanning tree** of $G$ is a tree which contains all the vertices in $G$ while only containing edges from $G$.
 
 Now if this graph has **weights** associated with each edge, the **minimum spanning tree** is the spanning tree with the minimum weight.
 
