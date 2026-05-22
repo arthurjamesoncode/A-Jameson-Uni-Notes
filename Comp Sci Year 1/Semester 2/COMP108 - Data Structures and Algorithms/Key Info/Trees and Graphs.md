@@ -105,6 +105,8 @@ $M(i,j)$ being 1 indicates that edge $i$ is incident with node $j$.
 
 In an undirected graph, if $a$ and $b$ were the endpoints of $i$ then both $M(i,a)$ and $M(i,b)$ would be 1.
 
+In a directed graph, if $i$ leads out from $a$ and into $b$ then $M(i,a)$ would be $1$ and $M(i, b)$ would be $-1$. In other words, there is a negative 1 for the destination, and a positive one for the origin.
+
 >Importantly: **each row represents an edge, and each column represents a node**.
 
 Incidence matrices should be used over adjacency matrices if the graph is **not-simple**.

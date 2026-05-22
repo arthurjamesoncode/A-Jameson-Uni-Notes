@@ -85,8 +85,7 @@ endwhile
 **Properties:**
 - Optimal - will always find an MST
 - Can find multiple MSTs for some graphs with duplicate edge weights depending on how ties are broken in the sorting of edges
-- $O(n)$ if given sorted edges
-- $O(n\log n)$ if given unsorted edges
+- $O(nm)$ if given $n$ vertices and $m$ edges
 ## Dijkstra's
 **Pseudocode:**
 ```
@@ -119,7 +118,9 @@ endwhile
 - Can produce different paths (specific nodes could have different predecessors) if two paths from the start to the same node have the same weight
 - Time complexity $O(n^2)$
 
-Note that, when tracing the algorithm on paper, the `distance` of each node is updated the each time a possible predecessor is travelled to. This is important to know since some questions will be of the form "which of these sets of changes could this algorithm produce" are common.
+Note that, when tracing the algorithm on paper, the `distance` of each node is updated the each time a possible predecessor is travelled to, meaning that an edge with it as one of its endpoints is selected.
+
+This is important to know since some questions will be of the form "which of these sets of changes could this algorithm produce" are common.
 
 
 

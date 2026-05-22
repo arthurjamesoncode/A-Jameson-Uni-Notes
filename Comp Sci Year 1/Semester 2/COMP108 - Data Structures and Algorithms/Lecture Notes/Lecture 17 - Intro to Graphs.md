@@ -241,7 +241,7 @@ We can see that this corresponds to the following incidence matrix:
 ![[incidence_undir_matrix.png]]
 Notice that each row has exactly two 1s in it, since each edge connects two nodes.
 
-In a directed graph, if $i$ leads out from $a$ and into $b$ then $M(i,a)$ would be $-1$ and $M(i, b)$ would be $1$.
+In a directed graph, if $i$ leads out from $a$ and into $b$ then $M(i,a)$ would be $1$ and $M(i, b)$ would be $-1$. In other words, there is a negative 1 for the destination, and a positive one for the origin.
 
 Take, for example, the following directed graph with it's edges labelled:
 ![[incidence_digraph.png]]

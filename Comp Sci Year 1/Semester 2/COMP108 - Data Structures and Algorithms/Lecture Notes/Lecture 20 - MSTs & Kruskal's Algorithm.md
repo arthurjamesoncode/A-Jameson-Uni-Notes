@@ -160,8 +160,25 @@ while E' is not empty do
 endwhile
 ```
 ## Time Complexity Analysis
-Imagine we start with a sorted list of edges.
+Let $m$ be the number of edges and $n$ be the number of nodes.
 
-In this case, we can go through the edges linearly, meaning that in the worst case (when the greatest edge is part of the MST), that we complete $n$ operations. This gives the algorithm a time complexity of $O(n)$.
+We first need to sort the list of edges. This is an $O(m\log m)$ if we use an efficient sorting algorithm.
 
-If we start with an unsorted list of edges, obviously we need to first sort them. Since the best sorting algorithms take $O(n\log n)$ time to complete, and $n\log n$ dominates $n$, the time complexity in this case would be $O(n\log n)$.
+We then go through the edges linearly, meaning that in the worst case (when the greatest edge is part of the MST), that we complete $m$ iterations.
+
+Each iteration we must check that adding the edge doesn't create a cycle. If we maintain the map of sets, this is an $O(1)$ operation but in order to maintain the map of sets we sometimes need to add all the members of 1 set to another set. In the worst case this is an $O(n)$ operation.
+
+This gives the nested loop a time complexity of $O(mn)$ and our full algorithm a time complexity of $O(mn+m\log m)$.
+
+To see if we can remove either term we need to understand how $m$ and $n$ are related. We now that in a fully connected graph with $n$ nodes there is 
+$$
+\frac{n(n-1)}2=\frac{n^2-n}2=O(n^2)
+$$
+edges.
+
+Since the upper bound of $m$ is $O(n^2)$ we know the upper bound of $\log m$ is
+$$
+\log n^2 = 2\log n
+$$
+
+Giving us a time complexity of $O(mn + 2m\log n)$ which neatly simplifies to $O(mn)$.
