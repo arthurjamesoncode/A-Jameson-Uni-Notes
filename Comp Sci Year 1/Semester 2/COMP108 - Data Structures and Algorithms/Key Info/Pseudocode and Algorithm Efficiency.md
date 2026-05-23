@@ -39,15 +39,15 @@ $$
 $$
 This definition can be used to prove that a given algorithm is of order $O(g(n))$ after calculating that the actual number operations for the algorithm is $f(n)$
 
-In practice, we can find the big-O of a algorithm by simply **discarding any constants** and **discarding all but the dominant term(s)**.
+In practice, we can find the big-O of an algorithm by simply **discarding any constants** and **discarding all but the dominant term(s)**.
 
 The **dominant term** of a function is the term which places highest in the hierarchy defined below.
 
-If a function has two distinct terms of the same degree, for example
+If a function has two distinct terms, for example
 $$
 f(n) = n^2 + m
 $$
-then you cannot eliminate either term unless you know for certain that one always dominates the other. For example if $m$ is always less than $n$.
+then you cannot eliminate either term unless you know for certain that one always dominates the other. For example if $m$ is always less than $n^2$.
 ### Hierarchy of Functions
 We can define the hierarchy of functions as follows, lowest **order of growth** to highest:
 - **Constant** - 1
@@ -60,7 +60,7 @@ We can also expand this to add:
 - $n^2\log n$ between $n^2$ and $n^3$
 - etc.
 
-$log_an$ and $log_bn$ always differ by a constant value so we don't need the base for time complexity analysis.
+$log_an$ and $log_bn$ always differ by a constant value for all $a,b$ so we don't need the base for time complexity analysis.
 
 $log^kn$ has a lower order of growth than $\log n$ for all $k\in\mathbb N$.
 

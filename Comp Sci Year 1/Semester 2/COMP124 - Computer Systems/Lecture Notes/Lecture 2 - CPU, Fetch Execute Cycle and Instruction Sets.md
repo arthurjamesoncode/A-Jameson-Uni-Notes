@@ -16,10 +16,11 @@ This invokes an interrupt handler within the operating system, which intercepts 
 ## Internal Memory
 All programs and data must be converted to binary format and loaded into internal memory before they can be processed. This is called the stored program concept.
 
-There are multiple types of memory, which include:
+There are two types of internal memory:
 - **RAM** - Random Access Memory - This is read and write, volatile (meaning it is not persistent, and will be lost when turned off or power is lost) and is the main type of memory the computer uses when performing tasks. It is called random access memory because it can be accessed from any random location, rather than needing to be accessed from the beginning.
 - **ROM** - Read Only Memory - This is non-volatile, and cannot be change. It is usually burned into a chip on the motherboard. This is how the system boot code would be stored.
-- The memory in HDDs and SSDs is different from the above 2 types, it is non-volatile and read and write. Programs stored in HDDs and SSDs must be loaded into ram before they are used.
+
+>The memory in HDDs and SSDs is different from the above 2 types, and are not considered internal memory. It is non-volatile and read and write. Programs stored in HDDs and SSDs must be loaded into RAM before they are used.
 
 The **bit length** of a system determines how much memory can be moved and manipulated by the CPU in a single operation.
 
@@ -86,7 +87,7 @@ These instructions generally fall into 6 broad categories:
 - **Control** - jumps and subroutine calls
 - **Miscellaneous** - Any helper operations that don't fit into another category.
 
-Code written in high level languages, such as Java or C++, needs to be compiled into a sequence of ow level instructions that the CPU can understand.
+Code written in high level languages, such as Java or C++, needs to be compiled into a sequence of low level instructions that the CPU can understand.
 
 The fetch execute cycle works it's way through that low level sequence as it executes the program.
 

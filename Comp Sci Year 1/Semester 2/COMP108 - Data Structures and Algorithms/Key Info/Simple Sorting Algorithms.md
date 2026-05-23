@@ -86,3 +86,5 @@ endwhile
 >This is because selection sort only requires $O(n)$ swap operations, while the other two require $O(n^2)$ swap operations. 
 >
 >The $O(n)$ swap operations is dominated by the $O(n^2)$ comparisons which need to be made as part of selection sort.
+>
+>In some cases insertion and bubble sort can perform less operations since selection sort always performs $n-1$ swap operations, but both insertion and bubble may perform less.

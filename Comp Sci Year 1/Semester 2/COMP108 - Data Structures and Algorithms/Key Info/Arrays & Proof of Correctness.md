@@ -8,7 +8,7 @@ A **nested array**, also called a **2D array**, is an array which contains a num
 
 **Binary search** is a search algorithm which works on a sorted list by repeatedly splitting it in two, and comparing the mid points of each sub-list with the `key`.
 
-**Naïve pattern matching** is a pattern matching algorithm which determines whether a given pattern exists in a given array/string. It does so by checking every position of the array for the pattern. Better alternatives are not talked needed for this course but can be read about [[Lecture 7 - 2D Arrays and Pattern Matching#Doing Better|here]].
+**Naïve pattern matching** is a pattern matching algorithm which determines whether a given pattern exists in a given array/string. It does so by checking every position of the array for the pattern. Better alternatives are not needed for this course but can be read about [[Lecture 7 - 2D Arrays and Pattern Matching#Doing Better|here]].
 ## Array Properties & Notation
 We use `A[1..n]` to denote an array with $n$ elements numbered from $1$ to $n$.
 

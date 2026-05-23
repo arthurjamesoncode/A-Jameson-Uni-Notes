@@ -91,14 +91,13 @@ Linked lists can be implemented as a series of **nodes** which have the followin
 - `prev` - A pointer to the previous list node
 `prev` would not exist in a singly linked list.
 
->Prudence seems to pretty much only work with doubly linked lists in exam questions, so I am only going to refer to doubly linked lists from now on.
+>Prudence seems to pretty much only work with doubly linked lists in exam questions, so I am (mostly) only going to refer to doubly linked lists from now on.
 
 The linked list itself will have the properties:
 - `head` - A pointer to the first item in the linked list 
 - `tail` - A pointer to the last item in the linked list
 
 Let $n$ be the size of the input list for all operations below.
-
 ### Traversing/Searching
 **Traversing a linked list from the head:** $O(n)$
 ```

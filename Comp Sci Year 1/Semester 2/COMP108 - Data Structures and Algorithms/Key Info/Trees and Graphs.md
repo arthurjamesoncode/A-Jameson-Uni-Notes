@@ -10,6 +10,8 @@ A **connected graph** is a graph which has at least one path between any two ind
 
 The **degree of a vertex** in an undirected graph is the number of edges the vertex is incident with.
 
+The **degree of a graph** is the maximum of all degrees of its vertices.
+
 In a **directed graph** each vertex has an:
 - **In-degree** - The number of edges which point to the vertex
 - **Out-degree** - The number of edges which leave a vertex
@@ -56,13 +58,13 @@ A **descendant** of a node is any node lower than it in a rooted tree hierarchy.
 
 A **leaf** is a vertex of a rooted tree which has no children.
 
-An **internal vertex** is any non-leaf vertex in the tree.
+An **internal vertex** is any non-leaf vertex in a rooted tree.
 
 The **degree of a vertex** in a **rooted tree** is the number of children it has.
 
 The **degree of a rooted tree** is the maximum of the degrees of all vertices in the tree.
 
-A **subtree** of a rooted tree is a smaller tree formed by taking any vertex of the tree as the root. In general a subtree is a smaller tree contained inside a larger tree.
+A **subtree** of a rooted tree is a smaller tree formed by taking any non-root vertex of the tree as the root. In general a subtree is a smaller tree contained inside a larger tree.
 ### Tree Traversals
 **Preorder traversal** - Visits the vertex first, then the left subtree, then the right subtree. (VLR)
 
@@ -111,7 +113,7 @@ In a directed graph, if $i$ leads out from $a$ and into $b$ then $M(i,a)$ would 
 
 Incidence matrices should be used over adjacency matrices if the graph is **not-simple**.
 
-Incidence matrices only ever store two 1 values per row, since an edge can only connect two nodes. This increases the amount of redundant space compared to an adjacency matrix, or adjacency list.
+Incidence matrices only ever store two values per row, since an edge can only connect two nodes. This increases the amount of redundant space compared to an adjacency matrix, or adjacency list.
 
 Incidence lists represent graphs by storing a list of all nodes incident with each edge alongside each edge.
 ## Circuit Properties
