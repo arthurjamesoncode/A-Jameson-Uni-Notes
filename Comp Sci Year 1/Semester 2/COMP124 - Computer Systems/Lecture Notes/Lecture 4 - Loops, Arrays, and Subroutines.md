@@ -168,11 +168,3 @@ There is no special syntax or meaning around subroutines in assembly code.
 Subroutines are simply sequences of instructions like the rest of assembly code. We use the `call` instruction will the label of the first instruction of the subroutine to jump to it, and then we use the `ret` instruction to return from the subroutine.
 
 A subroutine that doesn't end with a `ret` instruction isn't really a subroutine. It will just continue on to the next instruction.
-
-**The following is speculation on the questions asked at the end of the lecture and may be removed or repackaged. Even if I forget to change it, it may be inaccurate**
-
-My assumption is that there is a register that stores the address after the function call, and that `ret` simply jumps to that address whatever it may be.
-
-The lack of local registers causes a problem. Since we only have 4 general purpose ones to use, when we call a subroutine we have to be sure it will not overwrite any values that we need. A workaround for this could be to store the values we need in memory, and then retrieve it after running the subroutine.
-
-There also isn't really a concept of "return values" as it just jumps back to the where it was before, but if a subroutine computes a value and always leaves it in the same register we can use that value after calling the subroutine.

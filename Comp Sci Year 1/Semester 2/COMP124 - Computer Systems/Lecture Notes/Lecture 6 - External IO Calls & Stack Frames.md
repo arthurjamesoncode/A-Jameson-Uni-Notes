@@ -12,7 +12,7 @@ The two I/O subroutines that we will use from the standard C library are:
 - `printf` - which sends a formatted output to the console.
 - `scanf` - which waits for input from the console.
 
-To output things using `prinf` we must know that:
+To output things using `printf` we must know that:
 - It takes a string variable or literal as its first parameter;
 - We must pass the address of the string by **reference** in our assembly code.
 
