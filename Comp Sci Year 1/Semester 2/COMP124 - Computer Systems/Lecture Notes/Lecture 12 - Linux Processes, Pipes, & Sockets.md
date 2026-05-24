@@ -25,7 +25,7 @@ The fork system call returns one of three possible values:
 It is important to note that `fork()` clones the current process, and returns in **both** the child and parent process.
 
 A typical example of how this would be used is shown below
-```
+```C
 int pid = fork(); // Call returns in each of the two processes 
 
 if(pid == 0) { 
@@ -47,7 +47,7 @@ The first process to run is called `systemmd` and has a process id (PID) of 1. T
 - Maintains logfiles to record system activity
 - Keeps track of other processes and kernel settings
 ## Shell (Terminal) Login
-The `sshd` daemon runs in the background, waiting for incoming connections. It is spawned by `systemmd` when the system first boots up.
+The `sshd` daemon runs in the background, waiting for incoming connections. It is spawned by `systemd` when the system first boots up.
 
 We can use an `ssh` client to connect to a Linux server. When we do this:
 - The `sshd` daemon uses `fork()` to spawn a child process,
@@ -161,7 +161,7 @@ We could use a pipe to combine these two commands and therefore get the current 
 cat /proc/modules | wc --lines
 ```
 ### Sockets
-A socket is a form of OPC that can span multiple systems.
+A socket is a form of IPC that can span multiple systems.
 - One process is the server (a daemon) listening for clients
 - One process is the client which connects to the server
 - Both sides can send and receive (communication is bidirectional)

@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - flashcards
+---
 ## Assembly Language Overview
 ### What is assembly language?
 Assembly language is a human readable version of machine code. It uses simple mnemonics to represent machine code instructions.

@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - flashcards
+---
 ## Operating Systems Overview
 ### What is the purpose of an OS?
 Operating systems (OSs) serve two main purposes:
@@ -273,3 +277,240 @@ It also assigns a ‘nice’ value to each user which ranges from −20 (highest
 - Users can change priorities with nice and renice commands
 
 >Note that 1 is highest and 139 is lowest in Linux
+## Linux Overview
+### What is Linux?
+Linux is an open source operating system created in 1991. You can see its architecture below:
+![[linux_architecture.png]]
+### What are System Calls?
+System calls are an interface provided by the OS. They allow users to access I/O devices and perform certain actions which would otherwise be prevented by the protection ring.
+
+System calls can be made by processes in user mode, but system calls themselves use kernel mode.
+### What is the difference between modular and monolithic kernels?
+A monolithic kernel has all drivers included when the kernel is compiled.
+
+The disadvantages of a **monolithic kernel** are:
+- The kernel image is very big on disk and in memory
+- Need to recompile the kernel every time we want to add a new driver or functionality
+
+A modular kernel only has specific drivers loaded when the system boots up
+
+The disadvantages of a **modular kernel** are:
+- Fragmentation of kernel memory as file systems and modules are loaded.
+- Security and stability risk from loading bad modules
+### What do WIMP and GUI stand for?
+WIMP stands for:
+- Windows
+- Icons
+- Menus
+- Pointers
+
+GUI stands for "Graphical User Interface"
+## Navigating Linux & Other Commands
+### What is a directory?
+A directory is a location in which files or other directories are stored.
+### What special directories do we use to navigate file systems?
+We use 4 special directories to navigate file systems:
+- `~` - Home Directory
+- `.` - Current Directory
+- `..` - Parent of current directory
+- `/` - Root Directory
+### What is the root directory?
+The root directory is the top of the directory hierarchy and holds all other directories.
+
+### What commands can we use to navigate through and manipulate directories?
+We can use the commands:
+- `cd` - change directory
+- `pwd` - print working directory (current directory)
+- `ls` - list all files and directory in current directory
+- `mkdir` - create a new directory
+- `rmdir` - remove an empty directory
+- `rm` - remove a file
+### How can we pass options to commands?
+We can pass options to commands as a string of single letters following a dash.
+
+For example:
+```
+ls -a
+```
+or
+```
+ls -la
+```
+### What do `ls -a` and `ls -l` do?
+`ls -a` lists all directories in a folder including special/hidden ones.
+
+`ls -l` uses a longer format which shows more information
+### How are file permissions shown in the terminal?
+In the terminal, after performing `ls -l` a string will be shown next to each file which looks something like this:
+```
+drwx--x--x
+```
+### What does each character of the permission string mean?
+There are 10 characters in the permission string
+
+The first character indicates the type of file:
+- `-` for normal file
+- `d` for directory
+- other characters for other special files
+
+The next 9 characters split into 3 groups (in order):
+- User
+- Group
+- Others
+
+Each 3 character section indicates permissions:
+- The first character is either `r` (for read) or `-` 
+- The second character is either `w` (for write) or `-`
+- The third character is either `x` (for execute) or `-`
+### How do you change permissions?
+You can change permissions using the `chmod` (change mode) command.
+
+You either use the format `chmod [ugo][+-][rwx] filename` where:
+- `u`, `g`, or `o` represents who you are changing permissions for
+- `+` or `-` represents whether you are adding or removing permissions
+- `r`, `w`, `w` represents which permission you are changing
+
+Or you can change the whole string at once by passing in a 3 digit octal value. Each digit represents the new permissions for one set of users (`u`, `g`, `o`). 
+
+You can either get the correct octal value by thinking of the binary string which matches the permissions, or by using the table below.
+
+| (add up) | Value |
+| -------- | ----- |
+| Read     | 4     |
+| Write    | 2     |
+| Execute  | 1     |
+>Importantly, the filename is the second argument to the command. There was a practice question on this I got wrong.
+### What is the Root User?
+The root user is a special user in Linux which has full access to everything. It owns many background processes and system files. 
+
+Human users can not login to the root user in most modern systems. Users can temporarily request root permissions using the `sudo` command.
+### How do I compile and run assembly code in Linux?
+You must compile a file using the command
+```
+nasm -f elf32 filename.asm
+```
+
+And then link it to an executable with
+```
+ld -m elf_1386 filename.o -o filename
+```
+
+You can then run it with 
+```
+./hello
+```
+
+>I doubt this will come up but it might so you should try remember these commands.
+## Linux Processes
+### How are new processes created?
+New processes are created from other processes using the system calls:
+- `exec()` - tells a process to execute another process (essentially transforms the old process)
+- `fork()` - spawns a new clone of the process which runs alongside the parent
+### How can we tell a parent process to wait until its child finishes?
+By using the `wait()` system call.
+### What does the `fork()` system call return?
+It returns either:
+- A negative number - error that stopped creation
+- 0 - Child is created and this is running from inside the child
+- A **positive number** means that the child was created and this is running from **inside the parent process**. In this case, the number returned is the ID of the child process
+
+For example:
+```C
+int pid = fork(); // Call returns in each of the two processes 
+
+if(pid == 0) { 
+	printf(“I’m the child process”); 
+	// Will usually call exec() to load its own code 
+} else { 
+	printf(“I’m the parent and my child’s ID is %d”, pid); 
+}
+```
+### What is the first process called and what is its PID?
+The first process is called `systemd`, meaning system daemon. Its PID is 1.
+### How is the first process spawned?
+The first process is loaded by GRUB (GNU Grand Unified Bootloader) off of disk. This is the kernel image.
+
+GRUB is stored on the ROM of the motherboard.
+### How can we connect to a remote shell?
+We can connect to a remote shell using an `ssh` client.
+### What happens in terms of processes when we connect to a remote shell?
+An `sshd` daemon runs in the background of the shell we are connecting to. This waits for incoming connections and is spawned by `systemd`.
+
+When we connect:
+- The `sshd` daemon uses `fork()` to spawn a child process,
+- The child uses `exec()` to run a login process,
+- The login process checks that our credentials are correct,
+- If credentials are correct it uses `exec()` to run our preferred shell process.
+### What is a zombie?
+A zombie is a process which has terminated but it's "death" has not been acknowledged by the parent process, meaning it is still present in the process table.
+### What terminates first: Parent Process or Child Process?
+Parent processes usually wait for their children to die.
+- The processor manager will tell the parent that the child terminated
+- A `SIGCHILD` signal is then sent to the parent
+- Clean up is only done **after** the parent acknowledges it no longer needs its child
+### What is an orphan?
+An orphan is a process whose parent has terminated before them.
+### How are zombies and orphans dealt with?
+It is the job of `systemd` to periodically clean up any zombies/orphans in the process table.
+### What is a daemon process?
+A daemon is a background process. It is not attached to any user and it runs permanently in the background.
+
+Daemon processes usually have a higher priority than other processes.
+### How does the Linux kernel keep track of processes?
+The Linux kernel stores information about processes in the `/proc` directory.
+
+It stores:
+- Details about state of the kernel
+- A subdirectory for each running process
+
+This forms the virtual file system `procfs`. These files are not all real files.
+### What are Linux signals?
+Linux signals are interrupts.
+### How do processes send signals?
+Signals can be sent between processes using the `signal()` system call.
+### How can we send signals from the terminal?
+We can send signals from the terminal by using the `kill` command like so
+```
+kill -s SIGKILL 438
+```
+`438` is the PID and `SIGKILL` is the signal.
+
+`-s` lets us specify a signal. `SIGKILL` is sent by default.
+### How can processes respond to signals?
+Processes can respond by:
+- **Performing** the action requested
+- **Ignoring** the signal completely
+- **Catching** the signal and running some other arbitrary code
+### What signals do we need to know for this module?
+| Code     | Number | Meaning                                             |
+| -------- | ------ | --------------------------------------------------- |
+| SIGINT   | 2      | Interrupted from keyboard (via CTRL+C)              |
+| SIGKILL  | 9      | Request to terminate process (**can't be ignored**) |
+| SIGTERM  | 15     | Request to terminate process (can be ignored)       |
+| SIGCHILD | 17     | Indicates that a child process has terminated       |
+| SIGIO    | 29     | input or output is ready                            |
+### How can we terminate a zombie process?
+Often processes become zombies because their parents are poorly coded.
+
+This means that to terminate them we must send the `SIGKILL` signal to the parent and then let `systemd` adopt/clean up the zombie.
+### What types of Inter-Process Communication (IPC) exist?
+There are 4 types of IPC (for this course):
+- Shared memory
+- Shared files
+- Pipes
+- Sockets
+### What are pipes?
+Pipes a way to send the output from one process to another process in the command line.
+
+For example:
+```
+cat /proc/modules | wc --lines
+```
+### What are sockets?
+Sockets are a form of multiple system IPC between two processes, a server and a client.
+- The server listens for clients with the `listen()` system call
+- The client connects to the server and the server uses the `accept()` system call
+- The server spawns a handler using the `fork()` and `exec()` system calls
+Both sides can send and receive information.
+
+Linux views sockets as special files meaning that data transfer can be done with the `fread` and `fwrite` system calls.

@@ -16,6 +16,10 @@ If you have Obsidian installed, you can clone this repo into an Obsidian vault a
 The **Lecture Notes** folder within each module is meant to be written a comprehensive guide on the content covered in that lecture, although sometimes content from adjacent lectures may be covered if I think it fits better.
 
 The **Key Info** folder within some modules is meant to be a comparatively bite-sized collection of information I need to memorise, such as formulas, definitions, etc. The content in these is separated by topic. Not every module will have this.
+
+Some key info notes are flashcards notes. The idea is to have a question as a heading, since I can collapse the answer, this functions like a flashcard. They have a `cssclasses` property at the top set to `flashcards`. 
+
+On my system I have changed the colour of `h3` elements in these files so that it is easier to separate cards and categories. I recommend you do the same if you decide to use them. You can see how to [here](https://obsidian.md/help/snippets).
 ## Status
 This is just a quick place to track where I currently am in my studies, and which modules have up to date notes. This is just each module with a link to the most recent complete note written next to it. These links work if you clone the repo to an Obsidian Vault, but will not work if you are reading this on GitHub itself, and may not work in other apps (I haven't tested it).
 

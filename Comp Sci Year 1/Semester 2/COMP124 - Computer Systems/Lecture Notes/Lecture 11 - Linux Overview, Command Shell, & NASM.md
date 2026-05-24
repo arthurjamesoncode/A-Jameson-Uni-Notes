@@ -20,7 +20,7 @@ Library code is included or imported at the top of source code. This provides a 
 ## Kernel Modules
 The kernel is privileged in any OS, meaning it can do anything without any restrictions. It can access any device memory location etc.
 
-Device drivers also need privileged access to hardware. Because of this, Linux has trusted device drivers  built into the kernel itself.
+Device drivers also need privileged access to hardware. Because of this, Linux has trusted device drivers built into the kernel itself.
 
 There are two types of kernel which load drivers in different ways:
 - A **monolithic kernel** has all drivers included when the kernel is compiled.

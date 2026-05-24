@@ -1,3 +1,6 @@
+---
+cssclasses: flashcards
+---
 ## Von Neumann Model
 ### What does the Von Neumann model consist of, and what is it associated with?
 Von Neumann model consists of:
