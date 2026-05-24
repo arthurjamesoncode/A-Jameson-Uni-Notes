@@ -1,5 +1,5 @@
 ## Operating Systems
-Operating systems (OS) serve two main purposes:
+Operating systems (OSs) serve two main purposes:
 - Turn hardware components into a usable device;
 - Make efficient use of resources
 
@@ -130,7 +130,7 @@ In practice, this process management system doesn't work very well. This is beca
 ### Multitasking
 A better, modern way of process management is **multitasking**.
 
-Multitasking aims to provide fairer access to the CPU by rapidly switching between processing to give the illusion of uninterrupted execution in parallel.
+Multitasking aims to provide fairer access to the CPU by rapidly switching between processes to give the illusion of uninterrupted execution in parallel.
 
 Each running process is given a fixed time slice (called a **quantum**) on the CPU. This means that the OS itself needs time on the CPU to perform **scheduling** tasks (deciding which processes should run).
 
@@ -144,7 +144,7 @@ An **interrupt request (IRQ)** is a hardware signal.
 - They can happen at any time, regardless of what the CPU is doing. 
 - They tell the CPU to stop the current process execution and load an **interrupt handler**.
 
-The CPU has an **interrupt vector**, which stores the memory address of the handlers for each different type of interrupt and s populated by the OS when it boots up. This makes the OS responsible for handling and managing each interrupt.
+The CPU has an **interrupt vector**, which stores the memory address of the handlers for each different type of interrupt and is populated by the OS when it boots up. This makes the OS responsible for handling and managing each interrupt.
 
 Interrupt handlers are also known as **interrupt service routines (ISR)**.
 
@@ -176,7 +176,7 @@ The states a process go through are:
 
 There can be many processes in both the ready and blocked states. Blocked processes are unavailable for dispatch to the CPU. Ready processes are selected for despatch according to some kind of scheduling algorithm.
 
-The **process manager** is responsible for creating and terminating processes.
+The **processor manager** is responsible for creating and terminating processes.
 
 **Creation** of a process includes:
 - Reserving memory for the process and its stack;

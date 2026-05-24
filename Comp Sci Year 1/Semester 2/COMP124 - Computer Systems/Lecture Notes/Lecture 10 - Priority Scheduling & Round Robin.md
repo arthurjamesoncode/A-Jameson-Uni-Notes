@@ -97,7 +97,7 @@ The **disadvantages** of "Round Robin" are:
 - Depends on selecting a good **quantum**;
 - Extensive overhead if the quantum is too short;
 
-If the quantum is too big, "Round Robin" behaves like "First Come First Served", just with shorter processes executing a bit faster. If it too small it behaves like "Shortest Job First", just with longer processes executing a bit faster.
+If the quantum is too big, "Round Robin" behaves like "First Come First Served", just with shorter processes execution a bit faster. If it too small it behaves like "Shortest Job First", just with longer processes executing a bit faster.
 ## Windows Scheduling Algorithm
 Windows uses the "Priority Round Robin" algorithm. Which is a combination of priority scheduling and Round Robin.
 
