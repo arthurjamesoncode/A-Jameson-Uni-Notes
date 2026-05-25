@@ -131,13 +131,12 @@ In DMA the CPU initiates the read or write operation, before the **DMA Controlle
 
 It's worth noting that the system bus is still tied up during this transfer, but the CPU can still get on with things that don't involve accessing the bus.
 
- A **DMA Controller** is required for DMA. This is a hardware component of the system which liaises with both the CPU and the device controller. 
+A **DMA Controller** is required for DMA. This is a hardware component of the system which liaises with both the CPU and the device controller. 
 
 It has it's own registers:
 - Memory Address Register (MAR)
 - Byte Counter
 - Control Register
-- etc.
 
 The CPU loads these registers with the device address, and transfer details, before the DMA controller carries out the data transfer in the background.
 

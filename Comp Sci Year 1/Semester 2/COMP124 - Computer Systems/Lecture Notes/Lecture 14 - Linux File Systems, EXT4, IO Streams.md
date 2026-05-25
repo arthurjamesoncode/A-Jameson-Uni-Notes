@@ -50,7 +50,7 @@ EXT4 can support very large disks and file sizes:
 - Individual file up to 16 terabytes (16,000 GB)
 - Standard disk block size is 4KB (but can go up to 64KB)
 
-It also provide many features that improve performance, stability, and security.
+It also provides many features that improve performance, stability, and security.
 
 Every file (and directory) has an **inode** associated with it. Again this are stored in the **inodes table** and which inodes are free/used are stored in the **inodes bitmap** (the free list).
 
@@ -68,7 +68,7 @@ Instead the content of each directory is stored as a normal file in a block some
 
 Permissions and other metadata about each directory are stored in the inode that points to that directory data block.
 
-Since directories are nested some of the inodes listed in the directory block could point to other directory blocks, and so on.
+Since directories are nested, some of the inodes listed in the directory block could point to other directory blocks, and so on.
 
 The Kernel has to follow a trail of inode numbers and block indexes before it can finally read the actual data blocks for a file. You can see a figure illustrating this below:
 ![[read_trail.png]]

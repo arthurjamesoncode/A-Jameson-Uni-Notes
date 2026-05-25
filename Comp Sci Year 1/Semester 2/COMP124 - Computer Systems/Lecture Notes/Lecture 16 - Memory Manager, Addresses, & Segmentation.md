@@ -41,7 +41,7 @@ When **stack overflow** occurs it is because the heap and stack have grown to th
 ### Address Binding
 When programs are compiled into machine code, the addresses of loops, jumps, variables etc. must be bound to real physical addresses in memory.
 
-There are two main ways to do this:
+There are three main ways to do this:
 - At **compile time**
 - At **load time**
 - At **run time**
@@ -85,7 +85,9 @@ Now the jump location (`floop` label) is encoded with a relative address such as
 
 This lets the memory manager load a process anywhere in the address space, and ensures that 2 programs, as long as they are loaded into different addresses, will not want to jump to the same address.
 ### Dynamic/Run-Time Address Binding
-With run-time address binding, jumps and loop locations are turned into **relative** memory addresses when compiled. This is a big difference from *load time* or *compile time* address binding.
+With run-time address binding, jumps and loop locations are turned into **relative** memory addresses when compiled.
+
+This sounds the same as load time address binding but there is a big difference from *load time* or *compile time* address binding.
 
 The difference here is that each process has its own address space which starts at location 0. So if a process takes up $n$ bytes of memory when loaded, then the address space will always be the numbers from 0 to $n$ no matter where it was loaded.
 
@@ -176,7 +178,7 @@ With **static linking** copies of the library code are added to the final progra
 
 With **dynamic linking** a small stub is included in the final program image which tells the memory manager where to find the library code. If not already in memory, then it will be loaded into memory.
 
-**Dynamic linking** library code to be shared between processes, and helps keep the disk image small while using less main memory. It does require the operating system to support it. Windows supports it through `.DLL` files.
+**Dynamic linking** allows library code to be shared between processes, and helps keep the disk image small while using less main memory. It does require the operating system to support it. Windows supports it through `.DLL` files.
 
 There is an alternative to dynamic linking called **dynamic loading**, although both techniques can be used at the same time. This is because:
 - Dynamic linking is controlled by the OS's memory manager
