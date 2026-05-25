@@ -123,7 +123,7 @@ There are a few ways to prevent deadlock:
 2. Number each resource and force processes to claim then in a specific order
 3. Force processes to only use one resource at a time
 
-If we take approach 1, then we must before the process uses any specific resource claim all the resources that the process will need. Although this has some problems:
+If we take approach 1, then we must, before the process uses any specific resource, claim all the resources that the process will need. Although this has some problems:
 - If a specific resource is used a long time after the first required resource it will be underutilised
 - It's not always possible for a process to know what resource it will need in the future
 These too things make this approach difficult/inefficient.

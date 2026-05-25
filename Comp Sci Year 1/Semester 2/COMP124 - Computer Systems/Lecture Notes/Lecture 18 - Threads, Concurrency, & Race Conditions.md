@@ -104,7 +104,7 @@ public class MyMain {
 }
 ```
 
-Consider which order in which the statements will print to the terminal. Which statement prints first?
+Consider the order in which the statements will print to the terminal. Which statement prints first?
 
 The answer here is that it depends. You would expect the worker thread to output first because it is called first but, since the threads run concurrently, if the worker thread is slow to start then the main thread could run first.
 
