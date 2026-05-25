@@ -14,7 +14,9 @@ The Java compiler uses all 5 steps to produce optimised bytecode that is then in
 ## Lexical Analysis
 Lexical analysis is also known as **scanning**, and so we call the program which does this a **scanner**.  
 
-A scanner uses whitespace and punctation to identify relevant sequences of characters. This is often implemented as a f**finite state machine** and some can use **backtracking** to look at surrounding context. This turns the code into a series of **lexemes** (tokens).
+A scanner uses whitespace and punctation to identify relevant sequences of characters. This is often implemented as a **finite state machine** and some can use **backtracking** to look at surrounding context. 
+
+This turns the code into a series of **lexemes** (tokens).
 
 After this step the compiler has a list of the tokens which make up the program:
 - Identifiers - Variable, parameter, method/function names
@@ -49,7 +51,9 @@ Syntax analysis is also known as **parsing**, and so we call the program that do
 
 This is the stage where the list of tokens is checked to see if forms a valid program.
 
-The parser knows all the **grammars** for the language. It checks the sequence of tokens to see which rules they match. This is often implemented as a recursive algorithm with backtracking. The output of a parser is an **abstract syntax tree** (AST).
+The parser knows all the **grammars** for the language. It checks the sequence of tokens to see which rules they match. This is often implemented as a recursive algorithm with backtracking. 
+
+The output of a parser is an **abstract syntax tree** (AST).
 
 The syntax is correct if the entire list of tokens can be matched to a sequence of valid rules. If one or more tokens cannot be matched, then there must be a syntax error which stops the compiler and outputs a message.
 
@@ -96,7 +100,7 @@ The code generator must:
 - Add call, push, pop instructions to set up subroutines with correct parameters
 - Add debugging information (optionally) so the programmer can step through code.
 
-The generated machine code is passed to the next step.
+The generated machine code is the output of the compiler.
 
 >Some compilers may convert to assembly code first, but most go straight to machine code. 
 >

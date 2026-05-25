@@ -109,7 +109,7 @@ Programming languages are all built off of a similar set of components:
 - The syntactical component
 - The semantic component
 
-The **lexical component** is a list of all **legal keywords** allowed in the language, and there meaning (the action/effect of the keyword). This is things like `import`, `public`, `else`, `while`, etc.
+The **lexical component** is a list of all **legal keywords** allowed in the language, and their meaning (the action/effect of the keyword). This is things like `import`, `public`, `else`, `while`, etc.
 
 The **syntactical component** defines the form and structure of **legal expressions** in the language. For example, in java:
 ```java
