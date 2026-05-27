@@ -38,7 +38,7 @@ Examples include:
 - $\pi$
 - $e$
 
-You can see a proof that $\sqrt{2}$ is irrational in [[Lecture 7 - Two Classic Results]] from the COMP109 module. The same method can be used to prove the next 3 examples aswell.
+You can see a proof that $\sqrt{2}$ is irrational in [[Lecture 7 - Two Classic Results]] from the COMP109 module. The same method can be used to prove the next 3 examples as well.
 
 Irrational numbers are subset of $\mathbb{R}$ but don't fit into the subset chain shown above. If we represent all numbers as a Venn diagram we can show all numbers like so:
 ![[all_number_venn.png]]

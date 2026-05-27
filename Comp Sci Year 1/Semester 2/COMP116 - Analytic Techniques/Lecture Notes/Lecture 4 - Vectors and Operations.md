@@ -68,7 +68,7 @@ There are some other ones, but these are the ones you are most likely to encount
 ### Length
 The length (or magnitude) of a vector $\vec v=(v_1,...,v_n)$ is denoted by $|\vec v|$ and is given by 
 $$
-||\vec v|| = |\vec v| = \sqrt{v_1^2 + \cdot\cdot\cdot + v_n^2}
+||\vec v|| = |\vec v| = \sqrt{|v_1|^2 + \cdot\cdot\cdot + |v_n|^2}
 $$
 This formula is derived by the Pythagorean theorem. 
 
@@ -124,7 +124,7 @@ Before we cover dot product and cross product we should remind ourselves about t
 
 You may be familiar from school that $$
 \sin(\alpha)=\frac{O}{H} \text{ and } \cos(\alpha) = \frac{A}{H}
-$$where $\alpha$ is an **non-right** angle in a **right-angled** triangle, $O$ is the length of the side opposite $\alpha$, $A$ is the length of the side adjacent to $\alpha$ and $H$ is the length of the hypotenuse.
+$$where $\alpha$ is a **non-right** angle in a **right-angled** triangle, $O$ is the length of the side opposite $\alpha$, $A$ is the length of the side adjacent to $\alpha$ and $H$ is the length of the hypotenuse.
 
 A more consistent way to think about it at university level is to take a unit circle, drawn around the origin of a 2D cartesian coordinate grid, and draw a vector from the origin to any point on on the circle.
 
@@ -193,13 +193,19 @@ There are a few important properties of the **dot product**:
 - It has a minimum absolute value of $0$ when the vectors are orthogonal (also called perpendicular), meaning that $\alpha=\frac{\pi}{2}$.
 - It is a **commutative** operation, meaning that the order of the operands does not matter. This is shown below.
 
-To prove that **dot product** is commutative we just need to show that $$\cos(\angle(\vec u,\vec v)) = \cos(\angle(\vec v,\vec u))$$We know that $$
+To prove that **dot product** is commutative we just need to show that $$\cos(\angle(\vec u,\vec v)) = \cos(\angle(\vec v,\vec u))$$We know that 
+$$
 \angle(\vec v,\vec u) = 2\pi - \angle(\vec u,\vec v)
-$$Since we know that $$
+$$
+and since we know that 
+$$
 \cos(\alpha) = cos(2\pi - \alpha)
-$$It must be the case that $$
+$$
+It must be the case that 
+$$
 \cos(\angle(\vec u,\vec v)) = \cos(\angle(\vec v,\vec u))
-$$As this is true, and as multiplication is a commutative operation, we know that $$
+$$
+As this is true, and as multiplication is a commutative operation, we know that $$
 |\vec u| \cdot |\vec v| \cdot \cos(\alpha) = |\vec v| \cdot |\vec u| \cdot \cos(2\pi -\alpha)
 $$where $\alpha=\angle(\vec u,\vec v)$. Therefore **dot product** is a commutative operation.
 
@@ -212,7 +218,8 @@ We can also use a combination of both of these formulas to calculate the angle b
 \end{split}
 $$
 ### Vector/Cross Product
-The **vector product** of two vectors $\vec u, \vec v\in \mathbb{R}^3$, also called the **cross product**, is given by: $$
+The **vector product** of two vectors $\vec u, \vec v\in \mathbb{R}^3$, also called the **cross product**, is given by: 
+$$
 \vec u \times \vec v = |\vec u| \cdot |\vec v| \cdot \sin(\alpha)\cdot \vec n
 $$where $\alpha$ is the angle from $\vec u$ to $\vec v$ and $\vec n$ is a unit vector perpendicular to the plane containing vectors $\vec u$ and $\vec v$.
 

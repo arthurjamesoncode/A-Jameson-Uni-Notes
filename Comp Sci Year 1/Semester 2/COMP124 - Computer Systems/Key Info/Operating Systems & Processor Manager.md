@@ -183,7 +183,7 @@ The **advantages** of "Shortest Job First" are:
 The **disadvantages** of "Shortest Job First" are:
 - Can lead to **process starvation** of larger processes if smaller jobs keep getting created.
 - Difficult to estimate **burst time** for new processes. It usually relies on prior experience.
-### Are non-preemptive process suitable for modern systems and why?
+### Are non-preemptive processes suitable for modern systems and why?
 No:
 - Processes will spend too long waiting
 - Large process reduce overall performance
@@ -259,14 +259,14 @@ Priority values range from 0 to 31, and each new process is given one of five ba
 - **NORMAL** (8) - this is the default
 - **HIGH** (13)
 - **REALTIME** (24)
+
+>Note that 0 is lowest and 24 is highest in windows
 ### What algorithm does Linux use?
 Linux uses an algorithm called **Completely Fair Scheduling** (similar to Round Robin) 
 - Ready processes are stored in a balanced tree (not a queue)
 - Gives credit for time spent in the blocked state 
 - Time quantum varies depending on processor demand 
 - Process priority and nice values combine to give overall priority
-
->Note that 0 is lowest and 24 is highest in windows
 ### What process priorities does Linux use?
 Linux also assigns a priority to each process
 - Kernel processes have a value from 1 to 99
@@ -316,7 +316,6 @@ We use 4 special directories to navigate file systems:
 - `/` - Root Directory
 ### What is the root directory?
 The root directory is the top of the directory hierarchy and holds all other directories.
-
 ### What commands can we use to navigate through and manipulate directories?
 We can use the commands:
 - `cd` - change directory
@@ -441,13 +440,13 @@ When we connect:
 - The child uses `exec()` to run a login process,
 - The login process checks that our credentials are correct,
 - If credentials are correct it uses `exec()` to run our preferred shell process.
-### What is a zombie?
-A zombie is a process which has terminated but it's "death" has not been acknowledged by the parent process, meaning it is still present in the process table.
 ### What terminates first: Parent Process or Child Process?
 Parent processes usually wait for their children to die.
 - The processor manager will tell the parent that the child terminated
 - A `SIGCHILD` signal is then sent to the parent
 - Clean up is only done **after** the parent acknowledges it no longer needs its child
+### What is a zombie?
+A zombie is a process which has terminated but it's "death" has not been acknowledged by the parent process, meaning it is still present in the process table.
 ### What is an orphan?
 An orphan is a process whose parent has terminated before them.
 ### How are zombies and orphans dealt with?

@@ -15,11 +15,15 @@ You can then us this vector to determine how similar various documents are by us
 ## Linear Transformation
 A linear transformation, also called a linear map, is a type of function $f$ from $\mathbb R^m\to \mathbb R^k$. 
 
-A function $f:\mathbb R^m\to \mathbb R^k$ is a linear map if, and only if, for all $\vec u,\vec v\in\mathbb R^m$ and $s\in\mathbb R$ $$
+A function $f:\mathbb R^m\to \mathbb R^k$ is a linear map if, and only if, for all $\vec u,\vec v\in\mathbb R^m$ and $s\in\mathbb R$ 
+$$
 f(s\vec v) = sf(\vec v)
-$$and$$
+$$
+and
+$$
 f(\vec u + \vec v) = f(\vec u) + f(\vec v)
 $$
+
 Any linear map $f$ is determined by the images $f(\vec e_1),...,f(\vec e_m)$ of a **standard linear basis** $\vec e_1,...,\vec e_m$.
 
 We can represent this a $k\times m$ matrix of the linear map $\mathbf{A}$ which consists of $m$ columns that are the values of $f(\vec e_1),...,f(\vec e_m)$ in the output dimension $k$.

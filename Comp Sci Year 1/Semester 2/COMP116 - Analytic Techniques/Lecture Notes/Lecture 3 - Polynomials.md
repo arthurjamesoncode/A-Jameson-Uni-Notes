@@ -93,7 +93,7 @@ $$
 p(x)= 6x + 3,\; p(8) = 51 
 $$
 >Notice that the possible coefficients for a polynomial meant to represent a base $n$ number will be drawn from $\mathbb{Z}_n$.
-## Operation on Polynomials
+## Operations on Polynomials
 We can perform various operations on polynomials to generate new polynomials. 
 ### Addition and Subtraction
 To add or subtract two polynomials, we simply combine the like terms. The like terms are any terms with the same power of $x$.
@@ -235,15 +235,21 @@ We then combine these polynomials using a formula, and this gives us a new polyn
 ### Finding Lagrange Basis Polynomials
 Lagrange basis polynomials are defined so that $l_i(x)$ is equal to 1 when passed exactly 1 of the $x$ values from the $n+1$ point sequence and equal to 0 when passed every other $x$ value.
 
-The polynomial $l_i(x)$ is given by $$l_i(x)=\prod_{0\leq j\leq n,\;j\neq i}{\frac{(x-x_j)}{(x_i-x_j)}}$$
-To see how this works, consider the sequence of points with $x$ values $x_0,x_1,x_2$ and the **Lagrange basis** polynomial $l_0(x)$. We can see that $$
+The polynomial $l_i(x)$ is given by 
+$$
+l_i(x)=\prod_{0\leq j\leq n,\;j\neq i}{\frac{(x-x_j)}{(x_i-x_j)}}
+$$
+To see how this works, consider the sequence of points with $x$ values $x_0,x_1,x_2$ and the **Lagrange basis** polynomial $l_0(x)$. We can see that 
+$$
 \begin{split}
 l_o(x_0) 
 & = \frac{x_0-x_1}{x_0-x_1} \times \frac{x_0-x_2}{x_0-x_2} \\
 & = 1 \times 1 \\
 & = 1
 \end{split}
-$$and that $$
+$$
+and that 
+$$
 \begin{split}
 l_o(x_1) 
 & = \frac{x_1-x_1}{x_0-x_1} \times \frac{x_1-x_2}{x_0-x_2} \\
@@ -252,6 +258,7 @@ l_o(x_1)
 & = 0
 \end{split}
 $$
+
 As $x_0$ through to $x_n$ are constant values, the polynomial still only has one variable $x$. 
 
 If we give it some real values, lets say $x_0=1,x_1=2,x_3=3$ we can see that $$
@@ -265,11 +272,13 @@ $$which is a perfectly valid polynomial.
 ### Combining Lagrange Basis Polynomials
 To determine our Lagrange polynomial $L(x)$, we need to combine our Lagrange basis polynomials.
 
-To combine them, we use the formula $$
+To combine them, we use the formula 
+$$
 L(x)=\sum^n_{i=0}y_il_i(x)
 $$where $l_i(x)$ represents our Lagrange basis polynomial and $y_i$ represents the $y$ value of our given points.
 
-Consider the sequence of points $(x_0,y_0)=(1,2),(x_1,y_1)=(2,3),(x_2,y_2)=(3,1)$. Our Lagrange Basis polynomials are given by $$
+Consider the sequence of points $(x_0,y_0)=(1,2),(x_1,y_1)=(2,3),(x_2,y_2)=(3,1)$. Our Lagrange Basis polynomials are given by 
+$$
 \begin{split}
 l_0(x)
 & = \frac{1}{2}x^2 - \frac{5}{2}x + 3 \\
@@ -277,7 +286,9 @@ l_1(x)
 & = -x^2+4x-3 \\
 l_2(x) & = \frac12x^2-\frac32x+1
 \end{split}
-$$and so our Lagrange polynomial is $$
+$$
+and so our Lagrange polynomial is 
+$$
 \begin{split}
 L(x) 
 & = 2(\frac{1}{2}x^2 - \frac{5}{2}x + 3) + 3(-x^2+4x-3) + 1(\frac12x^2-\frac32x+1) \\

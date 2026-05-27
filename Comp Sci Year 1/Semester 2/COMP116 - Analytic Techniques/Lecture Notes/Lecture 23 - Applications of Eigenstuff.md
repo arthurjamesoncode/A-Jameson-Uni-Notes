@@ -80,7 +80,7 @@ The number of edges $|E|$ in a graph $G$ represented by an adjacency matrix $A$ 
 $$
 |E|=\frac12\sum^n_{k=1}(\lambda_k(G))^2
 $$
-Where $\lambda_k$ represents the $k^{th}$ eigenvalue of $A$.
+Where $\lambda_k(G)$ represents the $k^{th}$ eigenvalue of $A$.
 
 Lets take the matrix
 $$

@@ -3,9 +3,11 @@ A vector space is a collection of vectors from some set $V$, which can be added 
 - There is closure under addition;
 - There is closure under scalar multiplication;
 
-Closure under addition means that:$$
+Closure under addition means that:
+$$
 \forall\vec v, \vec u\in V,\;\vec u + \vec v \in V
-$$While closure under scalar multiplication means that:$$
+$$While closure under scalar multiplication means that:
+$$
 \forall\vec v \in V \text{ and } \forall s\in F,\; s\vec v\in V
 $$
 Less formally, a vector space is an infinite set of vectors which contains every vector that can be obtained by performing an addition or scalar multiplication on a vector in that set.
@@ -22,12 +24,15 @@ $$
 \vec v & = (v_0,...,v_n) \\
 \vec u & = (u_1,...,u_n)
 \end{split}
-$$Using this we can define $\vec u + \vec v$ and $s\vec v$ like so: $$
+$$
+Using this we can define $\vec u + \vec v$ and $s\vec v$ like so: 
+$$
 \begin{split}
 \vec u + \vec v & = (v_0+u_0,...,v_n+u_n) \\
 s\vec v         & = (sv_0,...,sv_n)
 \end{split}
 $$
+
 As $v_0,...,v_n\in\mathbb{R}$ and $u_0,...,u_n\in\mathbb{R}$ we know that $v_0+u_0,...,v_n+u_n\in\mathbb{R}$. Therefore $\vec u + \vec v\in\mathbb{R}^n$.
 
 As $s\in \mathbb{R}$ and $v_0,...,v_n\in\mathbb{R}$ we know that $sv_0,...,sv_n\in\mathbb R$. Therefore $s\vec v\in\mathbb R^n$.
@@ -58,9 +63,11 @@ As $s\vec v\notin\mathbb Z^2$, this shows that this is not a valid vector space.
 ## Linear Independence
 Let vectors from $V$ with scalars from $\mathbb R$ be a vector space. 
 
-A linear combination of $\vec v_1,...,\vec v_k\in V$ is an element of $V$ of the form $$
+A linear combination of $\vec v_1,...,\vec v_k\in V$ is an element of $V$ of the form 
+$$
 c_1\vec v_1+\cdot\cdot\cdot+c_k\vec v_k
-$$where $c_i\in\mathbb{R}\;\forall i\in\{1..k\}$
+$$
+where $c_i\in\mathbb{R}\;\forall i\in\{1..k\}$
 
 Vectors are linearly independent if a linear combination $$
 c_1\vec v_1+\cdot\cdot\cdot+c_k\vec v_k=\vec 0
@@ -114,7 +121,7 @@ These vectors are called the **standard basis** of $\mathbb R^2$, which means th
 $$
 The span of the **standard basis** vectors for $\mathbb R^n$ is $\mathbb R^n$.
 
-For a single vector $\vec v$, linear independence means that $\vec v\neq\vec 0$ and the span of $\vec v$ is a straight line. This is because $c\vec v =0$ only if $c=0$ or $v=0$ and the collection of $c\vec v\; \forall c\in\mathbb R$ is a straight line in the direction of $\vec v$. 
+For a single vector $\vec v$, linear independence means that $\vec v\neq\vec 0$. The span of $\vec v$ is a straight line. This is because $c\vec v =0$ only if $c=0$ or $v=0$ and the collection of $c\vec v\; \forall c\in\mathbb R$ is a straight line in the direction of $\vec v$. 
 
 For two vectors $v_1, v_2$, linear independence means that $v_1$ and $v_2$ are not proportional to each other. Meaning they are not parallel or anti-parallel. The span of $v_1$ and $v_2$ forms a plane. This is because every possible vector on this plane is a linear combination of $v_1$ and $v_2$.
 
@@ -131,7 +138,7 @@ So far, you may understand the dimension of a vector space as the number of comp
 
 **This is not always the case.**
 
-The definition of the **dimension** of a vector space is the minimum number of **basis** vectors required to span a vector space.
+The definition of the **dimension** of a vector space is the minimum number of **basis** vectors required to span the vector space.
 
 Understanding the dimension of a vector as the number of components of vector from a vector space overlaps with the **correct**, formal definition for vector spaces formed by vectors from $\mathbb R^n$ and scalars from $\mathbb R$, but not all vector spaces.
 

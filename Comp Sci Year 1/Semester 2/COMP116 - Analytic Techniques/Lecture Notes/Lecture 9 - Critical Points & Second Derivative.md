@@ -9,7 +9,7 @@ The answer of course is 0, since there is no $x$ term in $y=c$.
 
 Now recall that the **first derivative** $f'(x)$ of a function $f(x)$ gives us the gradient of the line tangent to the curve $y=f(x)$ then to find a **critical point** of $f(x)$ we need to find a value of $x$ such that $f'(x)=0$.
 
-And so the formal definition for the **critical points** of a function are any points $(x, f(x))$ such that $f'(x)=0$.
+And so the formal definition for the **critical points** of a function are any values $(x, f(x))$ such that $f'(x)=0$. Typically we would give these in just 
 
 You can see many examples of critical points in many different functions.
 

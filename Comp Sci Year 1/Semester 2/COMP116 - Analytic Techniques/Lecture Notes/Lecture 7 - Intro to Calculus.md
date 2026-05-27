@@ -69,7 +69,7 @@ All of these functions have **very** different behaviours:
 
 ### Domains and Ranges of Important Functions
 
-**Polynomial** functions are well behaved for all $x\in\mathbb R$, and all will have $\mathbb R$ as the domain and codomain. However only some with have a **range** of $\mathbb R$.
+**Polynomial** functions are well behaved for all $x\in\mathbb R$, and all will have $\mathbb R$ as the domain and codomain. However only some will have a **range** of $\mathbb R$.
 
 **Trigonometric** functions are a bit tricky. 
 

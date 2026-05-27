@@ -102,13 +102,15 @@ When $\nabla f$ is 0, we know that the **surface** of the function is flat. This
 ## Identifying Types of Critical Points
 When we identified the types of critical points for **univariate** (single variable) functions, we used the second derivative. So we need something similar for multivariate functions.
 
-However since we have 2 derivatives of $f(x,y)$ both of which have 2 variables, we actually need to compute both $\nabla f'_x(x,y)$ and $\nabla f'_y(x,y)$. Since both of those are vectors, we can combine them into a single matrix, which we call the **Hessian:**$$
+However since we have 2 derivatives of $f(x,y)$ both of which have 2 variables, we actually need to compute both $\nabla f'_x(x,y)$ and $\nabla f'_y(x,y)$. Since both of those are vectors, we can combine them into a single matrix, which we call the **Hessian:**
+$$
 \mathbf{H} =
 \begin{bmatrix}
 f_{xx} & f_{xy} \\
 f_{yx} & f_{yy} 
 \end{bmatrix}
 $$
+
 There is some new notation here so: 
 - $f_{xx}$ means the second partial derivative of $f$ with respect to $x$ both times;
 - $f_{xy}$ means the second partial derivative of $f$ with respect to $x$ first and then $y$;

@@ -165,7 +165,7 @@ Windows installations typically use either FAT32 or NTFS.
 
 MacOS installations use APFS (Apple File System), but can also read and write to FAT disks. MacOS can read NTFS but can't write to them without significant system changes.
 
-Most Linux installations use EXT4 (EXT2 and EXT3 are earlier versions of the same system). EXT4 disks can't be read by MacOS or Windows so Linux, so for portable disks you should use FAT.
+Most Linux installations use EXT4 (EXT2 and EXT3 are earlier versions of the same system). EXT4 disks can't be read by MacOS or Windows so, when using Linux, for portable disks you should use FAT.
 ## Linux & Files
 ### What is the fundamental concept that Unix/Linux is built on?
 Everything in the OS is a file.

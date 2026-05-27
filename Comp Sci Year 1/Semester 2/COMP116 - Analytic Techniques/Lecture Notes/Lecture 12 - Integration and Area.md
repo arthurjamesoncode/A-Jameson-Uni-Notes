@@ -239,7 +239,7 @@ Again this is most common when $n=e$ and therefore $\ln(n)=1$. Because of this, 
 $$
 f(x)=\exp(x)\implies \int f(x)dx=\exp(x)
 $$
-## The Logarithm Rule
+### The Logarithm Rule
 The logarithm rule is actually **not** the inverse of the logarithm rule from differentiation. It states that if $f(x)$ is of the form $\ln(x)$ then the integral of $f(x)$ is $x\ln(x)-x$.
 
 So formally:
