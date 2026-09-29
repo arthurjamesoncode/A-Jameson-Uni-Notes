@@ -93,7 +93,7 @@ The **kernel** has access to everything:
 - All I/O devices
 It's incredibly important to protect these things against unauthorised access by users (hackers, malware, etc.) and so we have a separate **kernel** mode.
 
-Kernel mode is enforced via a **protection ring**. This is a physical part of the CPU. Intel x86 processors have four rings. You can see below a visualisation of the 4 protection rings on an Intel x86 CPU.
+Kernel mode is enforced via a **protection ring**.
 ![[protection_ring.png]]
 
 The CPU flags register stores the **privilege level** of each process. Certain registers, instructions and memory addresses are protected, meaning they can only be used by processes with the correct **privilege** level.

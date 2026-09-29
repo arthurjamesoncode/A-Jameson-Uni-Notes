@@ -258,4 +258,4 @@ s_{ij}=\cases{
 }
 $$
 - $U$ is defined as containing columns such that the $i^{th}$ column of $U$ is an eigenvector of $W\cdot W^T$ with eigenvalue $\lambda_i$.
-- $V^T$ is defined as containing rows such that the $i^{th}$ row of $V^T$ is an eigenvector of $W^T\cdot W$ with eigenvalue $\lambda_i$
+- $V^T$ is defined as containing rows such that the $i^{th}$ row of $V^T$ is an eigenvector of $W^T\cdot W$ with eigenvalue $\lambda_i$#

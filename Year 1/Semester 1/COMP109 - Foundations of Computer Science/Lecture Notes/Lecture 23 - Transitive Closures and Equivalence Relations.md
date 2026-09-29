@@ -143,7 +143,7 @@ We can recognise the following about this relation:
 - We can see that this relation is **transitive** as any if $ab > 0$ and $bc> 0$ then $a$, $b$, and $c$ must be either all positive or all negative. In either case the relation holds.
 - We can see that this relation is not **antisymmetric** $(2,3)\in R$ and $(3,2)\in R$.
 
-Because the relation is **reflexive**, **antisymmetric**, and **transitive**, it means that the relation is an equivalence relation.
+Because the relation is **reflexive**, **symmetric**, and **transitive**, it means that the relation is an equivalence relation.
 
 An interesting consequence of equivalence relations is that they partition the set they exist on into multiple distinct classes.
 
