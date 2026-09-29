@@ -27,7 +27,7 @@ It is Currently **Year 2 Semester 1**
 
 | Module  | Most Recent Complete Note                                                                                      |
 | ------- | -------------------------------------------------------------------------------------------------------------- |
-| COMP201 | [[Uni/Year 2/COMP201 - Software Engineering/Lecture Notes/Lecture 1 - Introduction\|Lecture 1 - Introduction]] |
+| COMP201 | [[Uni/Year 2/COMP201 - Software Engineering 1/Lecture Notes/Lecture 1 - Introduction\|Lecture 1 - Introduction]] |
 | COMP207 |                                                                                                                |
 | COMP219 |                                                                                                                |
 | COMP221 |                                                                                                                |
