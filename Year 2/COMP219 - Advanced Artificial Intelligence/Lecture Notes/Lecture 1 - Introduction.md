@@ -1,4 +1,5 @@
 ## History, Predictions and Risks
+The lecture opened with 
 ## Pre-Requisite Knowledge
 - Probability - Machine Learning Systems, including transformer based models like ChatGPT, are probabilistic in nature and deal with uncertain (and therefore probabilistic, environments)
 - Linear Algebra - Machine learning algorithms are implemented with matrices.

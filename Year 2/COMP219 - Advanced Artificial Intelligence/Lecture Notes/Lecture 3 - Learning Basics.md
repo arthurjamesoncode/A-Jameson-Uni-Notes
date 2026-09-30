@@ -1,0 +1,1 @@
+Note: He added some detail on the active learning slide so redownload the slides.
