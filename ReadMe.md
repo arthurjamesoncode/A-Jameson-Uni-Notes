@@ -31,7 +31,7 @@ It is Currently **Year 2 Semester 1**
 | COMP207 | [[Uni/Year 2/COMP207 - Database Development/Lecture Notes/Lecture 1 - Introduction\|Lecture 1 - Introduction]]   |
 | COMP219 |                                                                                                                  |
 | COMP221 |                                                                                                                  |
-| COMP229 |                                                                                                                  |
+| COMP229 | [[Lecture 2 - EDA with Descriptive Statistics]]                                                                  |
 
 ## Errors
 These are my personal notes, which I am making as I am studying these modules. Although I try to make them as accurate as possible, **there may be errors in these notes.** 
