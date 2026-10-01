@@ -30,7 +30,7 @@ It is Currently **Year 2 Semester 1**
 | COMP201 | [[Uni/Year 2/COMP201 - Software Engineering 1/Lecture Notes/Lecture 1 - Introduction\|Lecture 1 - Introduction]] |
 | COMP207 | [[Uni/Year 2/COMP207 - Database Development/Lecture Notes/Lecture 1 - Introduction\|Lecture 1 - Introduction]]   |
 | COMP219 |                                                                                                                  |
-| COMP221 |                                                                                                                  |
+| COMP221 | Doesn't really count                                                                                             |
 | COMP229 | [[Lecture 2 - EDA with Descriptive Statistics]]                                                                  |
 
 ## Errors
