@@ -25,13 +25,13 @@ This is just a quick place to track where I currently am in my studies, and whic
 
 It is Currently **Year 2 Semester 1**
 
-| Module  | Most Recent Complete Note                                                                                        |
-| ------- | ---------------------------------------------------------------------------------------------------------------- |
-| COMP201 | [[Uni/Year 2/COMP201 - Software Engineering 1/Lecture Notes/Lecture 1 - Introduction\|Lecture 1 - Introduction]] |
-| COMP207 | [[Uni/Year 2/COMP207 - Database Development/Lecture Notes/Lecture 1 - Introduction\|Lecture 1 - Introduction]]   |
-| COMP219 |                                                                                                                  |
-| COMP221 | Doesn't really count                                                                                             |
-| COMP229 | [[Lecture 2 - EDA with Descriptive Statistics]]                                                                  |
+| Module  | Most Recent Complete Note                                                                                                  |
+| ------- | -------------------------------------------------------------------------------------------------------------------------- |
+| COMP201 | [[Uni/Year 2/COMP201 - Software Engineering 1/Lecture Notes/Lecture 1 - Introduction\|Lecture 1 - Introduction]]           |
+| COMP207 | [[Lecture 2 - SQL & DDL]]                                                                                                  |
+| COMP219 | [[Uni/Year 2/COMP219 - Advanced Artificial Intelligence/Lecture Notes/Lecture 1 - Introduction\|Lecture 1 - Introduction]] |
+| COMP221 | Doesn't really count                                                                                                       |
+| COMP229 | [[Lecture 2 - EDA with Descriptive Statistics]]                                                                            |
 
 ## Errors
 These are my personal notes, which I am making as I am studying these modules. Although I try to make them as accurate as possible, **there may be errors in these notes.** 
