@@ -235,6 +235,71 @@ INNER JOIN ON Table1.x_id = Table2.x_id;
 ```
 instead, since this only matches the specified column, and not all common columns.
 ## WHERE Clauses
-Where clauses were covered [[Lecture 2 - SQL & DDL|last lecture]] so I won't go over them again. This is simply a note to say that they can be used to filter select statements. 
+Where clauses were covered [[Lecture 2 - SQL & DDL|last lecture]] so I won't go over them again. This is simply a note to say that they can be used to filter select statements. Just place them after select statements and use them as shown before.
 
-Just place them after select statements and use them as shown before.
+We are going to cover some new stuff now regarding:
+- `IN`
+- `EXISTS`
+- Semi joins
+### IN Conditions
+One condition that was mentioned before is `IN` conditions. We will go into these in some more detail now.
+
+Before we saw that we could use `IN` to check if a value was in a list of values:
+```sql
+SELECT * 
+FROM Students 
+WHERE name IN (‘John’,’Sebastian’);
+```
+
+However we can also use `IN` with  sub-queries. For example:
+```sql
+SELECT * 
+FROM Students 
+WHERE name IN (
+	SELECT name FROM Lecturers
+);
+```
+
+The above chooses all students which have a name in common with at least one lecturer.
+### EXISTS Conditions
+`EXISTS` is a generalisation of `IN`.
+
+Essentially, with `EXISTS` you write a sub query and if it is not empty the condition is true.
+
+For example if we wanted to find all students which share both a first and last name with a lecturer we could do:
+```sql
+SELECT *
+FROM Students
+WHERE EXISTS (
+	SELECT 1
+	FROM Lecturers
+	WHERE
+		Students.name = Lecturers.name AND
+		Students.lat_name = Lecturers.last_name	
+);
+```
+
+Note that we use `SELECT 1`. This is done because we don't care about the details of what is selected, we just want to check whether there is any output at all.
+
+What doing this actually does is return a table of 1 column filled with 1s instead of a table with columns/values from the input.
+### Semi-Joins
+Most joins are done in the FROM statement. The exception to this is semi-joins, which are done in the where statement.
+
+A semi join between two tables A and B finds the subset of rows of one table which would be used to form some row of the **natural join** of A and B:
+- A **left semi join** finds rows from A
+- A **right semi join** finds rows from B
+
+These are done using `EXISTS` and `IN` conditions.
+
+For example we could do:
+```sql
+SELECT *
+FROM Employees E,
+WHERE EXISTS (
+	SELECT 1
+	FROM Transactions T
+	WHERE E.e_id = T.e_id
+);
+```
+
+To get a left semi-join between Employees and Transactions.
