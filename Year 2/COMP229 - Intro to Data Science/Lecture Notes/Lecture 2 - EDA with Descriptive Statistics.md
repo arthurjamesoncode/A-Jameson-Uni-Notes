@@ -89,7 +89,7 @@ $$
 $$
 
 The problem is that this doesn't account for the fact that we travelled at one of the speeds for longer. The actual **average speed** here is just $\frac34$.
-### Standard Deviation
+### Standard Deviation and Varience
 The mean measures the location of the data but doesn't give any **bounds** for it. As long as data is spread out proportionally, we will see no difference in mean regardless of how spread out it is.
 
 If we try to measure spread of data by finding the mean of how far each point is away from the mean we will (definitionally) get 0. The negative values and the positive values will cancel each other out, and since they mean is the average, the average of both sides of the mean will be the same.
@@ -104,6 +104,12 @@ Putting all this together, the formula for $s$ is:
 $$
 s = \sqrt{\frac1{n-1}\sum_{i=1}^n(a_i-\bar a)^2}
 $$
+We call the $s^2$ the variance or $Var$ of the sample, so:
+$$
+Var = s^2 = \frac1{n-1}\sum_{i=1}^n(a_i-\bar a)^2
+$$
+
+There is a difference between **sample variance** and **population variance**. This is why we need to correct for bias. We very rarely have access to the full population.
 ### Range, Median, & Mode
 The **range** of a data sample is the difference between its minimal value and its maximal value. This obviously only works for scalar datasets.
 
@@ -150,6 +156,8 @@ $$
 [Q_1-1.5 \cdot \text{IQR},\;\; Q_3 + 1.5\cdot\text{IQR}]
 $$
 is considered an outlier.
+
+>In the tutorial, the TA went over this and said that it's more common for box plots to exclude outliers. As a result the maximum and minimum values are not used and instead the values given above are used. 
 
 **Box plots** are a way to quickly represent any sample of scalar values by using the Tukey 5-number summary.
 

@@ -160,12 +160,13 @@ So formally:
 $$
 f(x)=n^x\implies f'(x)=\ln(n)\cdot n^x
 $$
-Most commonly you will see this rule when $n=e$. 
+Most commonly you will see this rule when $n=e$, and therefore $\ln(n)=e$. 
 
 $e^x$ is the same as $\exp(x)$. As a result you may see this rule expressed as
 $$
 f(x)=\exp(x)\implies f'(x)=\exp(x)
 $$
+>The definition of $e$ actually comes from being the unique real number for which if $f(x)=e^x$ then $f'(x)=e^x$ for all $x\in\mathbb R$.
 ### The Trigonometric Rules
 The trigonometric rules state that if $f(x)$ is of the form $\sin(x)$ then $f'(x)$ is $\cos(x)$. They also state that if $f(x)$ is $\cos(x)$ then $f'(x)$ is $-\sin (x)$.
 
