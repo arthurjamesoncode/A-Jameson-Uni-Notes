@@ -27,8 +27,8 @@ It is Currently **Year 2 Semester 1**
 
 | Module  | Most Recent Complete Note                                  |
 | ------- | ---------------------------------------------------------- |
-| COMP201 | [[Lecture 3 - Requirements & Design Overview]]             |
-| COMP207 | [[Lecture 3 - Breaking Keys & SELECT Queries]]             |
+| COMP201 | [[Lecture 5 - Scrum & Kanban]]                             |
+| COMP207 | [[Lecture 6 - ACID]]                                       |
 | COMP219 | [[Lecture 3 - Learning Basics]]                            |
 | COMP221 | Doesn't really count                                       |
 | COMP229 | [[Lecture 3 - Probabilities, Exclusivity, & Independence]] |
