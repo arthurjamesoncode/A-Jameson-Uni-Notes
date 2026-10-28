@@ -28,10 +28,10 @@ It is Currently **Year 2 Semester 1**
 | Module  | Most Recent Complete Note                                     |
 | ------- | ------------------------------------------------------------- |
 | COMP201 | [[Lecture 9 - Requirements Engineering Processes & Security]] |
-| COMP207 | [[Lecture 7 - Schedules and ACID]]                            |
+| COMP207 | [[Lecture 10 - Checkpoints & Schedule Types]]                 |
 | COMP219 | [[Lecture 3 - Learning Basics]]                               |
 | COMP221 | Doesn't really count                                          |
-| COMP229 | [[Lecture 3 - Probabilities, Exclusivity, & Independence]]    |
+| COMP229 | [[Lecture 4 - Conditional Probabilities & Bayes' Formula]]    |
 
 ## Errors
 These are my personal notes, which I am making as I am studying these modules. Although I try to make them as accurate as possible, **there may be errors in these notes.** 

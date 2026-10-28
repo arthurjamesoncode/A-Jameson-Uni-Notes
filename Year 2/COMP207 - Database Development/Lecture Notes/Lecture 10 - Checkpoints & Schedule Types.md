@@ -84,7 +84,7 @@ Note that cascadeless schedules are not necessarily serialisable. This is obviou
 
 The solution to this is **strict** schedules.
 
-A schedule is strict is each transaction in it reads and writes only values that were written by transactions that have already committed.
+A schedule is strict if each transaction in it reads and writes only values that were written by transactions that have already committed.
 
 This is like cascadeless schedules, but with the added quality that writes have the same restriction as reads.
 
