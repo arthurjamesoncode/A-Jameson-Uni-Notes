@@ -31,7 +31,7 @@ It is Currently **Year 2 Semester 1**
 | COMP207 | [[Lecture 10 - Checkpoints & Schedule Types]]                 |
 | COMP219 | [[Lecture 3 - Learning Basics]]                               |
 | COMP221 | Doesn't really count                                          |
-| COMP229 | [[Lecture 4 - Conditional Probabilities & Bayes' Formula]]    |
+| COMP229 | [[Lecture 5 - Applications of Probability and Paradoxes]]     |
 
 ## Errors
 These are my personal notes, which I am making as I am studying these modules. Although I try to make them as accurate as possible, **there may be errors in these notes.** 
