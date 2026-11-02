@@ -228,13 +228,13 @@ You keep flipping a fair coin until the first head, and then the game is over. I
 
 To find this we need to find the expectation of this variable $X$. First we need to encode it. If we encode the number of flips until head as the amount you win you get we get an encoding of
 $$
-X(n)=2^n
+X(n)=2^n \text{ with } P(X=i) = \frac{1}{2^n}
 $$
 for all $n\in\mathbb N$
 
 To take the expectation of this we take
 $$
-E(X)=\sum^{\infty}_{i=1}2^i
+E(X)=\sum^{\infty}_{i=1}2^i\cdot\frac{1}{2^i}=\sum^{\infty}1
 $$
 Since this diverges, it will be greater than any finite amount we pay to play. Therefore this game is worth paying at literally any price.
 
