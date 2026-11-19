@@ -47,16 +47,23 @@ The **Law of Large Numbers** states that
 $$
 \lim_{n\to+\infty}\bar X_n = \lim_{n\to+\infty}\frac1n\sum^n_{i=1}X_i=\mu
 $$
+Which basically means that as the sample space grows to infinity, the mean of the sample will converge to the actual mean of the distribution: $\mu$.
 
 The **Central Limit Theorem** states that
 $$
 \lim_{n\to+\infty}\frac{\bar X-\mu}{\sigma/\sqrt n} = N(0,1)
 $$
-Essentially, to put this informally, at the limit any average is normal.
+Essentially $\bar X$ approaches a normal distribution as long as each $X_i$ comes from the same distribution, and that distribution has a **finite mean** and **finite variance**.
 
-This is essentially what proves that binomial distributions approximate a normal distribution. A result of this is we often assume random variables we can't control to be normal.
+It also states that, if we find the difference between $\mu$ and our sample mean and divide that by $\frac\sigma{\sqrt n}$ we get the standard normal distribution. Since we standardise by subtracting our mean and dividing by the standard deviation, we know that, at the limit, $\mu$ and $\sigma/\sqrt{n}$ are our mean and standard deviation for the mean.
+
+Essentially
+$$
+\bar X\sim N(\mu, \frac{\sigma^2}n)
+$$
+As long as each $X_i$ has a finite mean of $\mu$ and a finite variance of $\sigma^2$.
 ## Statistical Inference
-Probability theory studies problems when a probability distribution is known, or at least assumed to be. For example we work with a normal distribution with a given $\mu$ and $\sigma$.
+Probability theory studies problems when a probability distribution is known, or at least assumed to be known. For example we work with a normal distribution with a given $\mu$ and $\sigma$.
 
 In practice we have sample data and wish to make conclusions about a population. For example we want to try and give estimates for "true" parameters such as $\mu$ and $\sigma$ of a normally distributed variable in the population.
 
@@ -117,7 +124,7 @@ $$
 \sigma_{\bar X}=\sqrt{\frac{\sigma^2}{n}}=\sqrt{\frac{15^2}{9}}=\frac{15}3=5
 $$
 
-Note that is $X_i\sim N(\mu,\sigma^2)$ but only the sample deviation $s$ is deliverable (meaning known/available/obtainable from the data), then it's better to use the different model: **t-statistic**.
+Note that is $X_i\sim N(\mu,\sigma^2)$ but if the sample deviation $s$ is deliverable (meaning known/available/obtainable from the data), then it's better to use the different model: **t-statistic**.
 $$
 t=\frac{\bar X - \mu}{\frac s{\sqrt n}}\sim t_{n-1}
 $$
@@ -130,7 +137,7 @@ $$
 [60 - 2\sigma, 60 + 2\sigma] = [60-10,60+10]=[50,70] 
 $$
 
-And so we can say with a 95% confidence interval that 
+And so we can say with 95% confidence that 
 $$
 \mu \in [50, 70]
 $$

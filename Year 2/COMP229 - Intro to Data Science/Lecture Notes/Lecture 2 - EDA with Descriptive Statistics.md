@@ -89,7 +89,7 @@ $$
 $$
 
 The problem is that this doesn't account for the fact that we travelled at one of the speeds for longer. The actual **average speed** here is just $\frac34$.
-### Standard Deviation and Varience
+### Standard Deviation and Variance
 The mean measures the location of the data but doesn't give any **bounds** for it. As long as data is spread out proportionally, we will see no difference in mean regardless of how spread out it is.
 
 If we try to measure spread of data by finding the mean of how far each point is away from the mean we will (definitionally) get 0. The negative values and the positive values will cancel each other out, and since they mean is the average, the average of both sides of the mean will be the same.
@@ -186,6 +186,7 @@ Histograms are a graph which shows the number of datapoints which fall into each
 We can use histograms to quickly see symmetries and other properties. Especially for large datasets.
 
 Take a look at the different shapes below![[histogram_properties.png]]
+All of the unsymmetric data is skewed, meaning that more of it lies on the side it's skewed to.
 
 Generally, when we look at skewed data, the mean lies towards the direction of the skew. You can see this below.
 

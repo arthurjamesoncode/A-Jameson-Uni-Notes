@@ -372,5 +372,5 @@ $$
 
 and since the child has a 1/4 chance to be affected only if both parents are carriers the total chance of the child being affected is
 $$
-P(Affected) = \frac14\cdot\frac{1}{36} = \frac{1}{144} = 0.00694
+P(\text{Affected}) = \frac14\cdot\frac{1}{36} = \frac{1}{144} = 0.00694
 $$

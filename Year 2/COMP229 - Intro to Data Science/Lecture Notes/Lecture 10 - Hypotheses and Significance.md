@@ -157,7 +157,7 @@ There are two types of errors you can make when hypothesis testing:
 - A **type 1** error is changing your mind when you shouldn't, rejecting a $H_0$ that is true
 - A **type 2** error is not changing your mind when you should, not rejecting a false $H_0$
 
-A lower significance level, decreases the probability of type 1 errors ($\alpha$ is actually synonymous with the probability of a type 1 error), although it increases the probability of a type 2 error.
+A lower significance level, decreases the probability of type 1 errors ($\alpha$ is actually synonymous with the maximum acceptable probability of a type 1 error), although it increases the probability of a type 2 error.
 ### Sample Size
 There is also a note here on sample size, but no detail is gone into. 
 
