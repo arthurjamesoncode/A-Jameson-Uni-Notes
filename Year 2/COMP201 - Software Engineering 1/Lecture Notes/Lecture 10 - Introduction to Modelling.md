@@ -32,14 +32,13 @@ Because of these weaknesses there are two commonly used approaches:
 ## Model Types
 There are a number of different model types that we need to know about.
 
-Some ones not covered in detail (although the models we cover are sometimes also these models) are:
+Some ones not covered in detail are:
 - Composition Model - Shows how entities are composed of other entities
-- Architectural Model (Internal Scope) - Shows sub systems
 - Classification Model - Shows how entities have common characteristics
 
 We will now spend time going over some other models in more detail. Specifically we will cover **context models** as well as two types of **behavioural models**:
 - Data processing models
-- State machine (or stimulus/response) models (Next Lecture)
+- State machine (or stimulus/response) models
 Both of the above models are needed to describe the systems behaviour.
 ### Context Model
 Context models are used to illustrate the boundaries of a system. Identifying these boundaries is not always a straightforward task.
@@ -79,7 +78,7 @@ Below you can see an even lower level DFD that breaks this operation control pro
 As you start to model at a lower and lower level, number of the level gets bigger. 
 - Level 0 DFDs are typically context diagrams with the system being represented as a single process
 - Level 1 DFDs typically break the system down into its principle sub processes
-- Level 2 DFDs typically break a specific sub process on the level 1 diagram down into its sub processes
+- Level 2 DFDs typically break a specific sub process down into its sub processes
 - etc.
 This forms a tree of DFDs.
 
@@ -88,3 +87,4 @@ The slide labels differ from this definition slightly, he simply labels what wou
 This only makes sense if you change the level of the green background diagrams to be in relation to **operation control** specifically, rather than the whole drinks system.
 
 All in all, I doubt we will be assessed on labelling or recognising the level of the diagram but this confused me so I thought I should make a note of it.
+
