@@ -16,7 +16,7 @@ fact 4
 
 The example above builds up a **call stack**. Each recursive call adds a new value to this stack and we can only evaluate when we hit the base case. This can cause crashes due to running out of memory if the stack gets too big.
 
->This is actually where the name `Stack Overflow`.
+>This is actually where the name `Stack Overflow` comes from.
 
 We can fix this using a tail recursive functions.
 ## Tail Recursive Functions
@@ -38,7 +38,7 @@ Observe how in the example above is even doesn't build up a call stack. This mea
 
 >In a lazily evaluated language this happens automatically (as long as something forces the evaluation of arguments) but in strictly evaluated languages they would need to feature something called "Tail Call Optimisation" or TCO.
 >
->This is because a lazily evaluated function would see that it returns a function call, return it and then go back into the function to actually evaluate what the call was. This, since it goes back and then into, doesn't build up a call stack.
+>This is because a lazily evaluated function would see that it returns a function call, return it and then go back into the function to actually evaluate what the call was. This doesn't build up a call stack.
 >
 >A strictly evaluated function would, by default, reach the end of its call, see that it returned a function call and then go straight in to evaluate it. This does build up a call stack. TCO essentially is an optimisation that allows the same level of the call stack to be used to evaluate the function call.
 >
@@ -59,7 +59,7 @@ fact_tail n acc = fact_tail (n-1) (acc * n)
 factorial n = fact_tail n 1
 ```
 
-In strict evaluation, as there is some kind of TCO, it the call looks like this:
+In strict evaluation, if there is some kind of TCO, the call looks like this:
 ```
 factorial 4  
 > fact_tail 4 1  
@@ -83,7 +83,7 @@ factorial 4
 
 >The memory problem is just transferred to the argument.
 
-We can fix this using `$!`
+We can fix this using `$!`, which forces strict evaluation.
 
 **For Example:**
 ```

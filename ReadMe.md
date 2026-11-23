@@ -25,13 +25,13 @@ This is just a quick place to track where I currently am in my studies, and whic
 
 It is Currently **Year 2 Semester 1**
 
-| Module  | Most Recent Complete Note                                     |
-| ------- | ------------------------------------------------------------- |
-| COMP201 | [[Lecture 9 - Requirements Engineering Processes & Security]] |
-| COMP207 | [[Lecture 11 - Deadlocks and Relational Algebra]]             |
-| COMP219 | [[Lecture 3 - Learning Basics]]                               |
-| COMP221 | Doesn't really count                                          |
-| COMP229 | [[Lecture 15 - Linear Regression]]                            |
+| Module  | Most Recent Complete Note                         |
+| ------- | ------------------------------------------------- |
+| COMP201 | [[Lecture 10 - Introduction to Modelling]]        |
+| COMP207 | [[Lecture 11 - Deadlocks and Relational Algebra]] |
+| COMP219 | [[Lecture 5 - Safety and Reliability]]            |
+| COMP221 | Doesn't really count                              |
+| COMP229 | [[Lecture 15 - Linear Regression]]                |
 
 ## Errors
 These are my personal notes, which I am making as I am studying these modules. Although I try to make them as accurate as possible, **there may be errors in these notes.** 
