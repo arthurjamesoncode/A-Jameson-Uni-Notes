@@ -27,7 +27,7 @@ It is Currently **Year 2 Semester 1**
 
 | Module  | Most Recent Complete Note                         |
 | ------- | ------------------------------------------------- |
-| COMP201 | [[Lecture 13 - Petri Nets Continued]]             |
+| COMP201 | [[Lecture 14 - Design Methodology]]               |
 | COMP207 | [[Lecture 11 - Deadlocks and Relational Algebra]] |
 | COMP219 | [[Lecture 5 - Safety and Reliability]]            |
 | COMP221 | Doesn't really count                              |
