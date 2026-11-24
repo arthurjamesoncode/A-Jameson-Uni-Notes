@@ -27,7 +27,7 @@ The only things that change are
 >Haskell has various fold functions that allow you to implement this without using recursion.
 
 **For Example:**
-```
+```haskell
 foldr' :: (a -> b -> b) -> b -> [a] -> b  
 foldr' _ init [] = init  
 foldr' f init (x:xs) = f x (foldr' f init xs)
@@ -48,7 +48,7 @@ The folded function takes 2 arguments, the current value of the list (`x`) and a
 The return value at any step of the fold is the result of `f x acc`.
 
 Below is an implementation of `sum` using `foldr` instead of recursion.
-```
+```haskell
 sum'' list = foldr (\ x acc -> acc + x) 0 list
 ```
 
@@ -57,7 +57,7 @@ You can see the folded function here is an anonymous function. The first argumen
 >You can see from the type annotation of `foldr'` that the folded function must have type `a -> b -> b`. This is because it takes an accumulator of type `b` and has to return a new accumulator. Remember `a` and `b` can be the same type but they don't have to be. This means that the output type of a fold does not have to be the same as the input type.
 
 Consider the expression `foldr (\ x acc -> acc + x) 0 [1,2,3,4]`. It has the following values for its accumulator at each step.
-```
+```haskell
 init = 0  
 0 + 4 = 4  
 4 + 3 = 7  
@@ -68,7 +68,7 @@ init = 0
 >The final step is 10 so the expression evaluates to 10.
 
 In python `foldr f init input_list` would be implemented like this:
-```
+```haskell
 def foldr (f, init, input_list):
 	acc = init  
 	input_list.reverse()  
@@ -82,7 +82,7 @@ def foldr (f, init, input_list):
 >The `input_list.reverse()` is necessary because `foldr` starts from the right.
 
 Below are some examples of uses for `foldr`:
-```
+```haskell
 concat' list = foldr (++) [] list  
 ghci> concat' ["a", "big", "bad"]  
 "abigbad"
@@ -151,7 +151,7 @@ ghci> maximum [1,2,3,4,3,2,1]
 `foldr` processes lists starting from the right.
 
 **For Example:**
-```  
+```haskell
 foldr (+) 0 [1..4]
 = 1 + (2 + (3 + (4 + 0)))
 = 10
@@ -164,7 +164,7 @@ foldr (/) 1 [1..4]
 `foldl` processes list starting from the left.
 
 **For Example:**
-```
+```haskell
 foldl (+) 0 [1..4]  
 = ((((0 + 1) + 2) + 3) + 4)
 = 10

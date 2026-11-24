@@ -107,9 +107,9 @@ The bottom row of scatterplots all show datasets in which there is clearly some 
 Sample correlation by itself does not imply causation. There is a list of [spurious correlations](https://www.tylervigen.com/spurious-correlations)
 that you can view to illustrate this, and so you must be careful to assume a true correlation (which does imply causation) between variables off of a small sample.
 ## Linear Transformations
-A function $f:\mathbb R^n\to\mathbb R^m$ is called a **linear transformation** if:
-- It is closed under addition $f(\vec u + \vec v)=f(\vec u) + f(\vec v)$
-- It is closed under scalar multiplication $f(s\vec v)=sf(\vec v)$
+A function $f:\mathbb R^n\to\mathbb R^m$ is called a **linear transformation** if $\forall \vec u,\vec v$:
+- $f(\vec u + \vec v)=f(\vec u) + f(\vec v)$
+- $f(s\vec v)=sf(\vec v)$
 
 >You can look back to [[Lecture 6 - Linear Transformations]] from COMP116 and it's successive lectures for more detailed information.
 
